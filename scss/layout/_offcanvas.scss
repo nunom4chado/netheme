@@ -48,10 +48,13 @@
       line-height: 2.5rem;
       color: $text-color-light;
 
-      &:hover,
-      &:active {
+      &:hover {
         color: $text-color;
       }
+    }
+
+    .current-menu-item a {
+      color: $text-color;
     }
   }
 

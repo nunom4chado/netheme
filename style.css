@@ -1079,8 +1079,10 @@ a {
       .navbar__nav ul a {
         padding: 1rem;
         color: #757575; }
-        .navbar__nav ul a:hover, .navbar__nav ul a:active {
+        .navbar__nav ul a:hover {
           color: #424242; }
+      .navbar__nav ul .current-menu-item a {
+        color: #424242; }
   .navbar #icon-menu {
     order: -1;
     padding: 1rem;
@@ -1142,8 +1144,10 @@ a {
       padding: 1rem;
       line-height: 2.5rem;
       color: #757575; }
-      .offcanvas ul a:hover, .offcanvas ul a:active {
+      .offcanvas ul a:hover {
         color: #424242; }
+    .offcanvas ul .current-menu-item a {
+      color: #424242; }
   .offcanvas #icon-close {
     text-align: right;
     align-self: flex-end;
