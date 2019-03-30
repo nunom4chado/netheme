@@ -1,0 +1,16 @@
+.link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--dark {
+    line-height: 2rem;
+    color: $text-color-light;
+    padding: 0 1rem;
+
+    &:hover,
+    &:active {
+      color: $text-color;
+    }
+  }
+}

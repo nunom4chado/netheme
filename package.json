@@ -1,0 +1,23 @@
+{
+  "name": "netheme",
+  "version": "1.0.0",
+  "description": "Wordpress Theme for Nutriente Essencial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch scss -o ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nunom4chado/netheme.git"
+  },
+  "author": "Nuno Machado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nunom4chado/netheme/issues"
+  },
+  "homepage": "https://github.com/nunom4chado/netheme#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

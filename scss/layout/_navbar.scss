@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  font-size: 0.8rem;
+  background-color: #fff;
+  @include normal-box-shadow;
+
+  &__inner {
+    height: 65px;
+    @include container;
+    @include row-spaced-center;
+  }
+
+  &__logo-link {
+    @include respond-above(sm) {
+      flex: auto;
+    }
+  }
+
+  &__logo {
+    height: 50px;
+  }
+
+  &__links {
+    list-style: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+
+    @include respond-above(sm) {
+      display: flex;
+    }
+  }
+
+  #icon-menu {
+    order: -1;
+    @include respond-above(sm) {
+      display: none;
+    }
+  }
+}

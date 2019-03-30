@@ -1,0 +1,57 @@
+/*
+Theme Name: Nutriente Essencial Theme
+Author: Nuno Machado
+Version: 1.0
+*/
+
+/*
+scss/
+|
+|– abstracts/
+|   |– _variables.scss    // Sass Variables
+|   |– _functions.scss    // Sass Functions
+|   |– _mixins.scss       // Sass Mixins
+|
+|– base/
+|   |– _normalize.scss    // normalize
+|   |– _typography.scss   // Typography rules
+|   |- _theme.scss        // Theme rules
+|
+|– components/
+|   |– _buttons.scss      // Buttons
+|   |– _carousel.scss     // Carousel
+|   |– _slider.scss       // Slider
+|
+|– layout/
+|   |– _navigation.scss   // Navigation
+|   |- _offcanvas.scss    // Offcanvas Navigation
+|   |– _grid.scss         // Grid system
+|   |– _header.scss       // Header
+|   |– _footer.scss       // Footer
+|   |– _sidebar.scss      // Sidebar
+|   |– _forms.scss        // Forms
+|
+|– pages/
+|   |– _home.scss         // Home specific styles
+|   |– _about.scss        // About specific styles
+|   |– _contact.scss      // Contact specific styles
+|
+|– vendors/
+|   |– _bootstrap.scss    // Bootstrap
+|   |– _jquery-ui.scss    // jQuery UI
+|
+`– main.scss              // Main Sass file
+ */
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/normalize/import-now";
+@import "base/simple-line-icons";
+@import "base/typography";
+@import "base/theme";
+
+@import "layout/navbar";
+@import "layout/offcanvas";
+@import "layout/grid";
+@import "layout/footer";

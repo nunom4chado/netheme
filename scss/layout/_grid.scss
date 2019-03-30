@@ -1,0 +1,10 @@
+.page-layout {
+  width: 100vw;
+  margin-top: 65px;
+}
+
+.section-normal {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include container;
+}

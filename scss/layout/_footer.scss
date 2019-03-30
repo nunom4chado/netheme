@@ -1,0 +1,7 @@
+.site-footer {
+  width: 100vw;
+
+  &__inner {
+    @include container;
+  }
+}
