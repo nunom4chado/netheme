@@ -1037,14 +1037,15 @@ template {
 body {
   font-family: Montserrat, "Segoe UI", Roboto, sans-serif; }
 
+img {
+  max-width: 100%; }
+
 .link {
   display: block;
   text-decoration: none;
   cursor: pointer; }
   .link--dark {
-    line-height: 2rem;
-    color: #757575;
-    padding: 0 1rem; }
+    color: #757575; }
     .link--dark:hover, .link--dark:active {
       color: #424242; }
 
@@ -1070,15 +1071,19 @@ body {
     .navbar__logo-link {
       flex: auto; } }
   .navbar__logo {
-    height: 50px; }
+    max-height: 50px; }
   .navbar__links {
     list-style: none;
     display: none;
-    margin: 0;
+    margin-right: 1rem;
     padding: 0; }
     @media (min-width: 768px) {
       .navbar__links {
         display: flex; } }
+    .navbar__links .link {
+      padding: 0 1rem; }
+  .navbar .link {
+    line-height: 2rem; }
   .navbar #icon-menu {
     order: -1; }
     @media (min-width: 768px) {
@@ -1122,6 +1127,10 @@ body {
     list-style: none;
     margin: 0;
     padding: 0; }
+    .offcanvas__links .link {
+      padding: 0 1rem; }
+  .offcanvas .link {
+    line-height: 2rem; }
   .offcanvas #icon-close {
     text-align: right;
     align-self: flex-end; }

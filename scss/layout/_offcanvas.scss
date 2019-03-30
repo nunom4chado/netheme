@@ -41,6 +41,14 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    .link {
+      padding: 0 1rem;
+    }
+  }
+
+  .link {
+    line-height: 2rem;
   }
 
   #icon-close {
