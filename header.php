@@ -3,9 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="<?php bloginfo('charset'); ?>" />
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <div class="offcanvas">
         <i id="icon-close" class="icon-close link link--dark"></i>
         <ul class="offcanvas__links">
