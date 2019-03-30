@@ -23,29 +23,56 @@
     max-height: 50px;
   }
 
-  &__links {
-    list-style: none;
+  &__nav {
     display: none;
-    margin-right: 1rem;
-    padding: 0;
 
     @include respond-above(sm) {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
       display: flex;
-    }
+      margin-right: 1rem;
+      padding: 0;
 
-    .link {
-      padding: 0 1rem;
-    }
-  }
+      a {
+        padding: 1rem;
+        color: $text-color-light;
 
-  .link {
-    line-height: 2rem;
+        &:hover,
+        &:active {
+          color: $text-color;
+        }
+      }
+    }
   }
 
   #icon-menu {
     order: -1;
+    padding: 1rem;
+    margin-left: -1rem;
+    color: $text-color-light;
+    cursor: pointer;
     @include respond-above(sm) {
       display: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $text-color;
+    }
+  }
+
+  #icon-search {
+    padding: 1rem;
+    margin-right: -1rem;
+    color: $text-color-light;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $text-color;
     }
   }
 }

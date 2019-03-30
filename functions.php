@@ -10,6 +10,8 @@ function ne_files() {
 add_action('wp_enqueue_scripts', 'ne_files');
 
 function ne_features() {
+    // register nav hook
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
     // insert title tag in header
     add_theme_support('title-tag');
 }

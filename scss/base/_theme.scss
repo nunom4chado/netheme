@@ -2,17 +2,6 @@ img {
   max-width: 100%;
 }
 
-.link {
-  display: block;
+a {
   text-decoration: none;
-  cursor: pointer;
-
-  &--dark {
-    color: $text-color-light;
-
-    &:hover,
-    &:active {
-      color: $text-color;
-    }
-  }
 }

@@ -1040,14 +1040,8 @@ body {
 img {
   max-width: 100%; }
 
-.link {
-  display: block;
-  text-decoration: none;
-  cursor: pointer; }
-  .link--dark {
-    color: #757575; }
-    .link--dark:hover, .link--dark:active {
-      color: #424242; }
+a {
+  text-decoration: none; }
 
 .navbar {
   position: fixed;
@@ -1072,23 +1066,39 @@ img {
       flex: auto; } }
   .navbar__logo {
     max-height: 50px; }
-  .navbar__links {
-    list-style: none;
-    display: none;
-    margin-right: 1rem;
-    padding: 0; }
+  .navbar__nav {
+    display: none; }
     @media (min-width: 768px) {
-      .navbar__links {
-        display: flex; } }
-    .navbar__links .link {
-      padding: 0 1rem; }
-  .navbar .link {
-    line-height: 2rem; }
+      .navbar__nav {
+        display: block; } }
+    .navbar__nav ul {
+      list-style: none;
+      display: flex;
+      margin-right: 1rem;
+      padding: 0; }
+      .navbar__nav ul a {
+        padding: 1rem;
+        color: #757575; }
+        .navbar__nav ul a:hover, .navbar__nav ul a:active {
+          color: #424242; }
   .navbar #icon-menu {
-    order: -1; }
+    order: -1;
+    padding: 1rem;
+    margin-left: -1rem;
+    color: #757575;
+    cursor: pointer; }
     @media (min-width: 768px) {
       .navbar #icon-menu {
         display: none; } }
+    .navbar #icon-menu:hover, .navbar #icon-menu:active {
+      color: #424242; }
+  .navbar #icon-search {
+    padding: 1rem;
+    margin-right: -1rem;
+    color: #757575;
+    cursor: pointer; }
+    .navbar #icon-search:hover, .navbar #icon-search:active {
+      color: #424242; }
 
 .offcanvas-overlay {
   visibility: hidden;
@@ -1117,23 +1127,31 @@ img {
   transform: translateX(-350px);
   width: 250px;
   padding: 1.25rem;
+  font-size: 0.8rem;
   background-color: #fff;
   z-index: 3000;
   transition: 0.3s all ease-in-out; }
   .offcanvas--active {
     visibility: visible;
     transform: translateX(0); }
-  .offcanvas__links {
+  .offcanvas ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    .offcanvas__links .link {
-      padding: 0 1rem; }
-  .offcanvas .link {
-    line-height: 2rem; }
+    .offcanvas ul a {
+      padding: 1rem;
+      line-height: 2.5rem;
+      color: #757575; }
+      .offcanvas ul a:hover, .offcanvas ul a:active {
+        color: #424242; }
   .offcanvas #icon-close {
     text-align: right;
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding: 1rem;
+    color: #757575;
+    cursor: pointer; }
+    .offcanvas #icon-close:hover, .offcanvas #icon-close:active {
+      color: #424242; }
 
 .page-layout {
   width: 100vw;

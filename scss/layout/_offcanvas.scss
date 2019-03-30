@@ -28,6 +28,7 @@
   transform: translateX(-350px);
   width: 250px;
   padding: $container-padding;
+  font-size: 0.8rem;
   background-color: #fff;
   z-index: 3000;
   transition: 0.3s all ease-in-out;
@@ -37,22 +38,33 @@
     transform: translateX(0);
   }
 
-  &__links {
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
 
-    .link {
-      padding: 0 1rem;
-    }
-  }
+    a {
+      padding: 1rem;
+      line-height: 2.5rem;
+      color: $text-color-light;
 
-  .link {
-    line-height: 2rem;
+      &:hover,
+      &:active {
+        color: $text-color;
+      }
+    }
   }
 
   #icon-close {
     text-align: right;
     align-self: flex-end;
+    padding: 1rem;
+    color: $text-color-light;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $text-color;
+    }
   }
 }
