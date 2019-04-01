@@ -1043,6 +1043,9 @@ img {
 a {
   text-decoration: none; }
 
+.logged-in .navbar {
+  top: 32px; }
+
 .navbar {
   position: fixed;
   top: 0;

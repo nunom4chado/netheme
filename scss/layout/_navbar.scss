@@ -1,3 +1,8 @@
+// adjust navbar bellow wp black bar if logged in
+.logged-in .navbar {
+  top: 32px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
