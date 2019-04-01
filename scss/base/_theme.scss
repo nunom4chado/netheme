@@ -5,3 +5,8 @@ img {
 a {
   text-decoration: none;
 }
+
+::selection {
+  background-color: $primary-color-light !important;
+  color: #fff;
+}

@@ -2,18 +2,20 @@
 //  COLORS
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$primary-color: #777;
-$secondary-color: #999;
+$primary-color: #4ab877;
+$primary-color-dark: darken($primary-color, 10%);
+$primary-color-light: lighten($primary-color, 10%);
 
 // Text colors
-$text-color: #424242;
+$text-color: #616161;
 $text-color-light: lighten($text-color, 20%);
+$text-color-dark: darken($text-color, 20%);
 
 //
 //  LAYOUT
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$container-max-width: 1032px;
+$container-max-width: 1140px;
 $container-padding: 1.25rem;
 
 //
