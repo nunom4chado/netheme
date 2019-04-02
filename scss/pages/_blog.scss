@@ -6,8 +6,68 @@
     flex-direction: row;
   }
 
+  &__share-container {
+    display: flex;
+
+    @include respond-above(sm) {
+      position: sticky;
+      top: 130px;
+      flex-direction: column;
+      margin-right: 1.85rem;
+    }
+  }
+
   &__content {
     flex: auto;
+
+    // wordpress drop cap style
+    p.has-drop-cap:not(:focus):first-letter {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 1.6rem;
+      font-family: Montserrat;
+    }
+  }
+
+  &__category {
+    margin: 0;
+
+    a {
+      color: $primary-color;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin: 0.2rem 0 0.8rem 0;
+  }
+
+  &__meta {
+    list-style-type: none;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    display: flex;
+    font-size: 0.8rem;
+    font-family: "Montserrat";
+    color: $text-color-light;
+
+    li + li:before {
+      content: "|";
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-weight: 300;
+      color: #ccc;
+    }
+
+    i {
+      vertical-align: middle;
+      padding-right: 0.2rem;
+    }
   }
 
   &__share {
@@ -16,24 +76,16 @@
     }
   }
 
-  &__share-container {
-    display: flex;
-
-    @include respond-above(sm) {
-      position: sticky;
-      top: 130px;
-      flex-direction: column;
-      margin-right: $container-padding;
-    }
-  }
-
   &__share-icons {
-    border: 1px solid #ccc;
-    width: 3rem;
-    height: 3rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    width: 2.8rem;
+    height: 2.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $text-color;
+    transition: all 0.2s;
 
     &:not(last-child) {
       margin-right: 0.5rem;
@@ -42,5 +94,13 @@
         margin-bottom: 0.5rem;
       }
     }
+
+    &:hover {
+      @include accent-box-shadow;
+    }
+  }
+
+  &__content {
+    line-height: 1.8;
   }
 }

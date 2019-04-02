@@ -1,0 +1,33 @@
+.ne-recent-post-item {
+  display: flex;
+  margin-bottom: 1rem;
+  font-family: Montserrat;
+
+  img {
+    object-fit: cover;
+    max-width: 4.375rem;
+    height: 4.375rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+  }
+
+  &__title-link {
+    color: $text-color;
+
+    &:hover {
+      color: $text-color-light;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 0.81rem;
+    font-weight: 700;
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 0.69rem;
+    color: #8d8d8d;
+  }
+}

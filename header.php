@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="offcanvas">
-        <i id="icon-close" class="icon-close link link--dark"></i>
+        <i id="icon-close" class="fas fa-times link link--dark"></i>
         <?php
             wp_nav_menu(array(
                 'theme_location' => 'headerMenuLocation'
