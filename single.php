@@ -13,7 +13,7 @@
                             <h1 class="ne-blog-post__title"><?php the_title(); ?></h1>
                             <ul class="ne-blog-post__meta">
                                 <li><?php the_time('j \d\e F, Y'); ?></li>
-                                <li><i class="icon-clock"></i> 1min para ler</li>
+                                <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
                                 <li><i class="icon-bubble"></i> 1 comentário</li>
                             </ul>
                             <?php

@@ -1,10 +1,14 @@
 <?php
 
 function ne_files() {
-    wp_enqueue_script('main_js', get_theme_file_uri('js/main.js'), NULL, microtime(), true);
+    wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), microtime(), true);
+    wp_enqueue_script('main_js', get_theme_file_uri('js/main.js'), array('jquery'), microtime(), true);
+    
+    // Styles
     wp_enqueue_style('font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:300,400,600');
     wp_enqueue_style('font-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,700');
     wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
+    wp_enqueue_style('fancybox_css', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
     wp_enqueue_style('main_css', get_stylesheet_uri(), NULL, microtime());
 }
 
