@@ -16,20 +16,32 @@
                                     the_post_thumbnail();
                                 } 
                             ?>
-                            <p>sazonalidade</p>
-                            <?php the_field('sazonalidade'); ?>
                             <div class="ne-blog-post__content"><?php the_content(); ?></div>
                             <?php
-                                $mainNutrients = get_field('nutrientes_principais');
+                                
+                                $foodsWithNutrient = new WP_Query(array(
+                                    'posts_per_page' => -1,
+                                    'post_type' => 'alimento',
+                                    'orderby' => 'title',
+                                    'order' => 'ASC',
+                                    'meta_query' => array(
+                                        array(
+                                            'key' => 'nutrientes_principais',
+                                            'compare' => 'LIKE',
+                                            'value' => '"' . get_the_ID() . '"'
+                                        )
+                                     )
+                                ));
 
-                                if ($mainNutrients) {
-                                    echo '<h2>Nutrientes Principais</h2>';
-                                    echo '<ul>';
-                                    foreach($mainNutrients as $nutrient) { ?>
-                                        <li><a href="<?php echo get_the_permalink($nutrient) ?>"><?php echo get_the_title($nutrient); ?></a></li>
-                                    <?php }
-                                    echo '</ul>';
+                                if ($foodsWithNutrient->have_posts()) {
+                                    echo '<h2>Alimentos ricos em ' . get_the_title() . '</h2>';
+
+                                    while ($foodsWithNutrient->have_posts()) {
+                                        $foodsWithNutrient->the_post(); ?>
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                    <?php } wp_reset_postdata();
                                 }
+
                             ?>
                         </article>
                         <div class="ne-blog-post__share">
