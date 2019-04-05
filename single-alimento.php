@@ -35,19 +35,19 @@
                         <div class="ne-blog-post__share">
                             <div class="ne-blog-post__share-container">
                                 <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="#" class="ne-blog-post__share-icons">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                                 <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-google-plus-g"></i>
                                 </a>
                                 <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-pinterest-p"></i>
                                 </a>
                                 <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
