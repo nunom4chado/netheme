@@ -1073,6 +1073,19 @@ a {
     font-size: 0.69rem;
     color: #8d8d8d; }
 
+.ne-categories-list {
+  font-family: Montserrat;
+  list-style: square inside;
+  padding: 0; }
+  .ne-categories-list li {
+    padding: 0.1rem 0; }
+  .ne-categories-list__link {
+    color: #616161;
+    font-weight: 600;
+    font-size: 0.85rem; }
+    .ne-categories-list__link:hover {
+      color: #949494; }
+
 .logged-in .navbar {
   top: 32px; }
 
@@ -1231,6 +1244,9 @@ a {
     margin-right: auto;
     padding-left: 1.25rem;
     padding-right: 1.25rem; }
+
+.ne-aside__title {
+  font-family: Montserrat; }
 
 .ne-blog-post {
   display: flex;

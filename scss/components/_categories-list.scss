@@ -1,0 +1,19 @@
+.ne-categories-list {
+  font-family: Montserrat;
+  list-style: square inside;
+  padding: 0;
+
+  li {
+    padding: 0.1rem 0;
+  }
+
+  &__link {
+    color: $text-color;
+    font-weight: 600;
+    font-size: 0.85rem;
+
+    &:hover {
+      color: $text-color-light;
+    }
+  }
+}

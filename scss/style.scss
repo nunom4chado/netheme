@@ -52,10 +52,12 @@ scss/
 @import "base/theme";
 
 @import "components/recent-posts";
+@import "components/categories-list";
 
 @import "layout/navbar";
 @import "layout/offcanvas";
 @import "layout/grid";
 @import "layout/footer";
+@import "layout/aside";
 
 @import "pages/blog";

@@ -45,8 +45,8 @@
                     </div>
                     <aside class="column-with-sidebar__sidebar">
                         <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
-                        <section class="ne-recent-posts">
-                            <h3 class="ne-recent-posts__title">Artigos Recentes</h3>
+                        <section class="ne-aside__container">
+                            <h3 class="ne-aside__title">Artigos Recentes</h3>
                             <?php
                                 $homePagePosts = new WP_Query(array(
                                     'posts_per_page' => 4,
@@ -69,6 +69,23 @@
                                 <?php } wp_reset_postdata();
                             ?>
                         </section>
+                        
+                        <?php
+                            $categories = get_categories();
+
+                            if ($categories) { ?>
+                                <section class="ne-aside__container">
+                                    <h3 class="ne-aside__title">Categorias</h3>
+                                    <ul class="ne-categories-list">
+                                        <?php
+                                            foreach($categories as $category) {
+                                                echo '<li><a class="ne-categories-list__link" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+                                            }
+                                        ?>
+                                    </ul>
+                                </section>
+                            <?php }
+                        ?>
                     </aside>
                 </div>
             </div>
