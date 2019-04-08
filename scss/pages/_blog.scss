@@ -1,9 +1,15 @@
 .ne-blog-post {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   @include respond-above(sm) {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__container {
+    flex: 1 1 80%;
   }
 
   &__share-container {
@@ -11,7 +17,7 @@
 
     @include respond-above(sm) {
       position: sticky;
-      top: 130px;
+      top: 100px;
       flex-direction: column;
       margin-right: 1.85rem;
     }

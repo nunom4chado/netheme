@@ -14,22 +14,20 @@
   flex-wrap: wrap;
 
   &__main {
-    float: 1;
-    padding: 1rem;
-    flex-basis: 100%;
+    flex: 1;
+    width: 100%;
     @include respond-above(md) {
       flex: 1;
       flex-basis: 70%;
-      padding: 1rem 1rem 1rem 0;
+      padding-right: 2rem;
     }
   }
 
   &__sidebar {
-    padding: 1rem;
     flex-basis: 100%;
     @include respond-above(md) {
       flex-basis: 30%;
-      padding: 1rem 0 1rem 1rem;
+      padding-left: 1rem;
     }
   }
 }

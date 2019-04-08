@@ -7,53 +7,54 @@
         <div class="page-layout">
             <div class="section-normal">
                 <div class="column-with-sidebar">
-                    <div class="column-with-sidebar__main ne-blog-post">
+                    <div class="column-with-sidebar__main">
+                        <div class="ne-blog-post">
+                            <!-- Post section -->
+                            <article class="ne-blog-post__container">
+                                <p class="ne-blog-post__category"><?php echo get_the_category_list(', '); ?></p>
+                                <h1 class="ne-blog-post__title"><?php the_title(); ?></h1>
+                                <ul class="ne-blog-post__meta">
+                                    <li><?php the_time('j \d\e F, Y'); ?></li>
+                                    <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
+                                    <li><i class="icon-bubble"></i> <?php comments_number( '0 comentários', '1 comentário', '% comentários' ); ?></li>
+                                </ul>
+                                <?php
+                                    if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail();
+                                    } 
+                                ?>
+                                <div class="ne-blog-post__content"><?php the_content(); ?></div>
+                            </article>
 
-                        <!-- Post section -->
-                        <article class="ne-blog-post__container">
-                            <p class="ne-blog-post__category"><?php echo get_the_category_list(', '); ?></p>
-                            <h1 class="ne-blog-post__title"><?php the_title(); ?></h1>
-                            <ul class="ne-blog-post__meta">
-                                <li><?php the_time('j \d\e F, Y'); ?></li>
-                                <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
-                                <li><i class="icon-bubble"></i> <?php comments_number( '0 comentários', '1 comentário', '% comentários' ); ?></li>
-                            </ul>
-                            <?php
-                                if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail();
-                                } 
-                            ?>
-                            <div class="ne-blog-post__content"><?php the_content(); ?></div>
-                            
-                            <?php 
-                                // Show comments if enabled or exist any comment already
-                                if (comments_open() || get_comments_number()) {
-                                    comments_template();
-                                }
-                            ?>
-
-                        </article>
-
-                        <!-- Social Share icons -->
-                        <div class="ne-blog-post__share">
-                            <div class="ne-blog-post__share-container">
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
+                            <!-- Social Share icons -->
+                            <div class="ne-blog-post__share">
+                                <div class="ne-blog-post__share-container">
+                                    <a href="#" class="ne-blog-post__share-icons">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="ne-blog-post__share-icons">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="ne-blog-post__share-icons">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                    <a href="#" class="ne-blog-post__share-icons">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                    <a href="#" class="ne-blog-post__share-icons">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>  
                         </div>
+                        <?php 
+                            // Show comments if enabled or exist any comment already
+                            if (comments_open() || get_comments_number()) {
+                                echo "<section>";
+                                comments_template();
+                                echo "</section>";
+                            }
+                        ?>
 
                     </div>
                     <aside class="column-with-sidebar__sidebar">
