@@ -1,7 +1,7 @@
 <?php
 
 function ne_files() {
-    wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), microtime(), true);
+    wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), '1.0', true);
     wp_enqueue_script('main_js', get_theme_file_uri('js/main.js'), array('jquery'), microtime(), true);
     
     // Styles
