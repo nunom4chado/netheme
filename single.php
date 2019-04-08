@@ -8,13 +8,15 @@
             <div class="section-normal">
                 <div class="column-with-sidebar">
                     <div class="column-with-sidebar__main ne-blog-post">
+
+                        <!-- Post section -->
                         <article class="ne-blog-post__container">
                             <p class="ne-blog-post__category"><?php echo get_the_category_list(', '); ?></p>
                             <h1 class="ne-blog-post__title"><?php the_title(); ?></h1>
                             <ul class="ne-blog-post__meta">
                                 <li><?php the_time('j \d\e F, Y'); ?></li>
                                 <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
-                                <li><i class="icon-bubble"></i> 1 comentário</li>
+                                <li><i class="icon-bubble"></i> <?php comments_number( '0 comentários', '1 comentário', '% comentários' ); ?></li>
                             </ul>
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -22,7 +24,17 @@
                                 } 
                             ?>
                             <div class="ne-blog-post__content"><?php the_content(); ?></div>
+                            
+                            <?php 
+                                // Show comments if enabled or exist any comment already
+                                if (comments_open() || get_comments_number()) {
+                                    comments_template();
+                                }
+                            ?>
+
                         </article>
+
+                        <!-- Social Share icons -->
                         <div class="ne-blog-post__share">
                             <div class="ne-blog-post__share-container">
                                 <a href="#" class="ne-blog-post__share-icons">
@@ -42,6 +54,7 @@
                                 </a>
                             </div>
                         </div>
+
                     </div>
                     <aside class="column-with-sidebar__sidebar">
                         <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
