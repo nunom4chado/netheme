@@ -31,3 +31,14 @@
     }
   }
 }
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+
+  @include respond-above(xs) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+}

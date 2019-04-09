@@ -110,3 +110,74 @@
     line-height: 1.8;
   }
 }
+
+.card-post {
+  @include normal-box-shadow;
+  font-family: Montserrat;
+  border-radius: 8px;
+
+  &__img-link img {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__details {
+    padding: 0 1.5rem 1.5rem;
+
+    &-categories {
+      margin-top: 0.7rem;
+      margin-bottom: 0.1rem;
+
+      a {
+        color: $primary-color;
+        font-weight: 700;
+        font-size: 0.75rem;
+      }
+    }
+
+    &-title {
+      font-size: 1.625rem;
+      font-weight: 300;
+      line-height: 1.75rem;
+      margin: 0;
+
+      a,
+      a:visited {
+        color: $text-color-dark;
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+
+    &-meta {
+      list-style-type: none;
+      margin: 0.5rem 0 1rem 0;
+      padding: 0;
+      display: flex;
+      font-size: 0.7rem;
+      color: $text-color-light;
+
+      li + li:before {
+        content: "|";
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        font-weight: 300;
+        color: #ccc;
+      }
+
+      i {
+        vertical-align: middle;
+        padding-right: 0.2rem;
+      }
+    }
+
+    &-excerpt {
+      font-family: "Open Sans";
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+}

@@ -1039,6 +1039,9 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #616161; }
 
+.page-title {
+  margin-top: 0; }
+
 img {
   max-width: 100%;
   height: auto; }
@@ -1234,6 +1237,15 @@ a {
         flex-basis: 30%;
         padding-left: 1rem; } }
 
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px; }
+  @media (min-width: 576px) {
+    .grid-2-col {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px; } }
+
 .site-footer {
   width: 100vw; }
   .site-footer__inner {
@@ -1323,3 +1335,52 @@ a {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.07); }
   .ne-blog-post__content {
     line-height: 1.8; }
+
+.card-post {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  font-family: Montserrat;
+  border-radius: 8px; }
+  .card-post__img-link img {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; }
+  .card-post__details {
+    padding: 0 1.5rem 1.5rem; }
+    .card-post__details-categories {
+      margin-top: 0.7rem;
+      margin-bottom: 0.1rem; }
+      .card-post__details-categories a {
+        color: #4ab877;
+        font-weight: 700;
+        font-size: 0.75rem; }
+    .card-post__details-title {
+      font-size: 1.625rem;
+      font-weight: 300;
+      line-height: 1.75rem;
+      margin: 0; }
+      .card-post__details-title a,
+      .card-post__details-title a:visited {
+        color: #2e2e2e; }
+        .card-post__details-title a:hover,
+        .card-post__details-title a:visited:hover {
+          color: #616161; }
+    .card-post__details-meta {
+      list-style-type: none;
+      margin: 0.5rem 0 1rem 0;
+      padding: 0;
+      display: flex;
+      font-size: 0.7rem;
+      color: #949494; }
+      .card-post__details-meta li + li:before {
+        content: "|";
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        font-weight: 300;
+        color: #ccc; }
+      .card-post__details-meta i {
+        vertical-align: middle;
+        padding-right: 0.2rem; }
+    .card-post__details-excerpt {
+      font-family: "Open Sans";
+      font-size: 0.875rem;
+      margin: 0; }
