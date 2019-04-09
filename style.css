@@ -18,9 +18,8 @@ scss/
 |   |- _theme.scss        // Theme rules
 |
 |– components/
-|   |– _buttons.scss      // Buttons
-|   |– _carousel.scss     // Carousel
-|   |– _slider.scss       // Slider
+|   |– _categories-list   // Buttons
+|   |– _recent-posts      // Carousel
 |
 |– layout/
 |   |– _navigation.scss   // Navigation
@@ -32,13 +31,9 @@ scss/
 |   |– _forms.scss        // Forms
 |
 |– pages/
-|   |– _home.scss         // Home specific styles
-|   |– _about.scss        // About specific styles
-|   |– _contact.scss      // Contact specific styles
+|   |– _blog.scss         // Home specific styles
 |
 |– vendors/
-|   |– _bootstrap.scss    // Bootstrap
-|   |– _jquery-ui.scss    // jQuery UI
 |
 `– main.scss              // Main Sass file
  */
@@ -1340,15 +1335,19 @@ a {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   font-family: Montserrat;
   border-radius: 8px; }
-  .card-post__img-link img {
-    height: 280px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0; }
+  .card-post__img-link {
+    transition: all 0.3s; }
+    .card-post__img-link:hover {
+      filter: brightness(80%); }
+    .card-post__img-link img {
+      height: 230px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0; }
   .card-post__details {
-    padding: 0 1.5rem 1.5rem; }
+    padding: 0 1.7rem 1.7rem; }
     .card-post__details-categories {
       margin-top: 0.7rem;
-      margin-bottom: 0.1rem; }
+      margin-bottom: 0.2rem; }
       .card-post__details-categories a {
         color: #4ab877;
         font-weight: 700;
@@ -1383,4 +1382,5 @@ a {
     .card-post__details-excerpt {
       font-family: "Open Sans";
       font-size: 0.875rem;
-      margin: 0; }
+      margin: 0;
+      line-height: 1.78; }

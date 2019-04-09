@@ -18,9 +18,8 @@ scss/
 |   |- _theme.scss        // Theme rules
 |
 |– components/
-|   |– _buttons.scss      // Buttons
-|   |– _carousel.scss     // Carousel
-|   |– _slider.scss       // Slider
+|   |– _categories-list   // Buttons
+|   |– _recent-posts      // Carousel
 |
 |– layout/
 |   |– _navigation.scss   // Navigation
@@ -32,13 +31,9 @@ scss/
 |   |– _forms.scss        // Forms
 |
 |– pages/
-|   |– _home.scss         // Home specific styles
-|   |– _about.scss        // About specific styles
-|   |– _contact.scss      // Contact specific styles
+|   |– _blog.scss         // Home specific styles
 |
 |– vendors/
-|   |– _bootstrap.scss    // Bootstrap
-|   |– _jquery-ui.scss    // jQuery UI
 |
 `– main.scss              // Main Sass file
  */
