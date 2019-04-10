@@ -1121,6 +1121,54 @@ a {
   .ne-pagination .next {
     width: 4rem; }
 
+.ne-comment-section .commentlist {
+  list-style: none;
+  padding: 0; }
+  .ne-comment-section .commentlist ul.children {
+    list-style-type: none; }
+
+.ne-comment-section .comment-body {
+  margin-bottom: 2rem; }
+  .ne-comment-section .comment-body p {
+    font-family: "Open Sans", sans-serif; }
+
+.ne-comment-section .vcard {
+  display: flex;
+  align-items: center; }
+  .ne-comment-section .vcard .photo {
+    border-radius: 50%;
+    margin-right: 0.8rem; }
+  .ne-comment-section .vcard .fn {
+    margin-right: 0.4rem;
+    font-weight: 600; }
+
+.ne-comment-section .comment-meta a {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #949494; }
+
+.ne-comment-section .comment-reply-link {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #949494; }
+  .ne-comment-section .comment-reply-link:hover {
+    color: #616161; }
+
+.ne-comment-section .comment-respond {
+  background: #f8f8f8;
+  padding: 2.5rem;
+  border-radius: 8px; }
+  .ne-comment-section .comment-respond .comment-reply-title {
+    margin-top: 0; }
+  .ne-comment-section .comment-respond textarea {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem; }
+  .ne-comment-section .comment-respond label {
+    font-size: 0.8rem;
+    font-weight: 600; }
+
 .logged-in .navbar {
   top: 32px; }
 

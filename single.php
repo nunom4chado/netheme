@@ -50,7 +50,7 @@
                         <?php 
                             // Show comments if enabled or exist any comment already
                             if (comments_open() || get_comments_number()) {
-                                echo "<section>";
+                                echo "<section class='ne-comment-section'>";
                                 comments_template();
                                 echo "</section>";
                             }

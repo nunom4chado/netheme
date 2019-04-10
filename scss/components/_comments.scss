@@ -1,0 +1,71 @@
+.ne-comment-section {
+  .commentlist {
+    list-style: none;
+    padding: 0;
+
+    ul.children {
+      list-style-type: none;
+    }
+  }
+
+  .comment-body {
+    margin-bottom: 2rem;
+
+    p {
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+
+  .vcard {
+    display: flex;
+    align-items: center;
+
+    .photo {
+      border-radius: 50%;
+      margin-right: 0.8rem;
+    }
+
+    .fn {
+      margin-right: 0.4rem;
+      font-weight: 600;
+    }
+  }
+
+  .comment-meta a {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: $text-color-light;
+  }
+
+  .comment-reply-link {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: $text-color-light;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  .comment-respond {
+    background: #f8f8f8;
+    padding: 2.5rem;
+    border-radius: 8px;
+
+    .comment-reply-title {
+      margin-top: 0;
+    }
+
+    textarea {
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+}
