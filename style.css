@@ -1418,6 +1418,8 @@ a {
       font-weight: 700;
       margin: 1.6rem;
       font-family: Montserrat; }
+    .ne-blog-post__content .wp-block-gallery {
+      margin-top: 2rem; }
   .ne-blog-post__category {
     margin: 0; }
     .ne-blog-post__category a {
