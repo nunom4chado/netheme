@@ -91,6 +91,11 @@
   margin-right: auto;
   padding-left: $container-padding;
   padding-right: $container-padding;
+
+  @include respond-above(xs) {
+    padding-left: $container-padding-extra;
+    padding-right: $container-padding-extra;
+  }
 }
 
 @mixin row-spaced-center {

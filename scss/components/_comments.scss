@@ -49,16 +49,30 @@
 
   .comment-respond {
     background: #f8f8f8;
-    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
     border-radius: 8px;
+
+    @include respond-above(sm) {
+      padding: 2.5rem;
+    }
 
     .comment-reply-title {
       margin-top: 0;
     }
 
+    input:not([type="checkbox"]),
+    textarea {
+      border: 3px solid transparent;
+
+      &:focus {
+        outline: none;
+        border: 3px solid $primary-color-light !important;
+      }
+    }
+
     textarea {
       width: 100%;
-      border: none;
       border-radius: 8px;
       padding: 1rem;
     }
@@ -66,6 +80,53 @@
     label {
       font-size: 0.8rem;
       font-weight: 600;
+    }
+
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url {
+      @include respond-above(sm) {
+        width: 30%;
+        display: inline-block;
+        margin-right: 2%;
+      }
+    }
+
+    .comment-form-author input,
+    .comment-form-email input,
+    .comment-form-url input {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+      padding: 0.5rem;
+    }
+
+    .comment-form-cookies-consent {
+      input {
+        margin-right: 0.5rem;
+      }
+
+      label {
+        font-weight: 400;
+      }
+    }
+
+    .form-submit {
+      input {
+        border: 3px solid transparent;
+        background: $primary-color;
+        color: #fff;
+        border-radius: 50rem;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:hover {
+          background: $primary-color-dark;
+        }
+      }
     }
   }
 }

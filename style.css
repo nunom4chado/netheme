@@ -1048,6 +1048,9 @@ a {
   background-color: #6fc693 !important;
   color: #fff; }
 
+:focus {
+  outline: 3px solid #6fc693; }
+
 .ne-recent-post-item {
   display: flex;
   margin-bottom: 1rem; }
@@ -1156,18 +1159,58 @@ a {
 
 .ne-comment-section .comment-respond {
   background: #f8f8f8;
-  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
   border-radius: 8px; }
+  @media (min-width: 768px) {
+    .ne-comment-section .comment-respond {
+      padding: 2.5rem; } }
   .ne-comment-section .comment-respond .comment-reply-title {
     margin-top: 0; }
+  .ne-comment-section .comment-respond input:not([type="checkbox"]),
+  .ne-comment-section .comment-respond textarea {
+    border: 3px solid transparent; }
+    .ne-comment-section .comment-respond input:not([type="checkbox"]):focus,
+    .ne-comment-section .comment-respond textarea:focus {
+      outline: none;
+      border: 3px solid #6fc693 !important; }
   .ne-comment-section .comment-respond textarea {
     width: 100%;
-    border: none;
     border-radius: 8px;
     padding: 1rem; }
   .ne-comment-section .comment-respond label {
     font-size: 0.8rem;
     font-weight: 600; }
+  @media (min-width: 768px) {
+    .ne-comment-section .comment-respond .comment-form-author,
+    .ne-comment-section .comment-respond .comment-form-email,
+    .ne-comment-section .comment-respond .comment-form-url {
+      width: 30%;
+      display: inline-block;
+      margin-right: 2%; } }
+  .ne-comment-section .comment-respond .comment-form-author input,
+  .ne-comment-section .comment-respond .comment-form-email input,
+  .ne-comment-section .comment-respond .comment-form-url input {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.5rem; }
+  .ne-comment-section .comment-respond .comment-form-cookies-consent input {
+    margin-right: 0.5rem; }
+  .ne-comment-section .comment-respond .comment-form-cookies-consent label {
+    font-weight: 400; }
+  .ne-comment-section .comment-respond .form-submit input {
+    border: 3px solid transparent;
+    background: #4ab877;
+    color: #fff;
+    border-radius: 50rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+    .ne-comment-section .comment-respond .form-submit input:hover {
+      background: #3a955f; }
 
 .logged-in .navbar {
   top: 32px; }
@@ -1190,6 +1233,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (min-width: 576px) {
+      .navbar__inner {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem; } }
   @media (min-width: 768px) {
     .navbar__logo-link {
       flex: auto; } }
@@ -1300,6 +1347,10 @@ a {
   margin-right: auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem; }
+  @media (min-width: 576px) {
+    .section-normal {
+      padding-left: 2.25rem;
+      padding-right: 2.25rem; } }
 
 .column-with-sidebar {
   display: flex;
@@ -1336,6 +1387,10 @@ a {
     margin-right: auto;
     padding-left: 1.25rem;
     padding-right: 1.25rem; }
+    @media (min-width: 576px) {
+      .site-footer__inner {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem; } }
 
 .ne-blog-post {
   display: flex;
