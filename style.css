@@ -1030,7 +1030,7 @@ template {
   content: "\e620"; }
 
 body {
-  font-family: "Open Sans", Roboto, sans-serif;
+  font-family: Montserrat, Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #616161; }
 
@@ -1050,8 +1050,7 @@ a {
 
 .ne-recent-post-item {
   display: flex;
-  margin-bottom: 1rem;
-  font-family: Montserrat; }
+  margin-bottom: 1rem; }
   .ne-recent-post-item img {
     object-fit: cover;
     max-width: 4.375rem;
@@ -1072,7 +1071,6 @@ a {
     color: #8d8d8d; }
 
 .ne-categories-list {
-  font-family: Montserrat;
   list-style: square inside;
   padding: 0; }
   .ne-categories-list li {
@@ -1083,6 +1081,45 @@ a {
     font-size: 0.85rem; }
     .ne-categories-list__link:hover {
       color: #949494; }
+
+.ne-pagination {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem; }
+  .ne-pagination .page-numbers {
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.812rem; }
+    .ne-pagination .page-numbers:hover {
+      color: #4ab877; }
+  .ne-pagination .current {
+    background: #4ab877;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; }
+    .ne-pagination .current:hover {
+      color: #fff; }
+  .ne-pagination .prev,
+  .ne-pagination .next {
+    border: 1px solid #ededed;
+    display: inline-flex;
+    border-radius: 50px;
+    color: #2e2e2e;
+    font-size: 0.58rem;
+    height: 2.2rem;
+    justify-content: center;
+    align-items: center; }
+    .ne-pagination .prev:hover,
+    .ne-pagination .next:hover {
+      color: #4ab877; }
+  .ne-pagination .prev {
+    width: 6rem; }
+  .ne-pagination .next {
+    width: 4rem; }
 
 .logged-in .navbar {
   top: 32px; }
@@ -1250,9 +1287,6 @@ a {
     padding-left: 1.25rem;
     padding-right: 1.25rem; }
 
-.ne-aside__title {
-  font-family: Montserrat; }
-
 .ne-blog-post {
   display: flex;
   flex-direction: column;
@@ -1272,7 +1306,8 @@ a {
         flex-direction: column;
         margin-right: 1.85rem; } }
   .ne-blog-post__content {
-    flex: auto; }
+    flex: auto;
+    font-family: "Open Sans"; }
     .ne-blog-post__content p.has-drop-cap:not(:focus):first-letter {
       font-size: 3rem;
       font-weight: 700;
@@ -1285,7 +1320,6 @@ a {
       font-size: 0.9rem;
       font-weight: 600; }
   .ne-blog-post__title {
-    font-family: Montserrat;
     font-weight: 300;
     font-size: 2.5rem;
     line-height: 1.1;
@@ -1296,7 +1330,6 @@ a {
     padding: 0;
     display: flex;
     font-size: 0.8rem;
-    font-family: "Montserrat";
     color: #949494; }
     .ne-blog-post__meta li + li:before {
       content: "|";
@@ -1333,7 +1366,6 @@ a {
 
 .card-post {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  font-family: Montserrat;
   border-radius: 8px; }
   .card-post__img-link {
     transition: all 0.3s; }

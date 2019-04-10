@@ -29,7 +29,9 @@
                 <?php } ?>
                 </div>
 
-                <?php echo paginate_links(); ?>
+                <div class="ne-pagination">
+                    <?php echo paginate_links(); ?>
+                </div>
             </div>
 
             <aside class="column-with-sidebar__sidebar">
