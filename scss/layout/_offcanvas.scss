@@ -29,6 +29,7 @@
   width: 250px;
   padding: $container-padding;
   font-size: 0.8rem;
+  font-weight: 600;
   background-color: #fff;
   z-index: 3000;
   transition: 0.3s all ease-in-out;
@@ -46,15 +47,15 @@
     a {
       padding: 1rem;
       line-height: 2.5rem;
-      color: $text-color-light;
+      color: $text-color;
 
       &:hover {
-        color: $text-color;
+        color: $primary-color;
       }
     }
 
     .current-menu-item a {
-      color: $text-color;
+      color: $primary-color;
     }
   }
 
@@ -62,12 +63,12 @@
     text-align: right;
     align-self: flex-end;
     padding: 1rem;
-    color: $text-color-light;
+    color: $text-color;
     cursor: pointer;
 
     &:hover,
     &:active {
-      color: $text-color;
+      color: $text-color-light;
     }
   }
 }

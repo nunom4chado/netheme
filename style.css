@@ -1148,7 +1148,8 @@ a {
   .navbar__logo {
     max-height: 50px; }
   .navbar__nav {
-    display: none; }
+    display: none;
+    font-weight: 600; }
     @media (min-width: 768px) {
       .navbar__nav {
         display: block; } }
@@ -1159,29 +1160,29 @@ a {
       padding: 0; }
       .navbar__nav ul a {
         padding: 1rem;
-        color: #949494; }
-        .navbar__nav ul a:hover {
-          color: #616161; }
-      .navbar__nav ul .current-menu-item a {
         color: #616161; }
+        .navbar__nav ul a:hover {
+          color: #4ab877; }
+      .navbar__nav ul .current-menu-item a {
+        color: #4ab877; }
   .navbar #icon-menu {
     order: -1;
     padding: 1rem;
     margin-left: -1rem;
-    color: #949494;
+    color: #616161;
     cursor: pointer; }
     @media (min-width: 768px) {
       .navbar #icon-menu {
         display: none; } }
     .navbar #icon-menu:hover, .navbar #icon-menu:active {
-      color: #616161; }
+      color: #949494; }
   .navbar #icon-search {
     padding: 1rem;
     margin-right: -1rem;
-    color: #949494;
+    color: #616161;
     cursor: pointer; }
     .navbar #icon-search:hover, .navbar #icon-search:active {
-      color: #616161; }
+      color: #949494; }
 
 .offcanvas-overlay {
   visibility: hidden;
@@ -1211,6 +1212,7 @@ a {
   width: 250px;
   padding: 1.25rem;
   font-size: 0.8rem;
+  font-weight: 600;
   background-color: #fff;
   z-index: 3000;
   transition: 0.3s all ease-in-out; }
@@ -1224,19 +1226,19 @@ a {
     .offcanvas ul a {
       padding: 1rem;
       line-height: 2.5rem;
-      color: #949494; }
-      .offcanvas ul a:hover {
-        color: #616161; }
-    .offcanvas ul .current-menu-item a {
       color: #616161; }
+      .offcanvas ul a:hover {
+        color: #4ab877; }
+    .offcanvas ul .current-menu-item a {
+      color: #4ab877; }
   .offcanvas #icon-close {
     text-align: right;
     align-self: flex-end;
     padding: 1rem;
-    color: #949494;
+    color: #616161;
     cursor: pointer; }
     .offcanvas #icon-close:hover, .offcanvas #icon-close:active {
-      color: #616161; }
+      color: #949494; }
 
 .page-layout {
   width: 100vw;

@@ -30,6 +30,7 @@
 
   &__nav {
     display: none;
+    font-weight: 600;
 
     @include respond-above(sm) {
       display: block;
@@ -43,15 +44,15 @@
 
       a {
         padding: 1rem;
-        color: $text-color-light;
+        color: $text-color;
 
         &:hover {
-          color: $text-color;
+          color: $primary-color;
         }
       }
 
       .current-menu-item a {
-        color: $text-color;
+        color: $primary-color;
       }
     }
   }
@@ -60,7 +61,7 @@
     order: -1;
     padding: 1rem;
     margin-left: -1rem;
-    color: $text-color-light;
+    color: $text-color;
     cursor: pointer;
     @include respond-above(sm) {
       display: none;
@@ -68,19 +69,19 @@
 
     &:hover,
     &:active {
-      color: $text-color;
+      color: $text-color-light;
     }
   }
 
   #icon-search {
     padding: 1rem;
     margin-right: -1rem;
-    color: $text-color-light;
+    color: $text-color;
     cursor: pointer;
 
     &:hover,
     &:active {
-      color: $text-color;
+      color: $text-color-light;
     }
   }
 }
