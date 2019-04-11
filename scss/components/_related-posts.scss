@@ -1,0 +1,49 @@
+.ne-related-posts {
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-above(xs) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include respond-above(xs) {
+      width: 31%;
+      margin-bottom: 0;
+    }
+
+    img {
+      border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    &-title {
+      margin: 0.3rem 0;
+      line-height: 1.3;
+
+      a {
+        font-weight: 600;
+        color: $text-color;
+
+        &:hover {
+          color: $text-color-light;
+        }
+      }
+    }
+
+    &-date {
+      margin: 0;
+      font-size: 0.69rem;
+      color: $text-color-light;
+    }
+  }
+}

@@ -47,6 +47,55 @@
                                 </div>
                             </div>  
                         </div>
+
+                        <!-- Show Related Posts -->
+                        <?php 
+                            $orig_post = $post;
+                            global $post;
+
+                            $categories = get_the_category($post->ID);
+
+                            if ($categories) {
+
+                                $category_ids = array();
+                                foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+
+                                $args=array(
+                                    'category__in' => $category_ids,
+                                    'post__not_in' => array($post->ID),
+                                    'posts_per_page'=> 3, // Number of related posts that will be shown.
+                                    'caller_get_posts'=>1
+                                );
+
+                                $neRelatedPosts = new wp_query( $args );
+                                if( $neRelatedPosts->have_posts() ) { ?>
+                                    
+                                    <div class="ne-related-posts">
+                                        <h3>Artigos Relacionados</h3>
+                                        <ul class="ne-related-posts__list">
+                                                
+                                        <?php while( $neRelatedPosts->have_posts() ) {
+                                            $neRelatedPosts->the_post();?>
+
+                                            <li class="ne-related-posts__item">
+                                                <a href="<? the_permalink()?>">
+                                                    <?php the_post_thumbnail(); ?>
+                                                </a>
+                                                <h4 class="ne-related-posts__item-title"><a href="<? the_permalink()?>"><?php the_title(); ?></a></h4>
+                                                <p class="ne-related-posts__item-date"><?php the_time('j \d\e F, Y'); ?></p>
+                                            </li>
+                                        <?php } ?>
+
+                                        </ul>
+                                    </div>
+                                <?php }
+                            }
+                            $post = $orig_post;
+                            wp_reset_query();
+                        ?>
+
+
+
                         <?php 
                             // Show comments if enabled or exist any comment already
                             if (comments_open() || get_comments_number()) {
@@ -56,7 +105,7 @@
                             }
                         ?>
 
-                    </div>
+                    </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
                         <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
                         <section class="ne-aside__container">
