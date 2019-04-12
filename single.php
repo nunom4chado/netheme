@@ -28,25 +28,52 @@
 
                             <!-- Social Share icons -->
                             <div class="ne-blog-post__share">
+                                <?php
+                                    // Get current page URL 
+                                    $nePostURL = urlencode(get_permalink());
+                            
+                                    // Get current page title
+                                    $nePostTitle = htmlspecialchars(urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8');
+                                    
+                                    // Get Post Thumbnail for pinterest
+                                    $nePostThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+                            
+                                    // Construct sharing URL without using any script
+                                    $twitterURL = 'https://twitter.com/intent/tweet?text=' . $nePostTitle . '&amp;url=' . $nePostURL . '&amp;via=NutrienteEssencial';
+                                    $facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$nePostURL;
+                                    $googleURL = 'https://plus.google.com/share?url='.$nePostURL;
+                                    $bufferURL = 'https://bufferapp.com/add?url='.$nePostURL.'&amp;text='.$nePostTitle;
+                                    $linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$nePostURL.'&amp;title='.$nePostTitle;
+                                    $whatsappURL = 'whatsapp://send?text='.$nePostTitle . ' ' . $nePostURL;
+                                    $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$nePostURL.'&amp;media='.$nePostThumbnail[0].'&amp;description='.$nePostTitle;
+                                    
+                                ?>
+
                                 <div class="ne-blog-post__share-container">
-                                    <a href="#" class="ne-blog-post__share-icons">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="ne-blog-post__share-icons">
+                                    <a href="<?php $twitterURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-twitter"></i>
                                     </a>
-                                    <a href="#" class="ne-blog-post__share-icons">
+                                    <a href="<?php $facebookURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="<?php $googleURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-google-plus-g"></i>
                                     </a>
-                                    <a href="#" class="ne-blog-post__share-icons">
-                                        <i class="fab fa-pinterest-p"></i>
+                                    <a href="<?php $bufferURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                        <i class="fab fa-buffer"></i>
                                     </a>
-                                    <a href="#" class="ne-blog-post__share-icons">
+                                    <a href="<?php $linkedInURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="<?php $whatsappURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
+                                    <a href="<?php $pinterestURL ?>" class="ne-blog-post__share-icons" data-pin-custom="true" target="_blank" rel="nofollow">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
                                 </div>
-                            </div>  
-                        </div>
+                            </div><!-- /.ne-blog-post__share -->
+                        </div><!-- /.ne-blog-post -->
 
                         <!-- Show Related Posts -->
                         <?php 
