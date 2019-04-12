@@ -1,4 +1,6 @@
 .ne-comment-section {
+  margin-top: 4.5rem;
+
   .commentlist {
     list-style: none;
     padding: 0;
@@ -86,9 +88,15 @@
     .comment-form-email,
     .comment-form-url {
       @include respond-above(sm) {
-        width: 30%;
+        width: 31.5%;
         display: inline-block;
         margin-right: 2%;
+      }
+    }
+
+    .comment-form-url {
+      @include respond-above(sm) {
+        margin-right: 0;
       }
     }
 

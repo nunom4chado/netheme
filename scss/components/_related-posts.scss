@@ -1,4 +1,12 @@
 .ne-related-posts {
+  margin-top: 2.5rem;
+  border-top: 1px solid #f3f3f3;
+  padding-top: 2.5rem;
+
+  &__title {
+    margin-top: 0;
+  }
+
   &__list {
     padding: 0;
     display: flex;
@@ -20,10 +28,18 @@
       margin-bottom: 0;
     }
 
-    img {
-      border-radius: 8px;
-      height: 150px;
-      object-fit: cover;
+    &-link-img {
+      transition: all 0.3s;
+
+      &:hover {
+        filter: brightness(80%);
+      }
+
+      img {
+        border-radius: 8px;
+        height: 150px;
+        object-fit: cover;
+      }
     }
 
     &-title {

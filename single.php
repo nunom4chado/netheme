@@ -98,14 +98,14 @@
                                 if( $neRelatedPosts->have_posts() ) { ?>
                                     
                                     <div class="ne-related-posts">
-                                        <h3>Artigos Relacionados</h3>
+                                        <h2 class="ne-related-posts__title">Artigos Relacionados</h2>
                                         <ul class="ne-related-posts__list">
                                                 
                                         <?php while( $neRelatedPosts->have_posts() ) {
                                             $neRelatedPosts->the_post();?>
 
                                             <li class="ne-related-posts__item">
-                                                <a href="<? the_permalink()?>">
+                                                <a class="ne-related-posts__item-link-img" href="<? the_permalink()?>">
                                                     <?php the_post_thumbnail(); ?>
                                                 </a>
                                                 <h4 class="ne-related-posts__item-title"><a href="<? the_permalink()?>"><?php the_title(); ?></a></h4>

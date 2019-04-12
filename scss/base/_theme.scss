@@ -5,6 +5,13 @@ img {
 
 a {
   text-decoration: none;
+  color: $primary-color;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: $primary-color-light;
 }
 
 ::selection {

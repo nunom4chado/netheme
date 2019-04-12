@@ -20,6 +20,10 @@
       top: 100px;
       flex-direction: column;
       margin-right: 1.85rem;
+
+      a:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -33,6 +37,10 @@
       font-weight: 700;
       margin: 1.6rem;
       font-family: Montserrat;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
 
     // fixes top margin on galleries
