@@ -24,12 +24,6 @@
                         <!-- Post section -->
                         <article class="ne-blog-post__container">
                             <p class="ne-blog-post__category"><?php echo get_the_category_list(', '); ?></p>
-                            <h1 class="ne-blog-post__title"><?php the_title(); ?></h1>
-                            <ul class="ne-blog-post__meta">
-                                <li><?php the_time('j \d\e F, Y'); ?></li>
-                                <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
-                                <li><i class="icon-bubble"></i> <?php comments_number( '0 comentários', '1 comentário', '% comentários' ); ?></li>
-                            </ul>
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail();
