@@ -5,12 +5,31 @@
         the_post(); ?>
 
         <div class="page-layout">
+            <div class="ne-sub-header">
+                <div class="section-normal">
+                    <h1 class="ne-sub-header__title"><?php the_title(); ?></h1>
+                    <p class="ne-sub-header__category">Legumes</p>
+                </div>
+            </div>
+            <div class="section-normal breadcrumb-container">
+                <div class="ne-breadcrumbs">
+                    <a class="ne-breadcrumbs__link" href="#">Home</a>
+                    <a class="ne-breadcrumbs__link" href="#">Alimentos</a>
+                    <span class="ne-breadcrumbs__current"><?php the_title(); ?></span>
+                </div>
+            </div>
             <div class="section-normal">
                 <div class="column-with-sidebar">
-                    <div class="column-with-sidebar__main ne-blog-post">
+                    <div class="column-with-sidebar__main">
+                        <!-- Post section -->
                         <article class="ne-blog-post__container">
                             <p class="ne-blog-post__category"><?php echo get_the_category_list(', '); ?></p>
                             <h1 class="ne-blog-post__title"><?php the_title(); ?></h1>
+                            <ul class="ne-blog-post__meta">
+                                <li><?php the_time('j \d\e F, Y'); ?></li>
+                                <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
+                                <li><i class="icon-bubble"></i> <?php comments_number( '0 comentários', '1 comentário', '% comentários' ); ?></li>
+                            </ul>
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail();
@@ -32,30 +51,12 @@
                                 }
                             ?>
                         </article>
-                        <div class="ne-blog-post__share">
-                            <div class="ne-blog-post__share-container">
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                                <a href="#" class="ne-blog-post__share-icons">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
+                    </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
                         <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
-                        <section class="ne-recent-posts">
-                            <h3 class="ne-recent-posts__title">Artigos Recentes</h3>
+                        <section class="ne-aside__container">
+                            <h3 class="ne-aside__title">Artigos Recentes</h3>
                             <?php
                                 $homePagePosts = new WP_Query(array(
                                     'posts_per_page' => 4,
@@ -78,6 +79,23 @@
                                 <?php } wp_reset_postdata();
                             ?>
                         </section>
+                        
+                        <?php
+                            $categories = get_categories();
+
+                            if ($categories) { ?>
+                                <section class="ne-aside__container">
+                                    <h3 class="ne-aside__title">Categorias</h3>
+                                    <ul class="ne-categories-list">
+                                        <?php
+                                            foreach($categories as $category) {
+                                                echo '<li><a class="ne-categories-list__link" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+                                            }
+                                        ?>
+                                    </ul>
+                                </section>
+                            <?php }
+                        ?>
                     </aside>
                 </div>
             </div>
