@@ -1263,19 +1263,24 @@ a:focus {
       font-size: 0.69rem;
       color: #949494; }
 
-.ne-sub-header {
+.ne-sub-header__alimento {
   background: url("img/foodPattern.png"), linear-gradient(to right, #4ab877, #a9dd81); }
-  .ne-sub-header__title {
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    margin: 0; }
-  .ne-sub-header__category {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #fff;
-    margin: -0.8rem 0 0.8rem; }
+
+.ne-sub-header__nutriente {
+  background: url("img/foodPattern.png"), linear-gradient(to right, #3498db, #64c9ef); }
+
+.ne-sub-header__title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin: 0; }
+
+.ne-sub-header__category {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  margin: -0.8rem 0 0.8rem; }
 
 .breadcrumb-container {
   margin-top: -3.5rem; }
@@ -1283,17 +1288,23 @@ a:focus {
 .ne-breadcrumbs {
   display: flex;
   width: fit-content;
-  background: #8bd17e;
   border-radius: 8px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
-  font-size: 0.82rem; }
+  font-size: 0.7rem; }
+  .ne-breadcrumbs__alimento {
+    background: #8bd17e; }
+  .ne-breadcrumbs__nutriente {
+    background: #64c9ef; }
   .ne-breadcrumbs__link, .ne-breadcrumbs__current {
     padding: 0.7rem; }
   .ne-breadcrumbs__link {
-    color: #fff;
-    border-right: 1px solid #67c47a; }
+    color: #fff; }
     .ne-breadcrumbs__link:hover {
-      color: #333; }
+      color: #555; }
+  .ne-breadcrumbs__link-alimento {
+    border-right: 1px solid #67c47a; }
+  .ne-breadcrumbs__link-nutriente {
+    border-right: 1px solid #36b9ea; }
   .ne-breadcrumbs__current {
     background: #fff;
     border-radius: 0 8px 8px 0;

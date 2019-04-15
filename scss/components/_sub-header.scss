@@ -1,6 +1,13 @@
 .ne-sub-header {
-  background: url("img/foodPattern.png"),
-    linear-gradient(to right, #4ab877, #a9dd81);
+  &__alimento {
+    background: url("img/foodPattern.png"),
+      linear-gradient(to right, #4ab877, #a9dd81);
+  }
+
+  &__nutriente {
+    background: url("img/foodPattern.png"),
+      linear-gradient(to right, #3498db, #64c9ef);
+  }
 
   &__title {
     color: #fff;
@@ -25,10 +32,17 @@
 .ne-breadcrumbs {
   display: flex;
   width: fit-content;
-  background: #8bd17e;
   border-radius: 8px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
-  font-size: 0.82rem;
+  font-size: 0.7rem;
+
+  &__alimento {
+    background: #8bd17e;
+  }
+
+  &__nutriente {
+    background: #64c9ef;
+  }
 
   &__link,
   &__current {
@@ -37,11 +51,18 @@
 
   &__link {
     color: #fff;
-    border-right: 1px solid #67c47a;
 
     &:hover {
-      color: #333;
+      color: #555;
     }
+  }
+
+  &__link-alimento {
+    border-right: 1px solid #67c47a;
+  }
+
+  &__link-nutriente {
+    border-right: 1px solid darken(#64c9ef, 10%);
   }
 
   &__current {

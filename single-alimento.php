@@ -5,16 +5,16 @@
         the_post(); ?>
 
         <div class="page-layout">
-            <div class="ne-sub-header">
+            <div class="ne-sub-header ne-sub-header__alimento">
                 <div class="section-normal">
                     <h1 class="ne-sub-header__title"><?php the_title(); ?></h1>
-                    <p class="ne-sub-header__category">Legumes</p>
+                    <p class="ne-sub-header__category">Define category here</p>
                 </div>
             </div>
             <div class="section-normal breadcrumb-container">
-                <div class="ne-breadcrumbs">
-                    <a class="ne-breadcrumbs__link" href="#">Home</a>
-                    <a class="ne-breadcrumbs__link" href="#">Alimentos</a>
+                <div class="ne-breadcrumbs ne-breadcrumbs__alimento">
+                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo site_url(); ?>">Home</a>
+                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo site_url('alimentos'); ?>">Alimentos</a>
                     <span class="ne-breadcrumbs__current"><?php the_title(); ?></span>
                 </div>
             </div>
