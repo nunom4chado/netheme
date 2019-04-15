@@ -1271,16 +1271,16 @@ a:focus {
 
 .ne-sub-header__title {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 0; }
 
 .ne-sub-header__category {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #fff;
-  margin: -0.8rem 0 0.8rem; }
+  margin: -0.5rem 0 0.8rem; }
 
 .breadcrumb-container {
   margin-top: -3.5rem; }

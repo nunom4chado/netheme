@@ -2,10 +2,21 @@
 
 
     <div class="page-layout">
+    <div class="ne-sub-header ne-sub-header__alimento">
+                <div class="section-normal">
+                    <h1 class="ne-sub-header__title">Blog</h1>
+                    <p class="ne-sub-header__category">Subtitle goes here</p>
+                </div>
+            </div>
+            <div class="section-normal breadcrumb-container">
+                <div class="ne-breadcrumbs ne-breadcrumbs__alimento">
+                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo site_url(); ?>">Home</a>
+                    <span class="ne-breadcrumbs__current">Blog</span>
+                </div>
+            </div>
       <div class="section-normal">
         <div class="column-with-sidebar">
             <div class="column-with-sidebar__main">
-                <h1 class="page-title">Blog</h1>
                 <div class="grid-2-col">
 
                 <?php while(have_posts()) {
