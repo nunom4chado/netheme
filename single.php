@@ -147,7 +147,7 @@
                                     $homePagePosts->the_post(); ?>
                                     <div class="ne-recent-post-item">
                                         <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail(); ?>
+                                            <?php the_post_thumbnail('thumbnail'); ?>
                                         </a>
                                         <div class="ne-recent-post-item__details">
                                             <a class="ne-recent-post-item__title-link" href="<?php the_permalink(); ?>">

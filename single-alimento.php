@@ -48,9 +48,32 @@
 
                     </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
-                        <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
+
+                        <?php
+                            $mainNutrients = get_field('nutrientes_principais');
+
+                            if ($mainNutrients) {
+                                echo '<section class="ne-aside__container">';
+                                echo '<h3 class="ne-aside__title">Nutrientes Principais</h3>';
+                                echo '<ul>';
+                                foreach($mainNutrients as $nutrient) { ?>
+                                    <li><a href="<?php echo get_the_permalink($nutrient) ?>"><?php echo get_the_title($nutrient); ?></a></li>
+                                <?php }
+                                echo '</ul>';
+                                echo '</section>';
+                            }
+                        ?>
+
                         <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Artigos Recentes</h3>
+                            <h3 class="ne-aside__title">Distribuição Nutricional</h3>
+                        </section>
+
+                        <section class="ne-aside__container">
+                            <h3 class="ne-aside__title">Sazonalidade</h3>
+                        </section>
+
+                        <section class="ne-aside__container">
+                            <h3 class="ne-aside__title">Receitas com este Alimento</h3>
                             <?php
                                 $homePagePosts = new WP_Query(array(
                                     'posts_per_page' => 4,
@@ -73,23 +96,6 @@
                                 <?php } wp_reset_postdata();
                             ?>
                         </section>
-                        
-                        <?php
-                            $categories = get_categories();
-
-                            if ($categories) { ?>
-                                <section class="ne-aside__container">
-                                    <h3 class="ne-aside__title">Categorias</h3>
-                                    <ul class="ne-categories-list">
-                                        <?php
-                                            foreach($categories as $category) {
-                                                echo '<li><a class="ne-categories-list__link" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
-                                            }
-                                        ?>
-                                    </ul>
-                                </section>
-                            <?php }
-                        ?>
                     </aside>
                 </div>
             </div>
