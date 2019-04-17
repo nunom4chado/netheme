@@ -72,7 +72,7 @@
                         <section class="ne-aside__container">
                             <h3 class="ne-aside__title">Sazonalidade</h3>
                             <!-- get field array and convert to string with spaces
-                                 if a class its added the item will be active -->
+                                 if a class its added here the item will be active -->
                             <div class="ne-season <?php echo implode(" ", get_field('sazonalidade')); ?>">
                                 <div class="ne-season__item ne-season__item--jan">
                                     <div class="ne-season__content">
