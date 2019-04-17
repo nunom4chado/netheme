@@ -1310,6 +1310,50 @@ a:focus {
     border-radius: 0 8px 8px 0;
     font-weight: 600; }
 
+.ne-season {
+  display: grid;
+  max-width: 350px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6px;
+  row-gap: 6px;
+  font-size: 0.75rem; }
+  .ne-season__item {
+    position: relative;
+    width: 100%;
+    background: #f8f8f8;
+    border-radius: 8px; }
+    .ne-season__item:before {
+      content: "";
+      height: 0;
+      display: inline-block;
+      padding-top: 100%;
+      width: 1px;
+      position: relative; }
+  .ne-season__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center; }
+
+.jan .ne-season__item--jan,
+.fev .ne-season__item--fev,
+.mar .ne-season__item--mar,
+.abr .ne-season__item--abr,
+.mai .ne-season__item--mai,
+.jun .ne-season__item--jun,
+.jul .ne-season__item--jul,
+.ago .ne-season__item--ago,
+.set .ne-season__item--set,
+.out .ne-season__item--out,
+.nov .ne-season__item--nov,
+.dez .ne-season__item--dez {
+  background: #92c569;
+  color: #fff; }
+
 .logged-in .navbar {
   top: 32px; }
 

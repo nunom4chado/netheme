@@ -67,9 +67,74 @@
                         <section class="ne-aside__container">
                             <h3 class="ne-aside__title">Distribuição Nutricional</h3>
                         </section>
-
+                        
+                        <!-- Sazonalidade -->
                         <section class="ne-aside__container">
                             <h3 class="ne-aside__title">Sazonalidade</h3>
+                            <!-- get field array and convert to string with spaces
+                                 if a class its added the item will be active -->
+                            <div class="ne-season <?php echo implode(" ", get_field('sazonalidade')); ?>">
+                                <div class="ne-season__item ne-season__item--jan">
+                                    <div class="ne-season__content">
+                                        <span>Jan</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--fev">
+                                    <div class="ne-season__content">
+                                        <span>Fev</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--mar">
+                                    <div class="ne-season__content">
+                                        <span>Mar</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--abr">
+                                    <div class="ne-season__content">
+                                        <span>Abr</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--mai">
+                                    <div class="ne-season__content">
+                                        <span>Mai</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--jun">
+                                    <div class="ne-season__content">
+                                        <span>Jun</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--jul">
+                                    <div class="ne-season__content">
+                                        <span>Jul</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--ago">
+                                    <div class="ne-season__content">
+                                        <span>Ago</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--set">
+                                    <div class="ne-season__content">
+                                        <span>Set</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--out">
+                                    <div class="ne-season__content">
+                                        <span>Out</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--nov">
+                                    <div class="ne-season__content">
+                                        <span>Nov</span>
+                                    </div>
+                                </div>
+                                <div class="ne-season__item ne-season__item--dez">
+                                    <div class="ne-season__content">
+                                        <span>Dez</span>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
 
                         <section class="ne-aside__container">
