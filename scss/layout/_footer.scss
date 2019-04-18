@@ -3,5 +3,42 @@
 
   &__inner {
     @include container;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 30%;
+  }
+
+  &__copy {
+    padding: 1.2rem;
+    margin-top: 1.7rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    font-size: 0.8rem;
+
+    &-inner {
+      @include container;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__social-link {
+    background: #c7c7c7;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    height: 35px;
+    width: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: $primary-color;
+      color: #fff;
+    }
   }
 }
