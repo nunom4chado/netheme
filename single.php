@@ -135,47 +135,16 @@
                     </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
                         <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
+                        
                         <section class="ne-aside__container">
                             <h3 class="ne-aside__title">Artigos Recentes</h3>
-                            <?php
-                                $homePagePosts = new WP_Query(array(
-                                    'posts_per_page' => 4,
-                                    'post__not_in' => array( $post->ID )
-                                ));
-
-                                while ($homePagePosts->have_posts()) {
-                                    $homePagePosts->the_post(); ?>
-                                    <div class="ne-recent-post-item">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail('thumbnail'); ?>
-                                        </a>
-                                        <div class="ne-recent-post-item__details">
-                                            <a class="ne-recent-post-item__title-link" href="<?php the_permalink(); ?>">
-                                                <h4 class="ne-recent-post-item__title"><?php the_title(); ?></h4>
-                                            </a>
-                                            <p class="ne-recent-post-item__date"><?php the_time('j \d\e F, Y'); ?></p>
-                                        </div>
-                                    </div>
-                                <?php } wp_reset_postdata();
-                            ?>
+                            <?php ne_recent_posts(); ?>
                         </section>
                         
-                        <?php
-                            $categories = get_categories();
-
-                            if ($categories) { ?>
-                                <section class="ne-aside__container">
-                                    <h3 class="ne-aside__title">Categorias</h3>
-                                    <ul class="ne-categories-list">
-                                        <?php
-                                            foreach($categories as $category) {
-                                                echo '<li><a class="ne-categories-list__link" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
-                                            }
-                                        ?>
-                                    </ul>
-                                </section>
-                            <?php }
-                        ?>
+                        <section class="ne-aside__container">
+                            <h3 class="ne-aside__title">Categorias</h3>
+                            <?php ne_posts_categories(); ?>
+                        </section>
                     </aside>
                 </div>
             </div>
