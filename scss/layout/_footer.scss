@@ -3,11 +3,23 @@
 
   &__inner {
     @include container;
-    display: flex;
+    display: none; //change from flex temporarly
     justify-content: space-between;
   }
 
-  &__col {
+  &__col1 {
+    width: 25%;
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__col2 {
+    width: 35%;
+  }
+
+  &__col3 {
     width: 30%;
   }
 

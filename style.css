@@ -1071,7 +1071,7 @@ a:focus {
   .ne-recent-post-item__title-link {
     color: #616161; }
     .ne-recent-post-item__title-link:hover {
-      color: #949494; }
+      color: #4ab877; }
   .ne-recent-post-item__title {
     margin: 0;
     font-size: 0.81rem;
@@ -1529,13 +1529,19 @@ a:focus {
     margin-right: auto;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    display: flex;
+    display: none;
     justify-content: space-between; }
     @media (min-width: 576px) {
       .site-footer__inner {
         padding-left: 2.25rem;
         padding-right: 2.25rem; } }
-  .site-footer__col {
+  .site-footer__col1 {
+    width: 25%; }
+    .site-footer__col1 p {
+      font-size: 0.9rem; }
+  .site-footer__col2 {
+    width: 35%; }
+  .site-footer__col3 {
     width: 30%; }
   .site-footer__copy {
     padding: 1.2rem;

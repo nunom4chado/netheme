@@ -2,32 +2,33 @@
       <div class="site-footer__inner">
 
         <!-- Sobre nós -->
-        <div class="site-footer__col">
-          <img src="<?php echo get_theme_file_uri('img/imgtemp.png'); ?>" alt="">
+        <div class="site-footer__col1">
+          <h3 class="site-footer__title">Sobre Nutriente Essencial</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui atque aspernatur accusamus
             animi ad? In ea praesentium, illo repudiandae natus, id aliquam deserunt tempore, laborum
             tenetur perspiciatis beatae eveniet sint!</p>
         </div>
 
         <!-- Third col -->
-        <div class="site-footer__col">
-          <h3 class="site-footer__title">Links Rápidos</h3>
-          <ul>
-            <li>Home</li>
-            <li>Blog</li>
-            <li>Alimentos</li>
-            <li>Nutrientes</li>
-            <li>Contactos</li>
-          </ul>
-
-          <ul>
-            <li>Cookies</li>
-            <li>Política de Privacidade</li>
-          </ul>
+        <div class="site-footer__col2">
+          <h3 class="site-footer__title">Navegação</h3>
+          <div>  
+            <ul>
+              <li>Home</li>
+              <li>Blog</li>
+              <li>Alimentos</li>
+              <li>Nutrientes</li>
+              <li>Contactos</li>
+            </ul>
+            <ul>
+              <li>Cookies</li>
+              <li>Privacidade</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Artigos Recentes -->
-        <div class="site-footer__col">
+        <div class="site-footer__col3">
           <h3 class="site-footer__title">Artigos Recentes</h3>
           <?php
             $homePagePosts = new WP_Query(array(
