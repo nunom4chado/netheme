@@ -19,13 +19,15 @@
 
     <header class="navbar">
         <div class="navbar__inner">
-            <a href="<?php echo site_url() ?>" class="navbar__logo-link">
-                <img
-                    class="navbar__logo"
-                    src="https://sunlightmedia.org/wp-content/uploads/2018/06/node-sass-1-680x510.png"
-                    alt="logo"
-                />
-            </a>
+            <div class="navbar__brand">
+                <a href="<?php echo site_url() ?>">
+                    <img
+                        class="navbar__logo"
+                        src="https://sunlightmedia.org/wp-content/uploads/2018/06/node-sass-1-680x510.png"
+                        alt="logo"
+                    />
+                </a>
+            </div>
 
             <nav class="navbar__nav">
                 <?php

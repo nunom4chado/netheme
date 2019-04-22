@@ -1380,7 +1380,7 @@ a:focus {
         padding-left: 2.25rem;
         padding-right: 2.25rem; } }
   @media (min-width: 768px) {
-    .navbar__logo-link {
+    .navbar__brand {
       flex: auto; } }
   .navbar__logo {
     max-height: 50px; }

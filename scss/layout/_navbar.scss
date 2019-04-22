@@ -18,7 +18,7 @@
     @include row-spaced-center;
   }
 
-  &__logo-link {
+  &__brand {
     @include respond-above(sm) {
       flex: auto;
     }
