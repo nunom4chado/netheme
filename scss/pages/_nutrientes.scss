@@ -2,18 +2,15 @@
   @include normal-box-shadow;
   border-radius: 8px;
   text-align: center;
+  transition: all 0.3s ease-out;
 
-  &__img-link {
-    transition: all 0.3s;
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.1);
+  }
 
-    &:hover {
-      filter: brightness(80%);
-    }
-
-    img {
-      padding: 1rem;
-      max-width: 125px;
-    }
+  img.size-thumbnail {
+    padding: 1rem;
+    max-width: 125px;
   }
 
   &__details {
@@ -24,26 +21,15 @@
       font-weight: 300;
       line-height: 1.75rem;
       margin: 0;
-
-      a,
-      a:visited {
-        color: $text-color-dark;
-
-        &:hover {
-          color: $text-color;
-        }
-      }
+      color: $text-color-dark;
     }
 
     &-categories {
       margin-top: 0;
       margin-bottom: 0.2rem;
-
-      a {
-        color: $text-color-light;
-        font-weight: 400;
-        font-size: 0.75rem;
-      }
+      color: $text-color-light;
+      font-weight: 400;
+      font-size: 0.75rem;
     }
   }
 }

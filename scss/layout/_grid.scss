@@ -43,7 +43,7 @@
   }
 }
 
-.grid-4-col {
+.grid-4-fit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-column-gap: 20px;
