@@ -1,0 +1,49 @@
+.card-post-nutriente {
+  @include normal-box-shadow;
+  border-radius: 8px;
+  text-align: center;
+
+  &__img-link {
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+
+    img {
+      padding: 1rem;
+      max-width: 125px;
+    }
+  }
+
+  &__details {
+    padding: 0 1rem 1rem;
+
+    &-title {
+      font-size: 1.312rem;
+      font-weight: 300;
+      line-height: 1.75rem;
+      margin: 0;
+
+      a,
+      a:visited {
+        color: $text-color-dark;
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+
+    &-categories {
+      margin-top: 0;
+      margin-bottom: 0.2rem;
+
+      a {
+        color: $text-color-light;
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
