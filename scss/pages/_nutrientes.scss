@@ -3,25 +3,21 @@
   border-radius: 8px;
   text-align: center;
   transition: all 0.3s ease-out;
+  padding: 1rem;
 
   &:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.1);
   }
 
-  img.size-thumbnail {
-    padding: 1rem;
-    max-width: 125px;
-  }
-
   &__details {
-    padding: 0 1rem 1rem;
+    //padding: 0 1rem 1rem;
 
     &-title {
-      font-size: 1.312rem;
-      font-weight: 300;
+      font-size: 1.1rem;
+      font-weight: 600;
       line-height: 1.75rem;
       margin: 0;
-      color: $text-color-dark;
+      color: $text-color;
     }
 
     &-categories {
@@ -32,4 +28,10 @@
       font-size: 0.75rem;
     }
   }
+}
+
+// Force small img size on card post nutriente for Nutrient Archive Page
+.post-type-archive-nutriente .card-post-nutriente img.size-thumbnail {
+  padding: 1rem;
+  max-width: 125px;
 }

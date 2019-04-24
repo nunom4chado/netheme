@@ -17,27 +17,28 @@
       <div class="section-normal">
         <div class="column-with-sidebar">
             <div class="column-with-sidebar__main">
-                <div class="grid-2-col">
+                <div class="grid-3-fit">
+                    <?php while(have_posts()) {
+                        the_post(); ?>
 
-                <?php while(have_posts()) {
-                    the_post(); ?>
-
-                    <div class="card-post">
-                        <a class="card-post__img-link" href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(); ?>
+                        <a class="card-post-nutriente" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('thumbnail'); ?>
+                            <div class="card-post-nutriente__details">
+                                <h2 class="card-post-nutriente__details-title"><?php the_title(); ?></h2>
+                                <!-- Show custom taxonomy -->
+                                <?php 
+                                    $terms = get_the_terms( $post->ID, 'categoria_alimento' );
+                                    if ($terms) {
+                                        foreach($terms as $term) {
+                                            $termlinks = get_term_link($term);
+                                            echo '<p class="card-post-nutriente__details-categories">' . $term->name . '</p>';
+                                        }
+                                    }
+                                ?>
+                            </div>
                         </a>
-                        <div class="card-post__details">
-                            <p class="card-post__details-categories"><?php echo get_the_category_list(', '); ?></p>
-                            <h2 class="card-post__details-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <ul class="card-post__details-meta">
-                                <li><?php the_time('j \d\e F, Y'); ?></li>
-                                <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
-                            </ul>
-                            <p class="card-post__details-excerpt"><?php echo wp_trim_words(get_the_content(), 25); ?></p>
-                        </div>
-                    </div>
 
-                <?php } ?>
+                    <?php } ?>
                 </div>
 
                 <div class="ne-pagination">

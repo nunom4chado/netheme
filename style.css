@@ -1524,16 +1524,17 @@ a:focus {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 20px; } }
 
+.grid-3-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px; }
+
 .grid-4-fit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  /*
-  @include respond-above(xs) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 20px;
-  }*/ }
+  grid-row-gap: 20px; }
 
 .site-footer {
   width: 100vw; }
@@ -1729,23 +1730,23 @@ a:focus {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   text-align: center;
-  transition: all 0.3s ease-out; }
+  transition: all 0.3s ease-out;
+  padding: 1rem; }
   .card-post-nutriente:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.1); }
-  .card-post-nutriente img.size-thumbnail {
-    padding: 1rem;
-    max-width: 125px; }
-  .card-post-nutriente__details {
-    padding: 0 1rem 1rem; }
-    .card-post-nutriente__details-title {
-      font-size: 1.312rem;
-      font-weight: 300;
-      line-height: 1.75rem;
-      margin: 0;
-      color: #2e2e2e; }
-    .card-post-nutriente__details-categories {
-      margin-top: 0;
-      margin-bottom: 0.2rem;
-      color: #949494;
-      font-weight: 400;
-      font-size: 0.75rem; }
+  .card-post-nutriente__details-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    margin: 0;
+    color: #616161; }
+  .card-post-nutriente__details-categories {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    color: #949494;
+    font-weight: 400;
+    font-size: 0.75rem; }
+
+.post-type-archive-nutriente .card-post-nutriente img.size-thumbnail {
+  padding: 1rem;
+  max-width: 125px; }

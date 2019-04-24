@@ -18,28 +18,27 @@
         <div class="column-with-sidebar">
             <div class="column-with-sidebar__main">
                 <div class="grid-4-fit">
+                    <?php while(have_posts()) {
+                        the_post(); ?>
 
-                <?php while(have_posts()) {
-                    the_post(); ?>
-
-                    <a class="card-post-nutriente" href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('thumbnail'); ?>
-                        <div class="card-post-nutriente__details">
-                            <h2 class="card-post-nutriente__details-title"><?php the_title(); ?></h2>
-                            <!-- Show custom taxonomy -->
-                            <?php 
-                                $terms = get_the_terms( $post->ID, 'categoria_nutriente' );
-                                if ($terms) {
-                                    foreach($terms as $term) {
-                                        $termlinks = get_term_link($term);
-                                        echo '<p class="card-post-nutriente__details-categories">' . $term->name . '</p>';
+                        <a class="card-post-nutriente" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('thumbnail'); ?>
+                            <div class="card-post-nutriente__details">
+                                <h2 class="card-post-nutriente__details-title"><?php the_title(); ?></h2>
+                                <!-- Show custom taxonomy -->
+                                <?php 
+                                    $terms = get_the_terms( $post->ID, 'categoria_nutriente' );
+                                    if ($terms) {
+                                        foreach($terms as $term) {
+                                            $termlinks = get_term_link($term);
+                                            echo '<p class="card-post-nutriente__details-categories">' . $term->name . '</p>';
+                                        }
                                     }
-                                }
-                            ?>
-                        </div>
-                    </a>
+                                ?>
+                            </div>
+                        </a>
 
-                <?php } ?>
+                    <?php } ?>
                 </div>
 
                 <div class="ne-pagination">
