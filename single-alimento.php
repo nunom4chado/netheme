@@ -63,6 +63,7 @@
 
                         <section class="ne-aside__container">
                             <h3 class="ne-aside__title">Distribuição Nutricional</h3>
+                            <div class="div-wrapper"><div id="ne-nutrition-distribution"></div></div>
                         </section>
                         
                         <!-- Sazonalidade -->
