@@ -1062,6 +1062,10 @@ a:focus {
   outline: 3px solid $primary-color-light;
 }
 */
+.list-min {
+  list-style-type: none;
+  padding: 0; }
+
 .ne-recent-post-item {
   display: flex;
   margin-bottom: 1rem; }
@@ -1356,6 +1360,17 @@ a:focus {
 .dez .ne-season__item--dez {
   background: #92c569;
   color: #fff; }
+
+.ne-main-nutrients {
+  list-style-type: none;
+  padding: 0; }
+  .ne-main-nutrients__item-link {
+    display: flex;
+    align-items: center; }
+  .ne-main-nutrients__item-title {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 0.8rem; }
 
 .logged-in .navbar {
   top: 32px; }

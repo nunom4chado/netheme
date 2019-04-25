@@ -32,18 +32,6 @@
                             <p>sazonalidade</p>
                             <?php the_field('sazonalidade'); ?>
                             <div class="ne-blog-post__content"><?php the_content(); ?></div>
-                            <?php
-                                $mainNutrients = get_field('nutrientes_principais');
-
-                                if ($mainNutrients) {
-                                    echo '<h2>Nutrientes Principais</h2>';
-                                    echo '<ul>';
-                                    foreach($mainNutrients as $nutrient) { ?>
-                                        <li><a href="<?php echo get_the_permalink($nutrient) ?>"><?php echo get_the_title($nutrient); ?></a></li>
-                                    <?php }
-                                    echo '</ul>';
-                                }
-                            ?>
                         </article>
 
                     </div> <!-- /.column-with-sidebar__main -->
@@ -55,9 +43,18 @@
                             if ($mainNutrients) {
                                 echo '<section class="ne-aside__container">';
                                 echo '<h3 class="ne-aside__title">Nutrientes Principais</h3>';
-                                echo '<ul>';
+                                echo '<ul class="ne-main-nutrients">';
                                 foreach($mainNutrients as $nutrient) { ?>
-                                    <li><a href="<?php echo get_the_permalink($nutrient) ?>"><?php echo get_the_title($nutrient); ?></a></li>
+                                    <li>
+                                        <a class="ne-main-nutrients__item-link" href="<?php echo get_the_permalink($nutrient) ?>">
+                                            <?php 
+                                                echo get_the_post_thumbnail( $nutrient, array(35,35));
+                                                echo "<span class='ne-main-nutrients__item-title'>";
+                                                    echo get_the_title($nutrient);
+                                                echo "</span>";
+                                            ?>
+                                        </a>
+                                    </li>
                                 <?php }
                                 echo '</ul>';
                                 echo '</section>';

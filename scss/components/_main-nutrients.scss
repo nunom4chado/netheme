@@ -1,0 +1,15 @@
+.ne-main-nutrients {
+  list-style-type: none;
+  padding: 0;
+
+  &__item-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-title {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+}
