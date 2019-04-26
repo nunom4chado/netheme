@@ -1364,6 +1364,8 @@ a:focus {
 .ne-main-nutrients {
   list-style-type: none;
   padding: 0; }
+  .ne-main-nutrients__item {
+    margin-bottom: 0.5rem; }
   .ne-main-nutrients__item-link {
     display: flex;
     align-items: center; }
@@ -1374,7 +1376,7 @@ a:focus {
 
 .ne-nutrition-distribution {
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: 80%;
   height: 0;
   overflow: hidden; }
 

@@ -45,7 +45,7 @@
                                 echo '<h3 class="ne-aside__title">Nutrientes Principais</h3>';
                                 echo '<ul class="ne-main-nutrients">';
                                 foreach($mainNutrients as $nutrient) { ?>
-                                    <li>
+                                    <li class="ne-main-nutrients__item">
                                         <a class="ne-main-nutrients__item-link" href="<?php echo get_the_permalink($nutrient) ?>">
                                             <?php 
                                                 echo get_the_post_thumbnail( $nutrient, array(35,35));

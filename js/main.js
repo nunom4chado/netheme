@@ -43,15 +43,15 @@ jQuery(function($) {
 function initChart() {
   var options = {
     pieHole: 0.4,
-    legend: { position: "bottom" },
+    legend: { position: "bottom", textStyle: { fontSize: 12 } },
     width: "100%",
-    height: "100%",
+    height: "80%",
     pieSliceText: "percentage",
     colors: ["#0598d8", "#f97263", "#773521"],
     chartArea: {
       left: "3%",
       top: "3%",
-      height: "84%",
+      height: "82%",
       width: "94%"
     }
   };
