@@ -29,34 +29,45 @@ jQuery(function($) {
 });
 
 // Google Chart for Alimento Page
-google.charts.load("current", { packages: ["corechart"] });
-google.charts.setOnLoadCallback(drawChart);
-function drawChart() {
+google.load("visualization", "1", {
+  packages: ["corechart"]
+});
+google.setOnLoadCallback(initChart);
+
+jQuery(function($) {
+  $(window).on("throttledresize", function(event) {
+    initChart();
+  });
+});
+
+function initChart() {
+  var options = {
+    pieHole: 0.4,
+    legend: { position: "bottom" },
+    width: "100%",
+    height: "100%",
+    pieSliceText: "percentage",
+    colors: ["#0598d8", "#f97263", "#773521"],
+    chartArea: {
+      left: "3%",
+      top: "3%",
+      height: "84%",
+      width: "94%"
+    }
+  };
+
   var data = google.visualization.arrayToDataTable([
     ["Distribuição Nutricional", "em Percentagem"],
     ["Hidratos de Carbono", 11],
     ["Lípidos", 2],
     ["Proteína", 2]
   ]);
+  drawChart(data, options);
+}
 
-  var options = {
-    pieHole: 0.4,
-    width: "100%",
-    height: "100%",
-    chartArea: {
-      left: "3%",
-      top: "3%",
-      height: "94%",
-      width: "94%"
-    },
-    legend: {
-      position: "right",
-      maxLines: 3
-    }
-  };
-
+function drawChart(data, options) {
   var chart = new google.visualization.PieChart(
-    document.getElementById("ne-nutrition-distribution")
+    document.getElementById("ne-food-chart")
   );
   chart.draw(data, options);
 }
