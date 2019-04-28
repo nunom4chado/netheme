@@ -45,7 +45,7 @@ function ne_recent_posts($args = NULL) {
 
 function ne_files() {
 
-    //wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), '1.0', true);
+    wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), '1.0', true);
     wp_enqueue_script('throttledresize_js', '//rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js', array('jquery'), '1.0', true);
     wp_enqueue_script('google-charts_js', '//www.gstatic.com/charts/loader.js', NULL, '1.0', true);
     wp_enqueue_script('jquery3_js', '//code.jquery.com/jquery-3.4.0.min.js', NULL, '1.0', true);
@@ -55,7 +55,7 @@ function ne_files() {
     wp_enqueue_style('font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
     wp_enqueue_style('font-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,700');
     wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
-    //wp_enqueue_style('fancybox_css', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
+    wp_enqueue_style('fancybox_css', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
     wp_enqueue_style('main_css', get_stylesheet_uri(), NULL, microtime());
 }
 
@@ -75,46 +75,22 @@ add_action('after_setup_theme', 'ne_features');
 
 
 
-
-
-
-// ADD FANCYBOX SCRIPT
-add_action ('wp_enqueue_scripts', 'add_fancybox_script');
-function add_fancybox_script() {
-    if ( is_single() ) { // LOAD ONLY FOR SINGLE POSTS
-        $add_script = 'jQuery(document).ready(function($){ 
-            $("[data-fancybox]").fancybox({
-                buttons: [
-                "zoom",
-                "fullScreen",
-                "share",
-                "thumbs",
-                "close"
-                ],
-                protect: true
-            });
-            $(
-                "a[href*=\\042.jpg\\042], a[href*=\\042.jpeg\\042], a[href*=\\042.png\\042], a[href*=\\042.gif\\042]"
-              ).fancybox({
-                buttons: [
-                    "zoom",
-                    "fullScreen",
-                    "share",
-                    "thumbs",
-                    "close"
-                    ],
-                    protect: true
-              });
-        });'; 
-        wp_enqueue_script ('fancybox-script', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js', array(), '3.3.5', true);     
-        wp_add_inline_script ('fancybox-script', $add_script, 'after');
-    }
+/**
+ * Add data attributes for Fancybox
+ */
+// Gallery images
+function ccd_fancybox_gallery_attribute( $content, $id ) {
+	// Restore title attribute
+	$title = get_the_title( $id );
+	return str_replace('<a', '<a data-type="image" data-fancybox="gallery" title="' . esc_attr( $title ) . '" ', $content);
 }
-// ENQUEUE CSS TO FOOTER
-function fancy_footer_styles() {
-    if ( is_single() ) {
-        wp_enqueue_style( 'fancybox-style','https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css' );
-    }   
-};
-add_action( 'get_footer', 'fancy_footer_styles' );
-
+add_filter( 'wp_get_attachment_link', 'ccd_fancybox_gallery_attribute', 10, 4 );
+// Single images
+function ccd_fancybox_image_attribute( $content ) {
+       global $post;
+       $pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+       $replace = '<a$1href=$2$3.$4$5 data-type="image" data-fancybox="image">';
+       $content = preg_replace( $pattern, $replace, $content );
+       return $content;
+}
+add_filter( 'the_content', 'ccd_fancybox_image_attribute' );
