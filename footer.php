@@ -75,6 +75,17 @@
       </div>
     </footer>
 
+    <!-- Search -->
+    <div class="search-overlay">
+      <div class="search-overlay__top">
+        <div class="search-overlay__inner">
+          <i class="icon-magnifier search-overlay__icon" aria-hidden="true"></i>
+          <input type="text" id="search-term" class="search-term" placeholder="O que procura?">
+          <i class="icon-close search-overlay__close" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+
     <?php wp_footer(); ?>
 </body>
 </html>
