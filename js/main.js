@@ -51,15 +51,6 @@ class Search {
 var neSearch = new Search();
 
 //
-// Fancybox - Force all link tags that links to an img to open on lighbox
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-/*jQuery(function($) {
-  $(
-    'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]'
-  ).fancybox({});
-});*/
-
-//
 // Google Chart for Alimento Page
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 var neFoodChart = document.getElementById("ne-food-chart");
