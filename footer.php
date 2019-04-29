@@ -84,6 +84,9 @@
           <i class="icon-close search-overlay__close" aria-hidden="true"></i>
         </div>
       </div>
+      <div class="search-overlay__inner">
+        <div id="search-overlay__results"></div>
+      </div>
     </div>
 
     <?php wp_footer(); ?>
