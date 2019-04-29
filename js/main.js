@@ -90,7 +90,7 @@ class Search {
           this.resultsDiv.html('<div class="spinner-loader"></div>');
           this.isSpinnerVisible = true;
         }
-        this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+        this.typingTimer = setTimeout(this.getResults.bind(this), 1000);
       } else {
         this.resultsDiv.html("");
         this.isSpinnerVisible = false;
@@ -100,8 +100,23 @@ class Search {
   }
 
   getResults() {
-    this.resultsDiv.html("real results here...");
-    this.isSpinnerVisible = false;
+    $.getJSON(
+      "http://netheme.local/wp-json/wp/v2/posts?search=" +
+        this.searchField.val(),
+      posts => {
+        this.resultsDiv.html(`
+          <h2 class="search-overlay__section-title">Artigos</h2>
+          <ul class="list-min">
+            ${posts
+              .map(
+                item =>
+                  `<li><a href="${item.link}">${item.title.rendered}</a></li>`
+              )
+              .join("")}
+          </ul>
+        `);
+      }
+    );
   }
 
   keyPress(e) {
