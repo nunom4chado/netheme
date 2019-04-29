@@ -1,7 +1,7 @@
 //
 //  OFFCANVAS TOGGLE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
+/*
 document
   .getElementById("icon-menu")
   .addEventListener("click", displayOffcanvas);
@@ -20,6 +20,40 @@ function displayOffcanvas() {
     .classList.toggle("offcanvas-overlay--active");
   document.querySelector(".offcanvas").classList.toggle("offcanvas--active");
 }
+*/
+//
+//  OFFCANVAS MENU
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+class OffcanvasMenu {
+  constructor() {
+    this.openButton = $("#icon-menu");
+    this.closeButton = $("#icon-close");
+    this.offcanvasMenu = $(".offcanvas");
+    this.offcanvasOverlay = $(".offcanvas-overlay");
+    // run events as soon object is created
+    this.events();
+  }
+
+  // Events
+  events() {
+    this.openButton.on("click", this.openOffcanvas.bind(this));
+    this.closeButton.on("click", this.closeOffcanvas.bind(this));
+    this.offcanvasOverlay.on("click", this.closeOffcanvas.bind(this));
+  }
+
+  // Methods
+  openOffcanvas() {
+    this.offcanvasMenu.addClass("offcanvas--active");
+    this.offcanvasOverlay.addClass("offcanvas-overlay--active");
+  }
+
+  closeOffcanvas() {
+    this.offcanvasMenu.removeClass("offcanvas--active");
+    this.offcanvasOverlay.removeClass("offcanvas-overlay--active");
+  }
+}
+
+var neOffcanvasMenu = new OffcanvasMenu();
 
 //
 //  SEARCH
