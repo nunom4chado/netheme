@@ -1066,6 +1066,9 @@ a:focus {
   list-style-type: none;
   padding: 0; }
 
+.valign-center {
+  align-items: center; }
+
 .ne-recent-post-item {
   display: flex;
   margin-bottom: 1rem; }
@@ -1634,8 +1637,6 @@ a:focus {
   opacity: 0;
   transform: scale(1.09);
   transition: opacity 0.3s, transform 0.3s, visibility 0.3s; }
-  .search-overlay p {
-    padding-top: 15px; }
   .search-overlay .event-summary p {
     padding-top: 0; }
   .search-overlay .event-summary {

@@ -107,6 +107,7 @@ class Search {
       results => {
         this.resultsDiv.html(`
         <div class="search-overlay__results-inner">
+
           <div>
             <h2 class="search-overlay__section-title">Artigos</h2>
             ${
@@ -119,11 +120,31 @@ class Search {
               ${results.artigos
                 .map(
                   item =>
-                    `<li><a href="${item.permalink}">${item.title}</a></li>`
+                    `
+                    <li class="ne-recent-post-item">
+                        <a href="${item.permalink}">
+                            <img src="${item.image}" alt="${item.title}">
+                        </a>
+                        <div class="ne-recent-post-item__details">
+                            <a class="ne-recent-post-item__title-link" href="${
+                              item.permalink
+                            }">
+                                <h4 class="ne-recent-post-item__title">${
+                                  item.title
+                                }</h4>
+                            </a>
+                            <p class="ne-recent-post-item__date">${
+                              item.date
+                            }</p>
+                        </div>
+                    </li>
+
+                    `
                 )
                 .join("")}
             ${results.artigos.length ? "</ul>" : ""}
           </div>
+
           <div>
             <h2 class="search-overlay__section-title">Alimentos</h2>
             ${
@@ -136,11 +157,28 @@ class Search {
               ${results.alimentos
                 .map(
                   item =>
-                    `<li><a href="${item.permalink}">${item.title}</a></li>`
+                    `
+                    <li class="ne-recent-post-item valign-center">
+                        <a href="${item.permalink}">
+                            <img src="${item.image}" alt="${item.title}">
+                        </a>
+                        <div class="ne-recent-post-item__details">
+                            <a class="ne-recent-post-item__title-link" href="${
+                              item.permalink
+                            }">
+                                <h4 class="ne-recent-post-item__title">${
+                                  item.title
+                                }</h4>
+                            </a>
+                            <p class="ne-recent-post-item__date">${"category"}</p>
+                        </div>
+                    </li>
+                    `
                 )
                 .join("")}
             ${results.alimentos.length ? "</ul>" : ""}
           </div>
+
           <div>
             <h2 class="search-overlay__section-title">Nutrientes</h2>
             ${
@@ -153,11 +191,28 @@ class Search {
               ${results.nutrientes
                 .map(
                   item =>
-                    `<li><a href="${item.permalink}">${item.title}</a></li>`
+                    `
+                    <li class="ne-recent-post-item valign-center">
+                        <a href="${item.permalink}">
+                            <img src="${item.image}" alt="${item.title}">
+                        </a>
+                        <div class="ne-recent-post-item__details">
+                            <a class="ne-recent-post-item__title-link" href="${
+                              item.permalink
+                            }">
+                                <h4 class="ne-recent-post-item__title">${
+                                  item.title
+                                }</h4>
+                            </a>
+                            <p class="ne-recent-post-item__date">${"category"}</p>
+                        </div>
+                    </li>
+                    `
                 )
                 .join("")}
             ${results.nutrientes.length ? "</ul>" : ""}
           </div>
+
         </div>
       `);
         this.isSpinnerVisible = false;

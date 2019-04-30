@@ -28,21 +28,25 @@ function neSearchResults($data) {
         if (get_post_type() == 'post') {
             array_push($results['artigos'], array(
                 'title' => get_the_title(),
-                'permalink' => get_the_permalink()
+                'permalink' => get_the_permalink(),
+                'image' => get_the_post_thumbnail_url(0, 'thumbnail'),
+                'date' => get_the_time('j \d\e F, Y')
             ));
         }
 
         if (get_post_type() == 'alimento') {
             array_push($results['alimentos'], array(
                 'title' => get_the_title(),
-                'permalink' => get_the_permalink()
+                'permalink' => get_the_permalink(),
+                'image' => get_the_post_thumbnail_url(0, 'thumbnail')
             ));
         }
 
         if (get_post_type() == 'nutriente') {
             array_push($results['nutrientes'], array(
                 'title' => get_the_title(),
-                'permalink' => get_the_permalink()
+                'permalink' => get_the_permalink(),
+                'image' => get_the_post_thumbnail_url(0, 'thumbnail')
             ));
         }
     }
