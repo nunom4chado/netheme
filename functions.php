@@ -50,6 +50,10 @@ function ne_files() {
     wp_enqueue_script('google-charts_js', '//www.gstatic.com/charts/loader.js', NULL, '1.0', true);
     wp_enqueue_script('jquery3_js', '//code.jquery.com/jquery-3.4.0.min.js', NULL, '1.0', true);
     wp_enqueue_script('main_js', get_theme_file_uri('js/main.js'), array('jquery3_js'), microtime(), true);
+
+    wp_localize_script('main_js', 'neData', array(
+        'root_url' => get_site_url()
+    ));
     
     // Styles
     wp_enqueue_style('font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:300,400,600,700');

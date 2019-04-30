@@ -60,6 +60,8 @@ var neOffcanvasMenu = new OffcanvasMenu();
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 class Search {
   constructor() {
+    // addSearchHTML method needs to be first here so jquery can access the elements
+    this.addSearchHTML();
     this.resultsDiv = $("#search-overlay__results");
     this.openButton = $("#icon-search");
     this.closeButton = $(".search-overlay__close");
@@ -90,7 +92,7 @@ class Search {
           this.resultsDiv.html('<div class="spinner-loader"></div>');
           this.isSpinnerVisible = true;
         }
-        this.typingTimer = setTimeout(this.getResults.bind(this), 1000);
+        this.typingTimer = setTimeout(this.getResults.bind(this), 650);
       } else {
         this.resultsDiv.html("");
         this.isSpinnerVisible = false;
@@ -101,8 +103,7 @@ class Search {
 
   getResults() {
     $.getJSON(
-      "http://netheme.local/wp-json/wp/v2/posts?search=" +
-        this.searchField.val(),
+      neData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val(),
       posts => {
         this.resultsDiv.html(`
           <h2 class="search-overlay__section-title">Artigos</h2>
@@ -137,6 +138,8 @@ class Search {
   openOverlay() {
     this.searchOverlay.addClass("search-overlay--active");
     $("body").addClass("body-no-scroll");
+    this.searchField.val("");
+    setTimeout(() => this.searchField.focus(), 301);
     this.isOverlayOpen = true;
   }
 
@@ -144,6 +147,23 @@ class Search {
     this.searchOverlay.removeClass("search-overlay--active");
     $("body").removeClass("body-no-scroll");
     this.isOverlayOpen = false;
+  }
+
+  addSearchHTML() {
+    $("body").append(`
+      <div class="search-overlay">
+        <div class="search-overlay__top">
+          <div class="search-overlay__inner">
+            <i class="icon-magnifier search-overlay__icon" aria-hidden="true"></i>
+            <input type="text" id="search-term" class="search-term" placeholder="O que procura?">
+            <i class="icon-close search-overlay__close" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="search-overlay__inner">
+          <div id="search-overlay__results"></div>
+        </div>
+      </div>
+    `);
   }
 }
 
