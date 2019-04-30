@@ -103,19 +103,63 @@ class Search {
 
   getResults() {
     $.getJSON(
-      neData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val(),
-      posts => {
+      neData.root_url + "/wp-json/ne/v1/search?term=" + this.searchField.val(),
+      results => {
         this.resultsDiv.html(`
-          <h2 class="search-overlay__section-title">Artigos</h2>
-          ${posts.length ? '<ul class="list-min">' : "<p>Sem resultados.</p>"}
-            ${posts
-              .map(
-                item =>
-                  `<li><a href="${item.link}">${item.title.rendered}</a></li>`
-              )
-              .join("")}
-          ${posts.length ? "</ul>" : ""}
-        `);
+        <div class="search-overlay__results-inner">
+          <div>
+            <h2 class="search-overlay__section-title">Artigos</h2>
+            ${
+              results.artigos.length
+                ? '<ul class="list-min">'
+                : `<p class='search-overlay__no-results'>Sem resultados. <a href='${
+                    neData.root_url
+                  }/blog'>Ver todos os Artigos</a></p>`
+            }
+              ${results.artigos
+                .map(
+                  item =>
+                    `<li><a href="${item.permalink}">${item.title}</a></li>`
+                )
+                .join("")}
+            ${results.artigos.length ? "</ul>" : ""}
+          </div>
+          <div>
+            <h2 class="search-overlay__section-title">Alimentos</h2>
+            ${
+              results.alimentos.length
+                ? '<ul class="list-min">'
+                : `<p class='search-overlay__no-results'>Sem resultados. <a href='${
+                    neData.root_url
+                  }/alimentos'>Ver todos os Alimentos</a></p>`
+            }
+              ${results.alimentos
+                .map(
+                  item =>
+                    `<li><a href="${item.permalink}">${item.title}</a></li>`
+                )
+                .join("")}
+            ${results.alimentos.length ? "</ul>" : ""}
+          </div>
+          <div>
+            <h2 class="search-overlay__section-title">Nutrientes</h2>
+            ${
+              results.nutrientes.length
+                ? '<ul class="list-min">'
+                : `<p class='search-overlay__no-results'>Sem resultados. <a href='${
+                    neData.root_url
+                  }/nutrientes'>Ver todos os Nutrientes</a></p>`
+            }
+              ${results.nutrientes
+                .map(
+                  item =>
+                    `<li><a href="${item.permalink}">${item.title}</a></li>`
+                )
+                .join("")}
+            ${results.nutrientes.length ? "</ul>" : ""}
+          </div>
+        </div>
+      `);
         this.isSpinnerVisible = false;
       }
     );
@@ -160,7 +204,7 @@ class Search {
           </div>
         </div>
         <div class="search-overlay__inner">
-          <div id="search-overlay__results"></div>
+          <div id="search-overlay__results" class="search-overlay__results"></div>
         </div>
       </div>
     `);

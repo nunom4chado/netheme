@@ -1,5 +1,7 @@
 <?php
 
+require get_theme_file_path('inc/search-route.php');
+
 // Post Categories Widget
 function ne_posts_categories() {
     $categories = get_categories();
@@ -42,6 +44,15 @@ function ne_recent_posts($args = NULL) {
         </div>
     <?php } wp_reset_postdata();
 }
+
+// NE CUSTOM REST
+function ne_custom_rest() {
+    register_rest_field('post', 'authorName', array(
+        'get_callback' => function() { return get_the_author(); }
+    ));
+}
+
+add_action('rest_api_init', 'ne_custom_rest');
 
 function ne_files() {
 
