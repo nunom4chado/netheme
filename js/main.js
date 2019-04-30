@@ -106,15 +106,16 @@ class Search {
       posts => {
         this.resultsDiv.html(`
           <h2 class="search-overlay__section-title">Artigos</h2>
-          <ul class="list-min">
+          ${posts.length ? '<ul class="list-min">' : "<p>Sem resultados.</p>"}
             ${posts
               .map(
                 item =>
                   `<li><a href="${item.link}">${item.title.rendered}</a></li>`
               )
               .join("")}
-          </ul>
+          ${posts.length ? "</ul>" : ""}
         `);
+        this.isSpinnerVisible = false;
       }
     );
   }
