@@ -44,11 +44,44 @@ function neSearchResults($data) {
 
         if (get_post_type() == 'nutriente') {
             array_push($results['nutrientes'], array(
+                'id' => get_the_id(),
                 'title' => get_the_title(),
                 'permalink' => get_the_permalink(),
                 'image' => get_the_post_thumbnail_url(0, 'thumbnail')
             ));
         }
+    }
+
+    if ($results['nutrientes']) {
+
+        $nutrienteMetaQuery = array('relation' => 'OR');
+
+        foreach($results['nutrientes'] as $item) {
+            array_push($nutrienteMetaQuery, array(
+                'key' => 'nutrientes_principais',
+                'compare' => 'LIKE',
+                'value' => '"' . $item['id'] . '"'
+            ));
+        }
+
+        $nutrienteRelationshipQuery = new WP_Query(array(
+            'post_type' => 'alimento',
+            'meta_query' => $nutrienteMetaQuery
+        ));
+
+        while ($nutrienteRelationshipQuery->have_posts()) {
+            $nutrienteRelationshipQuery->the_post();
+
+            if (get_post_type() == 'alimento') {
+                array_push($results['alimentos'], array(
+                    'title' => get_the_title(),
+                    'permalink' => get_the_permalink(),
+                    'image' => get_the_post_thumbnail_url(0, 'thumbnail')
+                ));
+            }
+        }
+
+        $results['alimentos'] = array_values(array_unique($results['alimentos'], SORT_REGULAR));
     }
 
     return $results;
