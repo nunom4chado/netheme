@@ -124,3 +124,9 @@ add_action('login_enqueue_scripts', 'neLoginCSS');
 function neLoginCSS() {
     wp_enqueue_style('main_css', get_stylesheet_uri(), NULL, microtime());
 }
+
+add_filter('login_headertitle', 'neLoginTitle');
+
+function neLoginTitle() {
+    return get_bloginfo("name");
+}
