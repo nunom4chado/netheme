@@ -112,19 +112,22 @@ add_filter( 'the_content', 'ccd_fancybox_image_attribute' );
 
 
 
-// Customize Login Screen
+// Change link on login img from wordpress site to our site root
 add_filter('login_headerurl', 'neHeaderUrl');
 
 function neHeaderUrl() {
     return esc_url(site_url('/'));
 }
 
+// Load our css file to be able to change elements on login page
 add_action('login_enqueue_scripts', 'neLoginCSS');
 
 function neLoginCSS() {
     wp_enqueue_style('main_css', get_stylesheet_uri(), NULL, microtime());
 }
 
+
+// Change Powered by Worpress title in login img to Site Name
 add_filter('login_headertitle', 'neLoginTitle');
 
 function neLoginTitle() {
