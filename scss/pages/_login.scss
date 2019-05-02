@@ -1,0 +1,49 @@
+.login-action-login {
+    background: url(img/foodPattern.png), linear-gradient(to right, #4ab877, #a9dd81);;
+
+    // focus color on inputs
+    input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime-local]:focus, input[type=datetime]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, input[type=password]:focus, input[type=radio]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, select:focus, textarea:focus {
+        border-color: $primary-color-dark;
+        box-shadow: 0 0 2px rgba(74,184,119,.8);
+        outline: 2px solid transparent;
+    }
+
+    .button-primary.focus, .button-primary:focus {
+        box-shadow: 0 0 2px rgba(74,184,119,.8);
+    }
+
+    a:focus {
+        box-shadow: 0 0 2px $text-color;
+    }
+}
+
+// login image
+.login h1 a {
+    background-image: url('img/imgtemp.png');
+    background-size: 100%;
+    width: 100%;
+}
+
+// log in button
+.wp-core-ui .button-primary {
+    background: #4ab877;
+    border-color: #45ad6f;
+    box-shadow: 0 1px 0 #45ad6f;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #45ad6f, 1px 0 1px #45ad6f, 0 1px 1px #45ad6f, -1px 0 1px #45ad6f;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    background: #45ad6f;
+    border-color: $primary-color-dark;
+    color: #fff;
+}
+
+// bottom links
+.login #backtoblog a, .login #nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+    color: $text-color;
+}

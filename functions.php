@@ -109,3 +109,18 @@ function ccd_fancybox_image_attribute( $content ) {
        return $content;
 }
 add_filter( 'the_content', 'ccd_fancybox_image_attribute' );
+
+
+
+// Customize Login Screen
+add_filter('login_headerurl', 'neHeaderUrl');
+
+function neHeaderUrl() {
+    return esc_url(site_url('/'));
+}
+
+add_action('login_enqueue_scripts', 'neLoginCSS');
+
+function neLoginCSS() {
+    wp_enqueue_style('main_css', get_stylesheet_uri(), NULL, microtime());
+}
