@@ -13,8 +13,8 @@
             </div>
             <div class="section-normal breadcrumb-container">
                 <div class="ne-breadcrumbs ne-breadcrumbs__nutriente">
-                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-nutriente" href="<?php echo site_url(); ?>">Home</a>
-                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-nutriente" href="<?php echo site_url('nutrientes'); ?>">Nutrientes</a>
+                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-nutriente" href="<?php echo esc_url(site_url()); ?>">Home</a>
+                    <a class="ne-breadcrumbs__link ne-breadcrumbs__link-nutriente" href="<?php echo esc_url(site_url('nutrientes')); ?>">Nutrientes</a>
                     <span class="ne-breadcrumbs__current"><?php the_title(); ?></span>
                 </div>
             </div>

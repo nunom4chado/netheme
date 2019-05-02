@@ -20,7 +20,7 @@
     <header class="navbar">
         <div class="navbar__inner">
             <div class="navbar__brand">
-                <a href="<?php echo site_url() ?>">
+                <a href="<?php echo esc_url(site_url()) ?>">
                     <img
                         class="navbar__logo"
                         src="https://sunlightmedia.org/wp-content/uploads/2018/06/node-sass-1-680x510.png"

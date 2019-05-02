@@ -10,7 +10,7 @@
       </div>
       <div class="section-normal breadcrumb-container">
         <div class="ne-breadcrumbs ne-breadcrumbs__alimento">
-            <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo site_url(); ?>">Home</a>
+            <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo esc_url(site_url()); ?>">Home</a>
             <span class="ne-breadcrumbs__current">Alimentos</span>
         </div>
       </div>
