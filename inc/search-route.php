@@ -35,6 +35,19 @@ function neSearchResults($data) {
         }
 
         if (get_post_type() == 'alimento') {
+            $nutrientesPrincipais = get_field('nutrientes_principais');
+
+            if ($nutrientesPrincipais) {
+                foreach($nutrientesPrincipais as $nutriente) {
+                    array_push($results['nutrientes'], array(
+                        'id' => get_the_id($nutriente),
+                        'title' => get_the_title($nutriente),
+                        'permalink' => get_the_permalink($nutriente),
+                        'image' => get_the_post_thumbnail_url($nutriente, 'thumbnail')
+                    ));
+                }
+            }
+
             array_push($results['alimentos'], array(
                 'title' => get_the_title(),
                 'permalink' => get_the_permalink(),
@@ -82,6 +95,7 @@ function neSearchResults($data) {
         }
 
         $results['alimentos'] = array_values(array_unique($results['alimentos'], SORT_REGULAR));
+        $results['nutrientes'] = array_values(array_unique($results['nutrientes'], SORT_REGULAR));
     }
 
     return $results;
