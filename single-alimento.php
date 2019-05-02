@@ -31,7 +31,7 @@
                             ?>
                             <p>sazonalidade</p>
                             <?php the_field('sazonalidade'); ?>
-                            <div class="ne-blog-post__content"><?php the_content(); ?></div>
+                            <div class="ne-blog-post__content"><?php the_field('conteudo_principal'); ?></div>
                         </article>
 
                     </div> <!-- /.column-with-sidebar__main -->

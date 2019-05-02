@@ -29,7 +29,7 @@
                                     the_post_thumbnail();
                                 } 
                             ?>
-                            <div class="ne-blog-post__content"><?php the_content(); ?></div>
+                            <div class="ne-blog-post__content"><?php the_field('conteudo_principal'); ?></div>
                             <?php
                                 
                                 $foodsWithNutrient = new WP_Query(array(
