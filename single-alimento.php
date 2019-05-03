@@ -32,6 +32,87 @@
                             <p>sazonalidade</p>
                             <?php the_field('sazonalidade'); ?>
                             <div class="ne-blog-post__content"><?php the_field('conteudo_principal'); ?></div>
+
+                            <!-- FOOD NUTTRITION TABLE -->
+                            <div class="ne-nutrition-table">
+                                <div class="ne-nutrition-table__main-header">
+                                    <div>
+                                        <h2>Tabela Nutricional</h2>
+                                        <p>Valores por 100g</p>
+                                    </div>
+                                    <div>
+                                    <form onsubmit="myFunction()">
+                                        por grama: <input type="text" name="fname" value="100">
+                                        <input type="submit" value="Submit">
+                                    </form>
+                                    </div>
+                                </div>
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="item-1" type="checkbox" class="ne-hide-input" name="ne-nt-input" checked>
+                                    <label for="item-1" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="aspect-content">
+                                        <p class="ne_nutrition-table-tab__header-name">Proteínas</p>
+                                        <div class="ne_nutrition-table-tab__total-quantities">
+                                        <span>7.5</span>
+                                        <span>gr</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="aspect-tab-content">
+                                        <div class="sentiment-wrapper">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="item-2" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="item-2" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="aspect-content">
+                                        <p class="ne_nutrition-table-tab__header-name">Lípidos</p>
+                                        <div class="ne_nutrition-table-tab__total-quantities">
+                                        <span>7.5</span>
+                                        <span>gr</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="aspect-tab-content">
+                                        <div class="sentiment-wrapper">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="item-3" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="item-3" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="aspect-content">
+                                        <p class="ne_nutrition-table-tab__header-name">Hidratos de Carbono</p>
+                                        <div class="ne_nutrition-table-tab__total-quantities">
+                                        <span>7.5</span>
+                                        <span>gr</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="aspect-tab-content">
+                                        <div class="sentiment-wrapper">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </article>
 
                     </div> <!-- /.column-with-sidebar__main -->
