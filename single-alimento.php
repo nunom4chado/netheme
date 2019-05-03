@@ -36,16 +36,18 @@
                             <!-- FOOD NUTTRITION TABLE -->
                             <div class="ne-nutrition-table">
                                 <div class="ne-nutrition-table__main-header">
-                                    <div>
+                                    <div class="ne-nutrition-table__main-header-title">
                                         <h2>Tabela Nutricional</h2>
                                         <p>Valores por 100g</p>
                                     </div>
-                                    <div>
                                     <form onsubmit="myFunction()">
-                                        por grama: <input type="text" name="fname" value="100">
-                                        <input type="submit" value="Submit">
+                                        <label for="change-grams">Ajustar valores <span>(em grama):</span></label>
+                                        
+                                        <div class="form-group">
+                                            <input id="change-grams" type="number" name="fname" value="100">
+                                            <input type="submit" value="Ok">
+                                        </div>
                                     </form>
-                                    </div>
                                 </div>
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
@@ -53,17 +55,17 @@
                                     <label for="item-1" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="aspect-content">
+                                    <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Proteínas</p>
-                                        <div class="ne_nutrition-table-tab__total-quantities">
+                                        <div class="ne_nutrition-table-tab__header-quantities">
                                         <span>7.5</span>
                                         <span>gr</span>
                                         </div>
                                     </div>
                                     
                                     <!-- Tab Content -->
-                                    <div class="aspect-tab-content">
-                                        <div class="sentiment-wrapper">
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
                                         </div>
                                     </div>
@@ -74,17 +76,17 @@
                                     <label for="item-2" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="aspect-content">
+                                    <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Lípidos</p>
-                                        <div class="ne_nutrition-table-tab__total-quantities">
+                                        <div class="ne_nutrition-table-tab__header-quantities">
                                         <span>7.5</span>
                                         <span>gr</span>
                                         </div>
                                     </div>
                                     
                                     <!-- Tab Content -->
-                                    <div class="aspect-tab-content">
-                                        <div class="sentiment-wrapper">
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
                                         </div>
                                     </div>
@@ -95,17 +97,17 @@
                                     <label for="item-3" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="aspect-content">
+                                    <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Hidratos de Carbono</p>
-                                        <div class="ne_nutrition-table-tab__total-quantities">
+                                        <div class="ne_nutrition-table-tab__header-quantities">
                                         <span>7.5</span>
                                         <span>gr</span>
                                         </div>
                                     </div>
                                     
                                     <!-- Tab Content -->
-                                    <div class="aspect-tab-content">
-                                        <div class="sentiment-wrapper">
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
                                         </div>
                                     </div>
