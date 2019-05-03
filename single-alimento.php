@@ -66,7 +66,35 @@
                                     <!-- Tab Content -->
                                     <div class="ne_nutrition-table-tab__content">
                                         <div class="ne_nutrition-table-tab__content-container">
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
+
+                                            <table class="ne-inner-table">
+                                                <tr>
+                                                    <th>Proteína</th>
+                                                    <th>1,2 g</th>
+                                                    <th>2% (DDR)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Triptofano</td>
+                                                    <td>13,9 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Treonina</td>
+                                                    <td>33,6 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isoleucina</td>
+                                                    <td>36,0 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Leucina</td>
+                                                    <td>53,4 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                    
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +115,38 @@
                                     <!-- Tab Content -->
                                     <div class="ne_nutrition-table-tab__content">
                                         <div class="ne_nutrition-table-tab__content-container">
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
+
+
+                                            <table class="ne-inner-table">
+                                                <tr>
+                                                    <th>Proteína</th>
+                                                    <th>1,2 g</th>
+                                                    <th>2% (DDR)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Triptofano</td>
+                                                    <td>13,9 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Treonina</td>
+                                                    <td>33,6 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isoleucina</td>
+                                                    <td>36,0 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Leucina</td>
+                                                    <td>53,4 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+
+                                    
+                                    
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +167,35 @@
                                     <!-- Tab Content -->
                                     <div class="ne_nutrition-table-tab__content">
                                         <div class="ne_nutrition-table-tab__content-container">
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa, iusto autem eum modi enim nam provident, illo at delectus, dignissimos laborum. Quos saepe optio ab fugiat, quo facere id.</p>
+
+                                            <table class="ne-inner-table">
+                                                <tr>
+                                                    <th>Proteína</th>
+                                                    <th>1,2 g</th>
+                                                    <th>2% (DDR)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Triptofano</td>
+                                                    <td>13,9 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Treonina</td>
+                                                    <td>33,6 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isoleucina</td>
+                                                    <td>36,0 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Leucina</td>
+                                                    <td>53,4 mg</td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+
                                         </div>
                                     </div>
                                 </div>

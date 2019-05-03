@@ -126,6 +126,57 @@
 
     &-container {
         padding: 20px 44px 20px;
-    font-size: .8rem;
+        font-size: .8rem;
     }
 }
+
+
+
+
+.ne-inner-table {
+    border-collapse: collapse;
+    width: 100%;
+    
+    // Make Table responsible with Flexbox
+    tr {
+      display: flex;
+      flex: auto;
+      
+      th:nth-of-type(1),
+      td:nth-of-type(1) {
+        flex: 1;
+      }
+      
+      th,
+      td {
+        flex-basis: 10%;
+        min-width: 95px;
+      }
+    }
+    
+    // Cell Padding
+    td,
+    th {
+      padding: .8rem;
+    }
+    
+    // Paint odd rows
+    tr:nth-child(even){
+      //background-color: #f1f1f1;
+      border-top: 1px solid #e9e9e9;
+      border-bottom: 1px solid #e9e9e9;
+    }
+    // Hover Row Color
+    tr:hover {
+      background-color: #e3efe8;
+    }
+    
+    // Table Header
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      //background-color: #4ab877;
+      //color: white;
+    }
+  }
