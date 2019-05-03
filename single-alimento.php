@@ -41,7 +41,7 @@
                                         <p>Valores por 100g</p>
                                     </div>
                                     <form onsubmit="myFunction()">
-                                        <label for="change-grams">Ajustar valores <span>(em grama):</span></label>
+                                        <label for="change-grams">Recalcular valores <span>(g):</span></label>
                                         
                                         <div class="form-group">
                                             <input id="change-grams" type="number" name="fname" value="100">
