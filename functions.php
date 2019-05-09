@@ -54,6 +54,22 @@ function ne_custom_rest() {
 
 add_action('rest_api_init', 'ne_custom_rest');
 
+
+
+// ACF ADMIN STYLES
+function acf_admin_styles() {
+	
+	// register style
+    wp_register_style( 'acf-admin-css', get_stylesheet_directory_uri() . '/css/acf-admin-styles.css', false, '1.0.0' );
+    wp_enqueue_style( 'acf-admin-css' );
+    
+}
+
+add_action( 'acf/input/admin_enqueue_scripts', 'acf_admin_styles' );
+
+
+
+// THEME STYLES AND SCRIPTS
 function ne_files() {
 
     wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), '1.0', true);
@@ -133,3 +149,4 @@ add_filter('login_headertitle', 'neLoginTitle');
 function neLoginTitle() {
     return get_bloginfo("name");
 }
+

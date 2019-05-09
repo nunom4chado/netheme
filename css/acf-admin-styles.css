@@ -1,0 +1,36 @@
+/* SIMPLIFY GROUP INPUTS 
+    -> USE CLASS .acf-group-min IN INPUT GROUPS
+*/
+.acf-group-min {
+    max-width: 500px;
+}
+.acf-group-min .acf-field .acf-label {
+    margin: 0;
+}
+.acf-group-min .acf-fields.-border {
+    border: none;
+}
+.acf-group-min .acf-fields.-left>.acf-field {
+    padding: 10px 0;
+}
+.acf-group-min .acf-fields.-left>.acf-field:before {
+    display: none;
+}
+.acf-group-min .acf-fields.-left>.acf-field {
+    display: flex;
+}
+.acf-group-min .acf-fields.-left>.acf-field>.acf-label {
+    width: 60%;
+}
+.acf-group-min .acf-fields.-left>.acf-field>.acf-input {
+    max-width: 40%;
+    min-width: 100px;
+}
+
+/* USE .nt-sub-cat CLASS IN INPUTS TO DEFINE AS SUBCATEGORY */
+.acf-group-min .acf-fields.-left>.nt-sub-cat>.acf-label {
+    padding-left: 30px;
+}
+.acf-group-min .acf-fields.-left>.nt-sub-2-cat>.acf-label {
+    padding-left: 60px;
+}
