@@ -46,7 +46,7 @@
                 </div><!-- /.column-with-sidebar__main -->
 
                 <aside class="column-with-sidebar__sidebar">
-                    <img src="https://nutrienteessencial.pt/wp-content/uploads/2019/03/AD.jpg" alt="custom ad">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
                     
                     <section class="ne-aside__container">
                         <h3 class="ne-aside__title">Artigos Recentes</h3>
