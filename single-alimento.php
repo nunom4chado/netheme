@@ -61,7 +61,7 @@
                                     
                                     <!-- Tab Header -->
                                     <div class="ne_nutrition-table-tab__header">
-                                        <p class="ne_nutrition-table-tab__header-name">Calorias</p>
+                                        <p class="ne_nutrition-table-tab__header-name">Energia</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
                                             <span><?php the_field('calorias'); ?></span>
                                             <span>kcal</span>
@@ -74,7 +74,7 @@
 
                                             <table class="ne-inner-table">
                                                 <tr>
-                                                    <th>Calorias</th>
+                                                    <th>Energia</th>
                                                     <th><?php the_field('calorias'); ?> kcal</th>
                                                     <th>2% (DDR)</th>
                                                 </tr>
@@ -210,6 +210,17 @@
                                                         }
                                                         endwhile;
                                                     endif;
+
+                                                    // Colesterol
+
+                                                    if (get_field('colesterol')) { ?>
+                                                        <tr>
+                                                            <td>Colesterol</td>
+                                                            <td><?php the_field('colesterol'); ?> mg</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    <?php }
+                                            
                                                 ?>
 
                                             </table>
@@ -368,6 +379,56 @@
                                                         endwhile;
                                                     endif;
                                                 ?>
+
+                                            </table>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 
+                                    // Outros ------------
+                                -->
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="outros-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="outros-table" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="ne_nutrition-table-tab__header">
+                                        <p class="ne_nutrition-table-tab__header-name">Outros</p>
+                                        <div class="ne_nutrition-table-tab__header-quantities">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
+
+
+                                            <table class="ne-inner-table">
+                                            
+                                            <?php 
+
+                                                if( have_rows('outros_grupo') ):
+                                                    while( have_rows('outros_grupo') ): the_row();
+                                                    if( $subfields = get_row() ) { ?>
+                                                        
+                                                        <?php
+                                                        foreach ($subfields as $key => $value) {
+                                                            if ( !empty($value) ) { 
+                                                                $field = get_sub_field_object( $key );?>
+                                                                <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <td><?php echo esc_html($field['label']); ?></td>
+                                                                    <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            <?php }
+                                                        } 
+                                                    }
+                                                    endwhile;
+                                                endif;
+                                            ?>
 
                                             </table>
                                     
