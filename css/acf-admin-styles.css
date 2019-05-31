@@ -27,6 +27,20 @@
     min-width: 100px;
 }
 
+/* style total calories, proteins, and carbohydrates */
+.acf-field-number.acf-group-min {
+    display: flex;
+}
+.acf-field-number.acf-group-min .acf-label {
+    width: 60%;
+    padding: 0 12px;
+}
+.acf-field-number.acf-group-min .acf-input {
+    max-width: 40%;
+    min-width: 100px;
+    padding: 0 12px;
+}
+
 /* USE .nt-sub-cat CLASS IN INPUTS TO DEFINE AS SUBCATEGORY */
 .acf-group-min .acf-fields.-left>.nt-sub-cat>.acf-label {
     padding-left: 30px;

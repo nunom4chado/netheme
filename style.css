@@ -1510,6 +1510,10 @@ a:focus {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left; }
+  .ne-inner-table .nt-sub-cat {
+    padding-left: 1rem; }
+  .ne-inner-table .nt-sub-2-cat {
+    padding-left: 2rem; }
 
 .logged-in .navbar {
   top: 32px; }

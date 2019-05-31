@@ -33,33 +33,38 @@
                             <?php the_field('sazonalidade'); ?>
                             <div class="ne-blog-post__content"><?php the_field('conteudo_principal'); ?></div>
 
-                            <!-- FOOD NUTTRITION TABLE -->
+                            <!-- 
+                                // --------------------------------------
+                                // FOOD NUTTRITION TABLE
+                                // --------------------------------------
+                            -->
                             <div class="ne-nutrition-table">
                                 <div class="ne-nutrition-table__main-header">
                                     <div class="ne-nutrition-table__main-header-title">
                                         <h2>Tabela Nutricional</h2>
-                                        <p>Valores por 100g</p>
+                                        <p>Valores por <span id="grams-based-val">100</span>g</p>
                                     </div>
-                                    <form onsubmit="myFunction()">
-                                        <label for="change-grams">Recalcular valores <span>(g):</span></label>
                                         
-                                        <div class="form-group">
-                                            <input id="change-grams" type="number" name="fname" value="100">
-                                            <input type="submit" value="Ok">
-                                        </div>
-                                    </form>
+                                    <div class="form-group">
+                                        <label for="change-grams">Recalcular valores <span>(g):</span></label>
+                                        <input id="change-grams" type="number" min="1">
+                                    </div>
                                 </div>
+
+                                <!-- 
+                                    // Calorias ------------
+                                -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="item-1" type="checkbox" class="ne-hide-input" name="ne-nt-input" checked>
-                                    <label for="item-1" class="ne-nt-input-label"></label>
+                                    <input id="calories-table" type="checkbox" class="ne-hide-input" name="ne-nt-input" checked>
+                                    <label for="calories-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
                                     <div class="ne_nutrition-table-tab__header">
-                                        <p class="ne_nutrition-table-tab__header-name">Proteínas</p>
+                                        <p class="ne_nutrition-table-tab__header-name">Calorias</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
-                                        <span>7.5</span>
-                                        <span>gr</span>
+                                            <span><?php the_field('calorias'); ?></span>
+                                            <span>kcal</span>
                                         </div>
                                     </div>
                                     
@@ -69,98 +74,52 @@
 
                                             <table class="ne-inner-table">
                                                 <tr>
-                                                    <th>Proteína</th>
-                                                    <th>1,2 g</th>
+                                                    <th>Calorias</th>
+                                                    <th><?php the_field('calorias'); ?> kcal</th>
                                                     <th>2% (DDR)</th>
                                                 </tr>
-                                                <tr>
-                                                    <td>Triptofano</td>
-                                                    <td>13,9 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Treonina</td>
-                                                    <td>33,6 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Isoleucina</td>
-                                                    <td>36,0 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Leucina</td>
-                                                    <td>53,4 mg</td>
-                                                    <td></td>
-                                                </tr>
+
+                                                <?php 
+
+                                                    if( have_rows('calorias_grupo') ):
+                                                        while( have_rows('calorias_grupo') ): the_row();
+                                                        if( $subfields = get_row() ) { ?>
+                                                            
+                                                            <?php
+                                                            foreach ($subfields as $key => $value) {
+                                                                if ( !empty($value) ) { 
+                                                                    $field = get_sub_field_object( $key );?>
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                        <td><?php echo esc_html($field['label']); ?></td>
+                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                <?php }
+                                                            } 
+                                                        }
+                                                        endwhile;
+                                                    endif;
+                                                ?>
+
                                             </table>
-                                    
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- 
+                                    // Hidratos de Carbono ------------
+                                -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="item-2" type="checkbox" class="ne-hide-input" name="ne-nt-input">
-                                    <label for="item-2" class="ne-nt-input-label"></label>
-                                    
-                                    <!-- Tab Header -->
-                                    <div class="ne_nutrition-table-tab__header">
-                                        <p class="ne_nutrition-table-tab__header-name">Lípidos</p>
-                                        <div class="ne_nutrition-table-tab__header-quantities">
-                                        <span>7.5</span>
-                                        <span>gr</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Tab Content -->
-                                    <div class="ne_nutrition-table-tab__content">
-                                        <div class="ne_nutrition-table-tab__content-container">
-
-
-                                            <table class="ne-inner-table">
-                                                <tr>
-                                                    <th>Proteína</th>
-                                                    <th>1,2 g</th>
-                                                    <th>2% (DDR)</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>Triptofano</td>
-                                                    <td>13,9 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Treonina</td>
-                                                    <td>33,6 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Isoleucina</td>
-                                                    <td>36,0 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Leucina</td>
-                                                    <td>53,4 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                            </table>
-
-                                    
-                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ne-nutrition-table-tab">
-                                    <!-- Hiden Inputs -->
-                                    <input id="item-3" type="checkbox" class="ne-hide-input" name="ne-nt-input">
-                                    <label for="item-3" class="ne-nt-input-label"></label>
+                                    <input id="hc-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="hc-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
                                     <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Hidratos de Carbono</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
-                                        <span>7.5</span>
-                                        <span>gr</span>
+                                            <span><?php the_field('hidratos_carbono'); ?></span>
+                                            <span>g</span>
                                         </div>
                                     </div>
                                     
@@ -170,32 +129,148 @@
 
                                             <table class="ne-inner-table">
                                                 <tr>
-                                                    <th>Proteína</th>
-                                                    <th>1,2 g</th>
+                                                    <th>Hidratos de Carbono</th>
+                                                    <th><?php the_field('hidratos_carbono'); ?> g</th>
                                                     <th>2% (DDR)</th>
                                                 </tr>
-                                                <tr>
-                                                    <td>Triptofano</td>
-                                                    <td>13,9 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Treonina</td>
-                                                    <td>33,6 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Isoleucina</td>
-                                                    <td>36,0 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Leucina</td>
-                                                    <td>53,4 mg</td>
-                                                    <td></td>
-                                                </tr>
-                                            </table>
+                                                
+                                                <?php 
 
+                                                    if( have_rows('hidratos_carbono_grupo') ):
+                                                        while( have_rows('hidratos_carbono_grupo') ): the_row();
+                                                        if( $subfields = get_row() ) { ?>
+                                                            
+                                                            <?php
+                                                            foreach ($subfields as $key => $value) {
+                                                                if ( !empty($value) ) { 
+                                                                    $field = get_sub_field_object( $key );?>
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                        <td><?php echo esc_html($field['label']); ?></td>
+                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                <?php }
+                                                            } 
+                                                        }
+                                                        endwhile;
+                                                    endif;
+                                                ?>
+                                            </table>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 
+                                    // Lípidos ------------
+                                -->
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="lipidos-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="lipidos-table" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="ne_nutrition-table-tab__header">
+                                        <p class="ne_nutrition-table-tab__header-name">Lípidos</p>
+                                        <div class="ne_nutrition-table-tab__header-quantities">
+                                            <span><?php the_field('lipidos'); ?></span>
+                                            <span>g</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
+
+
+                                            <table class="ne-inner-table">
+                                                <tr>
+                                                    <th>Lípidos</th>
+                                                    <th><?php the_field('lipidos'); ?> g</th>
+                                                    <th>2% (DDR)</th>
+                                                </tr>
+                                                
+                                                <?php 
+
+                                                    if( have_rows('lipidos_grupo') ):
+                                                        while( have_rows('lipidos_grupo') ): the_row();
+                                                        if( $subfields = get_row() ) { ?>
+                                                            
+                                                            <?php
+                                                            foreach ($subfields as $key => $value) {
+                                                                if ( !empty($value) ) { 
+                                                                    $field = get_sub_field_object( $key );?>
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                        <td><?php echo esc_html($field['label']); ?></td>
+                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                <?php }
+                                                            } 
+                                                        }
+                                                        endwhile;
+                                                    endif;
+                                                ?>
+
+                                            </table>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 
+                                    // Proteínas ------------
+                                -->
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="proteina-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="proteina-table" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="ne_nutrition-table-tab__header">
+                                        <p class="ne_nutrition-table-tab__header-name">Proteína</p>
+                                        <div class="ne_nutrition-table-tab__header-quantities">
+                                            <span><?php the_field('proteina'); ?></span>
+                                            <span>g</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
+
+
+                                            <table class="ne-inner-table">
+                                                <tr>
+                                                    <th>Proteína</th>
+                                                    <th><?php the_field('proteina'); ?> g</th>
+                                                    <th>2% (DDR)</th>
+                                                </tr>
+                                                
+                                                <?php 
+
+                                                    if( have_rows('proteina_grupo') ):
+                                                        while( have_rows('proteina_grupo') ): the_row();
+                                                        if( $subfields = get_row() ) { ?>
+                                                            
+                                                            <?php
+                                                            foreach ($subfields as $key => $value) {
+                                                                if ( !empty($value) ) { 
+                                                                    $field = get_sub_field_object( $key );?>
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                        <td><?php echo esc_html($field['label']); ?></td>
+                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                <?php }
+                                                            } 
+                                                        }
+                                                        endwhile;
+                                                    endif;
+                                                ?>
+
+                                            </table>
+                                    
                                         </div>
                                     </div>
                                 </div>

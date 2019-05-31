@@ -162,7 +162,6 @@
     
     // Paint odd rows
     tr:nth-child(even){
-      //background-color: #f1f1f1;
       border-top: 1px solid #e9e9e9;
       border-bottom: 1px solid #e9e9e9;
     }
@@ -176,7 +175,13 @@
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      //background-color: #4ab877;
-      //color: white;
+    }
+
+    // Indent Subcategories
+    .nt-sub-cat {
+        padding-left: 1rem;
+    }
+    .nt-sub-2-cat {
+        padding-left: 2rem;
     }
   }
