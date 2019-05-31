@@ -274,7 +274,57 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+                                <!-- 
+                                    // Vitaminas ------------
+                                -->
+                                <div class="ne-nutrition-table-tab">
+                                    <!-- Hiden Inputs -->
+                                    <input id="vitaminas-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <label for="vitaminas-table" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="ne_nutrition-table-tab__header">
+                                        <p class="ne_nutrition-table-tab__header-name">Vitaminas</p>
+                                        <div class="ne_nutrition-table-tab__header-quantities">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
+
+
+                                            <table class="ne-inner-table">
+                                            
+                                                <?php 
+
+                                                    if( have_rows('vitaminas_grupo') ):
+                                                        while( have_rows('vitaminas_grupo') ): the_row();
+                                                        if( $subfields = get_row() ) { ?>
+                                                            
+                                                            <?php
+                                                            foreach ($subfields as $key => $value) {
+                                                                if ( !empty($value) ) { 
+                                                                    $field = get_sub_field_object( $key );?>
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                        <td><?php echo esc_html($field['label']); ?></td>
+                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                <?php }
+                                                            } 
+                                                        }
+                                                        endwhile;
+                                                    endif;
+                                                ?>
+
+                                            </table>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.ne-nutrition-table -->
 
 
                         </article>
