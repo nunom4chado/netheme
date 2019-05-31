@@ -66,6 +66,7 @@
                                             <span><?php the_field('calorias'); ?></span>
                                             <span>kcal</span>
                                         </div>
+                                        <p class="ne_nutrition-table-tab__header-ddr">2% (DDR)</p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -73,11 +74,6 @@
                                         <div class="ne_nutrition-table-tab__content-container">
 
                                             <table class="ne-inner-table">
-                                                <tr>
-                                                    <th>Energia</th>
-                                                    <th><?php the_field('calorias'); ?> kcal</th>
-                                                    <th>2% (DDR)</th>
-                                                </tr>
 
                                                 <?php 
 
@@ -128,11 +124,6 @@
                                         <div class="ne_nutrition-table-tab__content-container">
 
                                             <table class="ne-inner-table">
-                                                <tr>
-                                                    <th>Hidratos de Carbono</th>
-                                                    <th><?php the_field('hidratos_carbono'); ?> g</th>
-                                                    <th>2% (DDR)</th>
-                                                </tr>
                                                 
                                                 <?php 
 
@@ -184,11 +175,6 @@
 
 
                                             <table class="ne-inner-table">
-                                                <tr>
-                                                    <th>Lípidos</th>
-                                                    <th><?php the_field('lipidos'); ?> g</th>
-                                                    <th>2% (DDR)</th>
-                                                </tr>
                                                 
                                                 <?php 
 
@@ -252,11 +238,6 @@
 
 
                                             <table class="ne-inner-table">
-                                                <tr>
-                                                    <th>Proteína</th>
-                                                    <th><?php the_field('proteina'); ?> g</th>
-                                                    <th>2% (DDR)</th>
-                                                </tr>
                                                 
                                                 <?php 
 

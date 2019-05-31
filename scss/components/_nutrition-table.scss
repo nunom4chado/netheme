@@ -56,10 +56,11 @@
 .ne_nutrition-table-tab__header {
     position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 60px;
     margin: 0;
-    padding: 0 87px 0 30px;
+    padding: 0 70px 0 30px;
     cursor: pointer;
     @include user-select();
 
@@ -78,7 +79,7 @@
     }
 
     &-name {
-        width: 75%;
+        width: 60%;
         margin-left: 16px;
         font-weight: 500;
         color: #242a32;
@@ -178,10 +179,7 @@
     }
 
     // Indent Subcategories
-    .nt-sub-cat {
-        padding-left: 1rem;
-    }
     .nt-sub-2-cat {
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
   }

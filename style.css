@@ -1421,10 +1421,11 @@ a:focus {
 .ne_nutrition-table-tab__header {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
   margin: 0;
-  padding: 0 87px 0 30px;
+  padding: 0 70px 0 30px;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -1445,7 +1446,7 @@ a:focus {
     background-position: center;
     transform: rotate(180deg); }
   .ne_nutrition-table-tab__header-name {
-    width: 75%;
+    width: 60%;
     margin-left: 16px;
     font-weight: 500;
     color: #242a32; }
@@ -1510,10 +1511,8 @@ a:focus {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left; }
-  .ne-inner-table .nt-sub-cat {
-    padding-left: 1rem; }
   .ne-inner-table .nt-sub-2-cat {
-    padding-left: 2rem; }
+    padding-left: 1rem; }
 
 .logged-in .navbar {
   top: 32px; }
