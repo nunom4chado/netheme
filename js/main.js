@@ -317,3 +317,88 @@ if (neFoodChart) {
     chart.draw(data, options);
   }
 }
+
+// Rounding function
+function round(value, decimals) {
+  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+}
+
+//
+// NUTRITION TABLE UPDATE VALUES AND DDR
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+class RecalcValues {
+  constructor() {
+    this.inputField = $("#change-grams");
+    this.basedValues = $("#grams-based-val");
+    this.elements = $('.ne-nutrition-table .ne-nutrition-table__element');
+    
+    //Define Base DDR values
+    this.ddr = {
+      "calorias": 2000,
+      "hc": 5,
+      "lp": 3,
+      "pt": 4
+    }
+    
+    // Init Events
+    this.events();
+  }
+  
+  events() {
+    $(window).on("load", this.setDDR.bind(this));
+    this.inputField.on("keyup mouseup", this.updateValues.bind(this));
+  }
+  
+  // methods
+  calculateDDR(nutriVal, nutriBaseDDR) {
+    return Math.round((100 * nutriVal) / nutriBaseDDR);
+  }
+  
+  setDDR() {
+    // Reference Class Scoup to access within each function
+    var classReference = this;
+    
+    this.elements.each(function() {
+      var DDRtype = $(this).data('name');
+      var nutriValue = $(this).data('value');
+      var currentBaseDDR = classReference.ddr[DDRtype];
+      // check if ddr is aplicable
+      if (currentBaseDDR) {
+        var calculatedDDR = classReference.calculateDDR(nutriValue, currentBaseDDR);
+        //console.log(calculatedDDR);
+        $(this).find(".ne-nutrition-table__element-ddr").text(calculatedDDR + "%");
+      }
+    });
+  }
+  
+  updateValues() {
+    var inputVal = this.inputField.val();
+    
+    // If input is empty set default to 100
+    if (inputVal == "") {
+      inputVal = 100;
+    }
+    
+    // Update description "Values based on"
+    this.basedValues.text(inputVal);
+
+    // Reference Class Scoup to access within each function
+    var classReference = this;
+    
+    this.elements.each(function(){
+      var updatedValue = $(this).data('value') * inputVal / 100;
+      $(this).find(".ne-nutrition-table__element-quantity").text(round(updatedValue, 1));
+       
+      var DDRtype = $(this).data('name');
+      var currentBaseDDR = classReference.ddr[DDRtype];
+      // check if ddr is aplicable
+      if (currentBaseDDR) {
+        var calculatedDDR = classReference.calculateDDR(updatedValue, currentBaseDDR);
+        //console.log(calculatedDDR);
+        $(this).find(".ne-nutrition-table__element-ddr").text(calculatedDDR + "%");
+      }
+    });
+  }
+}
+
+var recalcValues = new RecalcValues();
