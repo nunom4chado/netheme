@@ -2,6 +2,28 @@
 
 require get_theme_file_path('inc/search-route.php');
 
+// Nutrition Inner Tables
+function ne_nutrition_table_inner($group) {
+    if( have_rows($group) ):
+        while( have_rows($group) ): the_row();
+        if( $subfields = get_row() ) { ?>
+            
+            <?php
+            foreach ($subfields as $key => $value) {
+                if ( !empty($value) ) { 
+                    $field = get_sub_field_object( $key );?>
+                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
+                        <td><?php echo esc_html($field['label']); ?></td>
+                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                        <td class="ne-nutrition-table__element-ddr"></td>
+                    </tr>
+                <?php }
+            } 
+        }
+        endwhile;
+    endif;
+}
+
 // Post Categories Widget
 function ne_posts_categories() {
     $categories = get_categories();

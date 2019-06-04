@@ -60,13 +60,13 @@
                                     <label for="calories-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="ne_nutrition-table-tab__header">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="calorias" data-value="<?php the_field('calorias'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Energia</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
-                                            <span><?php the_field('calorias'); ?></span>
+                                            <span class="ne-nutrition-table__element-quantity"><?php the_field('calorias'); ?></span>
                                             <span>kcal</span>
                                         </div>
-                                        <p class="ne_nutrition-table-tab__header-ddr">2% (DDR)</p>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -85,16 +85,17 @@
                                                             foreach ($subfields as $key => $value) {
                                                                 if ( !empty($value) ) { 
                                                                     $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                         <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td></td>
+                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td class="ne-nutrition-table__element-ddr"></td>
                                                                     </tr>
                                                                 <?php }
                                                             } 
                                                         }
                                                         endwhile;
                                                     endif;
+
                                                 ?>
 
                                             </table>
@@ -111,12 +112,13 @@
                                     <label for="hc-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="ne_nutrition-table-tab__header">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="hidratos_carbono" data-value="<?php the_field('hidratos_carbono'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Hidratos de Carbono</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
-                                            <span><?php the_field('hidratos_carbono'); ?></span>
+                                            <span class="ne-nutrition-table__element-quantity"><?php the_field('hidratos_carbono'); ?></span>
                                             <span>g</span>
                                         </div>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -135,10 +137,10 @@
                                                             foreach ($subfields as $key => $value) {
                                                                 if ( !empty($value) ) { 
                                                                     $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                         <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td></td>
+                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td class="ne-nutrition-table__element-ddr"></td>
                                                                     </tr>
                                                                 <?php }
                                                             } 
@@ -161,12 +163,13 @@
                                     <label for="lipidos-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="ne_nutrition-table-tab__header">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="lipidos" data-value="<?php the_field('lipidos'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Lípidos</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
-                                            <span><?php the_field('lipidos'); ?></span>
+                                            <span class="ne-nutrition-table__element-quantity"><?php the_field('lipidos'); ?></span>
                                             <span>g</span>
                                         </div>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -186,10 +189,10 @@
                                                             foreach ($subfields as $key => $value) {
                                                                 if ( !empty($value) ) { 
                                                                     $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                         <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td></td>
+                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td class="ne-nutrition-table__element-ddr"></td>
                                                                     </tr>
                                                                 <?php }
                                                             } 
@@ -200,10 +203,10 @@
                                                     // Colesterol
 
                                                     if (get_field('colesterol')) { ?>
-                                                        <tr>
+                                                        <tr class="ne-nutrition-table__element" data-name="colesterol" data-value="<?php the_field('colesterol'); ?>">
                                                             <td>Colesterol</td>
-                                                            <td><?php the_field('colesterol'); ?> mg</td>
-                                                            <td></td>
+                                                            <td><span class="ne-nutrition-table__element-quantity"><?php the_field('colesterol'); ?></span> mg</td>
+                                                            <td class="ne-nutrition-table__element-ddr"></td>
                                                         </tr>
                                                     <?php }
                                             
@@ -224,12 +227,13 @@
                                     <label for="proteina-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div class="ne_nutrition-table-tab__header">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="proteina" data-value="<?php the_field('proteina'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Proteína</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
-                                            <span><?php the_field('proteina'); ?></span>
+                                            <span class="ne-nutrition-table__element-quantity"><?php the_field('proteina'); ?></span>
                                             <span>g</span>
                                         </div>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -249,10 +253,10 @@
                                                             foreach ($subfields as $key => $value) {
                                                                 if ( !empty($value) ) { 
                                                                     $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                         <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td></td>
+                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td class="ne-nutrition-table__element-ddr"></td>
                                                                     </tr>
                                                                 <?php }
                                                             } 
@@ -278,8 +282,6 @@
                                     <!-- Tab Header -->
                                     <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Vitaminas</p>
-                                        <div class="ne_nutrition-table-tab__header-quantities">
-                                        </div>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -299,10 +301,10 @@
                                                             foreach ($subfields as $key => $value) {
                                                                 if ( !empty($value) ) { 
                                                                     $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                         <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td></td>
+                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td class="ne-nutrition-table__element-ddr"></td>
                                                                     </tr>
                                                                 <?php }
                                                             } 
@@ -328,8 +330,6 @@
                                     <!-- Tab Header -->
                                     <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Minerais</p>
-                                        <div class="ne_nutrition-table-tab__header-quantities">
-                                        </div>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -349,10 +349,10 @@
                                                             foreach ($subfields as $key => $value) {
                                                                 if ( !empty($value) ) { 
                                                                     $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                         <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td></td>
+                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                        <td class="ne-nutrition-table__element-ddr"></td>
                                                                     </tr>
                                                                 <?php }
                                                             } 
@@ -378,8 +378,6 @@
                                     <!-- Tab Header -->
                                     <div class="ne_nutrition-table-tab__header">
                                         <p class="ne_nutrition-table-tab__header-name">Outros</p>
-                                        <div class="ne_nutrition-table-tab__header-quantities">
-                                        </div>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -399,10 +397,10 @@
                                                         foreach ($subfields as $key => $value) {
                                                             if ( !empty($value) ) { 
                                                                 $field = get_sub_field_object( $key );?>
-                                                                <tr class="<?php echo esc_attr($field['wrapper']['class']); ?>">
+                                                                <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                                                                     <td><?php echo esc_html($field['label']); ?></td>
-                                                                    <td><?php echo esc_html($value); ?> <?php echo esc_html($field['append']); ?></td>
-                                                                    <td></td>
+                                                                    <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
+                                                                    <td class="ne-nutrition-table__element-ddr"></td>
                                                                 </tr>
                                                             <?php }
                                                         } 
