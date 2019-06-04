@@ -75,28 +75,7 @@
 
                                             <table class="ne-inner-table">
 
-                                                <?php 
-
-                                                    if( have_rows('calorias_grupo') ):
-                                                        while( have_rows('calorias_grupo') ): the_row();
-                                                        if( $subfields = get_row() ) { ?>
-                                                            
-                                                            <?php
-                                                            foreach ($subfields as $key => $value) {
-                                                                if ( !empty($value) ) { 
-                                                                    $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                        <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td class="ne-nutrition-table__element-ddr"></td>
-                                                                    </tr>
-                                                                <?php }
-                                                            } 
-                                                        }
-                                                        endwhile;
-                                                    endif;
-
-                                                ?>
+                                                <?php ne_nutrition_table_inner('calorias_grupo'); ?>
 
                                             </table>
                                         </div>
@@ -127,27 +106,8 @@
 
                                             <table class="ne-inner-table">
                                                 
-                                                <?php 
-
-                                                    if( have_rows('hidratos_carbono_grupo') ):
-                                                        while( have_rows('hidratos_carbono_grupo') ): the_row();
-                                                        if( $subfields = get_row() ) { ?>
-                                                            
-                                                            <?php
-                                                            foreach ($subfields as $key => $value) {
-                                                                if ( !empty($value) ) { 
-                                                                    $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                        <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td class="ne-nutrition-table__element-ddr"></td>
-                                                                    </tr>
-                                                                <?php }
-                                                            } 
-                                                        }
-                                                        endwhile;
-                                                    endif;
-                                                ?>
+                                                <?php ne_nutrition_table_inner('hidratos_carbono_grupo'); ?>
+                                                
                                             </table>
                                     
                                         </div>
@@ -179,29 +139,10 @@
 
                                             <table class="ne-inner-table">
                                                 
-                                                <?php 
-
-                                                    if( have_rows('lipidos_grupo') ):
-                                                        while( have_rows('lipidos_grupo') ): the_row();
-                                                        if( $subfields = get_row() ) { ?>
-                                                            
-                                                            <?php
-                                                            foreach ($subfields as $key => $value) {
-                                                                if ( !empty($value) ) { 
-                                                                    $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                        <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td class="ne-nutrition-table__element-ddr"></td>
-                                                                    </tr>
-                                                                <?php }
-                                                            } 
-                                                        }
-                                                        endwhile;
-                                                    endif;
+                                                <?php ne_nutrition_table_inner('lipidos_grupo');
+                                                
 
                                                     // Colesterol
-
                                                     if (get_field('colesterol')) { ?>
                                                         <tr class="ne-nutrition-table__element" data-name="colesterol" data-value="<?php the_field('colesterol'); ?>">
                                                             <td>Colesterol</td>
@@ -243,27 +184,7 @@
 
                                             <table class="ne-inner-table">
                                                 
-                                                <?php 
-
-                                                    if( have_rows('proteina_grupo') ):
-                                                        while( have_rows('proteina_grupo') ): the_row();
-                                                        if( $subfields = get_row() ) { ?>
-                                                            
-                                                            <?php
-                                                            foreach ($subfields as $key => $value) {
-                                                                if ( !empty($value) ) { 
-                                                                    $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                        <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td class="ne-nutrition-table__element-ddr"></td>
-                                                                    </tr>
-                                                                <?php }
-                                                            } 
-                                                        }
-                                                        endwhile;
-                                                    endif;
-                                                ?>
+                                                <?php ne_nutrition_table_inner('proteina_grupo'); ?>
 
                                             </table>
                                     
@@ -291,27 +212,7 @@
 
                                             <table class="ne-inner-table">
                                             
-                                                <?php 
-
-                                                    if( have_rows('vitaminas_grupo') ):
-                                                        while( have_rows('vitaminas_grupo') ): the_row();
-                                                        if( $subfields = get_row() ) { ?>
-                                                            
-                                                            <?php
-                                                            foreach ($subfields as $key => $value) {
-                                                                if ( !empty($value) ) { 
-                                                                    $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                        <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td class="ne-nutrition-table__element-ddr"></td>
-                                                                    </tr>
-                                                                <?php }
-                                                            } 
-                                                        }
-                                                        endwhile;
-                                                    endif;
-                                                ?>
+                                                <?php ne_nutrition_table_inner('vitaminas_grupo'); ?>
 
                                             </table>
                                     
@@ -339,28 +240,8 @@
 
                                             <table class="ne-inner-table">
                                             
-                                                <?php 
-
-                                                    if( have_rows('minerais_grupo') ):
-                                                        while( have_rows('minerais_grupo') ): the_row();
-                                                        if( $subfields = get_row() ) { ?>
-                                                            
-                                                            <?php
-                                                            foreach ($subfields as $key => $value) {
-                                                                if ( !empty($value) ) { 
-                                                                    $field = get_sub_field_object( $key );?>
-                                                                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                        <td><?php echo esc_html($field['label']); ?></td>
-                                                                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                        <td class="ne-nutrition-table__element-ddr"></td>
-                                                                    </tr>
-                                                                <?php }
-                                                            } 
-                                                        }
-                                                        endwhile;
-                                                    endif;
-                                                ?>
-
+                                                <?php ne_nutrition_table_inner('minerais_grupo'); ?>
+                                                
                                             </table>
                                     
                                         </div>
@@ -387,27 +268,7 @@
 
                                             <table class="ne-inner-table">
                                             
-                                            <?php 
-
-                                                if( have_rows('outros_grupo') ):
-                                                    while( have_rows('outros_grupo') ): the_row();
-                                                    if( $subfields = get_row() ) { ?>
-                                                        
-                                                        <?php
-                                                        foreach ($subfields as $key => $value) {
-                                                            if ( !empty($value) ) { 
-                                                                $field = get_sub_field_object( $key );?>
-                                                                <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
-                                                                    <td><?php echo esc_html($field['label']); ?></td>
-                                                                    <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
-                                                                    <td class="ne-nutrition-table__element-ddr"></td>
-                                                                </tr>
-                                                            <?php }
-                                                        } 
-                                                    }
-                                                    endwhile;
-                                                endif;
-                                            ?>
+                                                <?php ne_nutrition_table_inner('outros_grupo'); ?>
 
                                             </table>
                                     
