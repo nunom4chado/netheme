@@ -272,6 +272,10 @@ var neSearch = new Search();
 // Google Chart for Alimento Page
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 var neFoodChart = document.getElementById("ne-food-chart");
+// get values from nutrition table
+let ntHc = $("#ne-nt-hc").data('value');
+let ntLip = $("#ne-nt-lip").data('value');
+let ntProt = $("#ne-nt-prot").data('value');
 
 if (neFoodChart) {
   google.load("visualization", "1", {
@@ -303,9 +307,9 @@ if (neFoodChart) {
 
     var data = google.visualization.arrayToDataTable([
       ["Distribuição Nutricional", "em Percentagem"],
-      ["Hidratos de Carbono", 11],
-      ["Lípidos", 2],
-      ["Proteína", 2]
+      ["Hidratos de Carbono", ntHc],
+      ["Lípidos", ntLip],
+      ["Proteína", ntProt]
     ]);
     drawChart(data, options);
   }
