@@ -1524,7 +1524,7 @@ a:focus {
   width: 100vw;
   font-size: 0.8rem;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05); }
   .navbar__inner {
     height: 65px;
     max-width: 1140px;
@@ -1675,11 +1675,11 @@ a:focus {
 .grid-2-col {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 20px; }
+  grid-row-gap: 2rem; }
   @media (min-width: 576px) {
     .grid-2-col {
       grid-template-columns: 1fr 1fr;
-      grid-column-gap: 20px; } }
+      grid-column-gap: 2rem; } }
 
 .grid-3-fit {
   display: grid;
@@ -1954,16 +1954,16 @@ a:focus {
     line-height: 1.8; }
 
 .card-post {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  border-radius: 8px; }
-  .card-post__img-link {
-    transition: all 0.3s; }
-    .card-post__img-link:hover {
-      filter: brightness(80%); }
-    .card-post__img-link img {
-      height: 230px;
-      object-fit: cover;
-      border-radius: 8px 8px 0 0; }
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05);
+  border-radius: 8px;
+  transition: box-shadow .25s ease, transform .25s ease; }
+  .card-post:hover {
+    box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05) !important;
+    transform: translate3d(0, -5px, 0); }
+  .card-post__img-link img {
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; }
   .card-post__details {
     padding: 0 1.7rem 1.7rem; }
     .card-post__details-categories {
@@ -2007,13 +2007,15 @@ a:focus {
       line-height: 1.78; }
 
 .card-post-nutriente {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05);
   border-radius: 8px;
   text-align: center;
-  transition: all 0.3s ease-out;
-  padding: 1rem; }
+  transition: box-shadow .25s ease, transform .25s ease;
+  padding: 1rem;
+  background: #fff; }
   .card-post-nutriente:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05);
+    transform: translate3d(0, -5px, 0); }
   .card-post-nutriente__details-title {
     font-size: 1.1rem;
     font-weight: 600;
