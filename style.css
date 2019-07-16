@@ -1961,7 +1961,7 @@ a:focus {
     box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05) !important;
     transform: translate3d(0, -5px, 0); }
   .card-post__img-link img {
-    height: 230px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px 8px 0 0; }
   .card-post__details {

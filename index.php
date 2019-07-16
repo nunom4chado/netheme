@@ -34,7 +34,7 @@
                                         <li><?php the_time('j \d\e F, Y'); ?></li>
                                         <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
                                     </ul>
-                                    <p class="card-post__details-excerpt"><?php echo wp_trim_words(get_the_content(), 25); ?></p>
+                                    <p class="card-post__details-excerpt"><?php echo wp_trim_words(get_the_content(), 17); ?></p>
                                 </div>
                             </div>
 
