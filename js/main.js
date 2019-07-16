@@ -296,7 +296,7 @@ if (neFoodChart) {
       width: "100%",
       height: "80%",
       pieSliceText: "percentage",
-      colors: ["#0598d8", "#f97263", "#773521"],
+      colors: ["#D7B084", "#D74562", "#D784A6"],
       chartArea: {
         left: "3%",
         top: "3%",

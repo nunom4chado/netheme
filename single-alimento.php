@@ -282,23 +282,32 @@
 
                     </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
 
                         <?php
                             $mainNutrients = get_field('nutrientes_principais');
 
-                            if ($mainNutrients) {
-                                echo '<section class="ne-aside__container">';
-                                echo '<h3 class="ne-aside__title">Nutrientes Principais</h3>';
-                                echo '<ul class="ne-main-nutrients">';
-                                foreach($mainNutrients as $nutrient) { ?>
+                            if ($mainNutrients) { ?>
+                                <section class="ne-aside__container">
+                                <div class="ne-aside__border-b">
+                                    <h3 class="ne-aside__title">Nutrientes Principais</h3>
+                                </div>
+                                <ul class="ne-main-nutrients">
+                                <?php foreach($mainNutrients as $nutrient) { ?>
                                     <li class="ne-main-nutrients__item">
                                         <a class="ne-main-nutrients__item-link" href="<?php echo get_the_permalink($nutrient) ?>">
-                                            <?php 
-                                                echo get_the_post_thumbnail( $nutrient, array(35,35));
-                                                echo "<span class='ne-main-nutrients__item-title'>";
-                                                    echo get_the_title($nutrient);
-                                                echo "</span>";
-                                            ?>
+                                            <?php echo get_the_post_thumbnail( $nutrient, array(35,35)); ?>
+                                            <span class='ne-main-nutrients__item-details'>
+                                                <span class='ne-main-nutrients__item-title'>
+                                                    <?php echo get_the_title($nutrient); ?>
+                                                </span>
+                                                <span class='ne-main-nutrients__item-category'>
+                                                    <?php $terms = get_the_terms( $nutrient->ID , 'categoria_nutriente' );
+                                                    foreach ( $terms as $term ) {
+                                                        echo $term->name;
+                                                    } ?>
+                                                </span>
+                                            </span>
                                         </a>
                                     </li>
                                 <?php }
@@ -308,7 +317,9 @@
                         ?>
 
                         <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Distribuição Nutricional</h3>
+                            <div class="ne-aside__border-b">
+                                <h3 class="ne-aside__title">Distribuição Nutricional</h3>
+                            </div>
                             <div class="ne-nutrition-distribution">
                                 <div id="ne-food-chart" class="ne-nutrition-distribution__chart"></div>
                             </div>
@@ -316,7 +327,9 @@
                         
                         <!-- Sazonalidade -->
                         <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Sazonalidade</h3>
+                            <div class="ne-aside__border-b">
+                                <h3 class="ne-aside__title">Sazonalidade</h3>
+                            </div>
                             <!-- get field array and convert to string with spaces
                                  if a class its added here the item will be active -->
                             <div class="ne-season <?php echo implode(" ", get_field('sazonalidade')); ?>">
@@ -384,7 +397,9 @@
                         </section>
 
                         <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Receitas com este Alimento</h3>
+                            <div class="ne-aside__border-b">
+                                <h3 class="ne-aside__title">Receitas com este Alimento</h3>
+                            </div>
                             <?php
                                 $homePagePosts = new WP_Query(array(
                                     'posts_per_page' => 4,

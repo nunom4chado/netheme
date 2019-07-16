@@ -1,2 +1,20 @@
 .ne-aside {
+
+    &__container {
+        margin-bottom: 2rem;
+    }
+
+    &__border-b {
+        border-bottom: 2px solid #f0f0f0;
+        margin-bottom: 1.5rem;
+    }
+
+    &__title {
+        display: inline-block;
+        border-bottom: 2px solid #505050;
+        vertical-align: top;
+        padding-bottom: .75rem;
+        margin-bottom: -2px;
+        font-size: 1rem;
+    }
 }

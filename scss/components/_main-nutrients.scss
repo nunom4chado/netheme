@@ -5,15 +5,24 @@
   &__item {
     margin-bottom: 0.5rem;
   }
-
+  
   &__item-link {
     display: flex;
     align-items: center;
   }
+  
+  &__item-details {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__item-title {
-    margin-left: 0.5rem;
     font-weight: 600;
-    font-size: 0.8rem;
+  }
+
+  &__item-category {
+    color: #999;
   }
 }

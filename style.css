@@ -1372,10 +1372,15 @@ a:focus {
   .ne-main-nutrients__item-link {
     display: flex;
     align-items: center; }
-  .ne-main-nutrients__item-title {
+  .ne-main-nutrients__item-details {
     margin-left: 0.5rem;
-    font-weight: 600;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column; }
+  .ne-main-nutrients__item-title {
+    font-weight: 600; }
+  .ne-main-nutrients__item-category {
+    color: #999; }
 
 .ne-nutrition-distribution {
   position: relative;
@@ -1746,6 +1751,21 @@ a:focus {
     .site-footer__social-link:hover {
       background: #4ab877;
       color: #fff; }
+
+.ne-aside__container {
+  margin-bottom: 2rem; }
+
+.ne-aside__border-b {
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 1.5rem; }
+
+.ne-aside__title {
+  display: inline-block;
+  border-bottom: 2px solid #505050;
+  vertical-align: top;
+  padding-bottom: .75rem;
+  margin-bottom: -2px;
+  font-size: 1rem; }
 
 .search-overlay {
   overflow-y: auto;
