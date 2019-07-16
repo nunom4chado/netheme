@@ -9,13 +9,13 @@ $primary-color-light: lighten($primary-color, 10%);
 // Text colors
 $text-color: #616161;
 $text-color-light: lighten($text-color, 20%);
-$text-color-dark: darken($text-color, 20%);
+$text-color-dark: darken($text-color, 15%);
 
 //
 //  LAYOUT
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$container-max-width: 1140px;
+$container-max-width: 1200px;
 $container-padding: 1.25rem;
 $container-padding-extra: 2.25rem;
 

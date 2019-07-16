@@ -26,8 +26,9 @@
                                 <a class="card-post__img-link" href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail(); ?>
                                 </a>
+                                <p class="card-post__details-categories"><?php echo get_the_category_list(', '); ?></p>
                                 <div class="card-post__details">
-                                    <p class="card-post__details-categories"><?php echo get_the_category_list(', '); ?></p>
+                                    
                                     <h2 class="card-post__details-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                     <ul class="card-post__details-meta">
                                         <li><?php the_time('j \d\e F, Y'); ?></li>
