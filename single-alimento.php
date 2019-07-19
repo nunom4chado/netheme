@@ -47,8 +47,15 @@
                                     <div class="ne-allergy">
                                         <h3 class="ne-small-title">Contém:</h3>
                                         <ul class="list-inline">
-                                            <li><img src="<?php echo get_template_directory_uri(); ?>/img/allergy/allergy-gluten.png" alt="alerta alergia glutén"> Glutén</li>
-                                            <li><img src="<?php echo get_template_directory_uri(); ?>/img/allergy/allergy-lactose.png" alt="alerta alergia lactose"> Lactose</li>
+                                            <?php
+                                                $allergies = get_field('allergy');
+
+                                                if ($allergies) {
+                                                    foreach($allergies as $allergy) { 
+                                                        echo '<li><img src="' . get_template_directory_uri() . '/img/allergy/allergy-' . $allergy['value'] . '.png" alt="Alerta alergia ' . $allergy['label'] . '" > ' . $allergy['label'] . '</li>';
+                                                    }
+                                                }
+                                            ?>
                                         </ul>
                                     </div>
                                 </div>
