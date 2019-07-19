@@ -43,21 +43,28 @@
                                 ?>
                                 <div>
                                     <h2 class="ne-h3-title">Descrição Geral</h2>
-                                    <div class="ne-post-content"><?php the_field('conteudo_principal'); ?></div>
-                                    <div class="ne-allergy">
-                                        <h3 class="ne-small-title">Contém:</h3>
-                                        <ul class="list-inline">
-                                            <?php
-                                                $allergies = get_field('allergy');
-
-                                                if ($allergies) {
-                                                    foreach($allergies as $allergy) { 
-                                                        echo '<li><img src="' . get_template_directory_uri() . '/img/allergy/allergy-' . $allergy['value'] . '.png" alt="Alerta alergia ' . $allergy['label'] . '" > ' . $allergy['label'] . '</li>';
-                                                    }
-                                                }
-                                            ?>
-                                        </ul>
+                                    
+                                    <div class="ne-post-content">
+                                        <?php the_field('conteudo_principal'); ?>
                                     </div>
+                                    
+                                    <?php
+                                        $allergies = get_field('allergy');
+
+                                        if ($allergies) { ?>
+                                            <div class="ne-allergy">
+                                                <h3 class="ne-small-title">Contém:</h3>
+                                                <ul class="list-inline">
+                                                
+                                                <?php foreach($allergies as $allergy) { 
+                                                    echo '<li><img src="' . get_template_directory_uri() . '/img/allergy/allergy-' . $allergy['value'] . '.png" alt="Alerta alergia ' . $allergy['label'] . '" > ' . $allergy['label'] . '</li>';
+                                                } ?>
+
+                                                </ul>
+                                            </div>
+                                        <?php }
+                                    ?> 
+                                    
                                 </div>
 
                             </div>
