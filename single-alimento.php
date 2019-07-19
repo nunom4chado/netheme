@@ -10,21 +10,14 @@
                     <h1 class="ne-sub-header__title"><?php the_title(); ?></h1>
                     <p class="ne-sub-header__category">
                         <?php
-                        $terms = get_terms( 'categoria_alimento' );
-                                
-                        foreach ( $terms as $term ) {
                         
-                            // The $term is an object, so we don't need to specify the $taxonomy.
-                            $term_link = get_term_link( $term );
-                            
-                            // If there was an error, continue to the next term.
-                            if ( is_wp_error( $term_link ) ) {
-                                continue;
-                            }
+                        // get custom taxonomy link and name from 'categoria_alimento'
+                        $terms = wp_get_post_terms( $post->ID, 'categoria_alimento');
+                        foreach ($terms as $term) {
+                            echo '<a class="ne-link--white" href="'.get_term_link($term->slug, 'categoria_alimento').'">'.$term->name.'</a>';
+                        }
                         
-                            // We successfully got a link. Print it out.
-                            echo '<a class="ne-link--white" href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
-                        } ?>
+                        ?>
                     </p>
                 </div>
             </div>
@@ -40,12 +33,27 @@
                     <div class="column-with-sidebar__main">
                         <!-- Post section -->
                         <article class="ne-blog-post__container">
-                            <?php
-                                if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail();
-                                } 
-                            ?>
-                            <div class="ne-blog-post__content"><?php the_field('conteudo_principal'); ?></div>
+                            
+                            <!-- General Description -->
+                            <div class="grid-1-2">
+                                <?php
+                                    if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail();
+                                    } 
+                                ?>
+                                <div>
+                                    <h2 class="ne-h3-title">Descrição Geral</h2>
+                                    <div class="ne-post-content"><?php the_field('conteudo_principal'); ?></div>
+                                    <div class="ne-allergy">
+                                        <h3 class="ne-small-title">Contém:</h3>
+                                        <ul class="list-inline">
+                                            <li><img src="<?php echo get_template_directory_uri(); ?>/img/allergy/allergy-gluten.png" alt="alerta alergia glutén"> Glutén</li>
+                                            <li><img src="<?php echo get_template_directory_uri(); ?>/img/allergy/allergy-lactose.png" alt="alerta alergia lactose"> Lactose</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
 
                             <!-- 
                                 // --------------------------------------
@@ -296,7 +304,6 @@
 
                     </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
 
                         <?php
                             $mainNutrients = get_field('nutrientes_principais');
@@ -436,6 +443,8 @@
                                 <?php } wp_reset_postdata();
                             ?>
                         </section>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
                     </aside>
                 </div>
             </div>

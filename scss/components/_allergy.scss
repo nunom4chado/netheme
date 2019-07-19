@@ -1,0 +1,14 @@
+.ne-allergy {
+    margin-top: 2rem;
+    font-size: .8rem;
+
+    li {
+        display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
+
+        img {
+            margin-right: .5rem;
+        }
+    }
+}

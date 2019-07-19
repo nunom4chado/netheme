@@ -56,3 +56,9 @@
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+
+.grid-1-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem;
+}

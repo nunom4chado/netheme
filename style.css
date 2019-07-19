@@ -1040,6 +1040,14 @@ body {
 .text-center {
   text-align: center; }
 
+.ne-h3-title {
+  font-size: 1rem;
+  margin-bottom: .5rem; }
+
+.ne-small-title {
+  font-size: .75rem;
+  margin-bottom: .25rem; }
+
 img {
   max-width: 100%;
   height: auto; }
@@ -1066,6 +1074,12 @@ a:focus {
   list-style-type: none;
   padding: 0; }
 
+.list-inline {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0; }
+
 .valign-center {
   align-items: center; }
 
@@ -1075,6 +1089,11 @@ a:focus {
   .ne-link--white:hover {
     color: #fff;
     text-decoration: underline; }
+
+.ne-post-content {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  line-height: 1.78; }
 
 .ne-recent-post-item {
   display: flex;
@@ -1526,6 +1545,16 @@ a:focus {
   .ne-inner-table .nt-sub-2-cat {
     padding-left: 1rem; }
 
+.ne-allergy {
+  margin-top: 2rem;
+  font-size: .8rem; }
+  .ne-allergy li {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem; }
+    .ne-allergy li img {
+      margin-right: .5rem; }
+
 .logged-in .navbar {
   top: 32px; }
 
@@ -1704,6 +1733,11 @@ a:focus {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px; }
+
+.grid-1-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem; }
 
 .site-footer {
   width: 100vw; }

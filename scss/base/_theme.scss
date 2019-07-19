@@ -29,6 +29,13 @@ a:focus {
   padding: 0;
 }
 
+.list-inline {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
 .valign-center {
   align-items: center;
 }
@@ -43,4 +50,10 @@ a:focus {
       text-decoration: underline;
     }
   }
+}
+
+.ne-post-content {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  line-height: 1.78;
 }
