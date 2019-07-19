@@ -40,12 +40,15 @@
   }
 
   .comment-reply-link {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin-top: 0.5rem;
-    color: $text-color-light;
+    color: #fff;
+    border-radius: 10px;
+    background: $primary-color;
+    padding: .1rem .5rem;
 
     &:hover {
-      color: $text-color;
+      background: $primary-color-dark;
     }
   }
 

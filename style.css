@@ -1193,11 +1193,14 @@ a:focus {
     margin-top: 0.5rem;
     color: #949494; }
   .ne-comment-section .comment-reply-link {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin-top: 0.5rem;
-    color: #949494; }
+    color: #fff;
+    border-radius: 10px;
+    background: #4ab877;
+    padding: .1rem .5rem; }
     .ne-comment-section .comment-reply-link:hover {
-      color: #616161; }
+      background: #3a955f; }
   .ne-comment-section .comment-respond {
     background: #f8f8f8;
     margin-bottom: 2.5rem;
