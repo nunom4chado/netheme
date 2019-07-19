@@ -1069,6 +1069,13 @@ a:focus {
 .valign-center {
   align-items: center; }
 
+.ne-link--white {
+  color: #fff;
+  font-weight: 400; }
+  .ne-link--white:hover {
+    color: #fff;
+    text-decoration: underline; }
+
 .ne-recent-post-item {
   display: flex;
   margin-bottom: 1rem; }

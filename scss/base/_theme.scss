@@ -32,3 +32,15 @@ a:focus {
 .valign-center {
   align-items: center;
 }
+
+.ne-link {
+  &--white {
+    color: #fff;
+    font-weight: 400;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
