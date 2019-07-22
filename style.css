@@ -1572,7 +1572,7 @@ a:focus {
   box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05); }
   .navbar__inner {
     height: 65px;
-    max-width: 1200px;
+    max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.25rem;
@@ -1588,7 +1588,7 @@ a:focus {
     .navbar__brand {
       flex: auto; } }
   .navbar__logo {
-    max-height: 50px; }
+    max-height: 20px; }
   .navbar__nav {
     display: none;
     font-weight: 600; }
@@ -1689,7 +1689,7 @@ a:focus {
 .section-normal {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  max-width: 1200px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -1755,7 +1755,7 @@ a:focus {
 .site-footer {
   width: 100vw; }
   .site-footer__inner {
-    max-width: 1200px;
+    max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.25rem;
@@ -1780,7 +1780,7 @@ a:focus {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     font-size: 0.8rem; }
     .site-footer__copy-inner {
-      max-width: 1200px;
+      max-width: 1260px;
       margin-left: auto;
       margin-right: auto;
       padding-left: 1.25rem;
@@ -1845,7 +1845,7 @@ a:focus {
   .search-overlay__top {
     background-color: rgba(0, 0, 0, 0.05); }
   .search-overlay__inner {
-    max-width: 1200px;
+    max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.25rem;

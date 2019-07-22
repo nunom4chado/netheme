@@ -23,7 +23,7 @@
                 <a href="<?php echo esc_url(site_url()) ?>">
                     <img
                         class="navbar__logo"
-                        src="https://sunlightmedia.org/wp-content/uploads/2018/06/node-sass-1-680x510.png"
+                        src="<?php echo get_template_directory_uri(); ?>/img/ne-logo-test.svg"
                         alt="logo"
                     />
                 </a>
