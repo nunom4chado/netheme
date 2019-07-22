@@ -1725,6 +1725,15 @@ a:focus {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 2rem; } }
 
+.grid-2-col-sm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem; }
+  @media (min-width: 768px) {
+    .grid-2-col-sm {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem; } }
+
 .grid-3-fit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -2139,3 +2148,12 @@ a:focus {
 
 .login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
   color: #616161; }
+
+.alimento-pros-cons {
+  margin-top: 2rem; }
+  .alimento-pros-cons h2 {
+    font-size: 1rem; }
+  .alimento-pros-cons ul {
+    font-family: "Open Sans";
+    font-size: 0.875rem;
+    line-height: 1.78; }

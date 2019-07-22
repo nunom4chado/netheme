@@ -69,6 +69,35 @@
 
                             </div>
 
+                            <!-- Beneficios e Conservação -->
+                            <div class="grid-2-col-sm">
+                                <div class="alimento-pros-cons">
+                                    <h2>Benefícios</h2>
+                                    <?php
+                                        if( have_rows('benef_conserv') ):
+
+                                            while( have_rows('benef_conserv') ) : the_row(); 
+                                                 the_sub_field('beneficios');
+                                            endwhile;
+                                            
+                                        endif;
+                                    ?>
+                                </div>
+
+                                <div class="alimento-pros-cons">
+                                    <h2>Métodos de Conservação</h2>
+                                    <?php
+                                        if( have_rows('benef_conserv') ):
+
+                                            while( have_rows('benef_conserv') ) : the_row(); 
+                                                 the_sub_field('metodos_conservacao');
+                                            endwhile;
+                                            
+                                        endif;
+                                    ?>
+                                </div>
+                            </div>
+
                             <!-- 
                                 // --------------------------------------
                                 // FOOD NUTTRITION TABLE
@@ -430,12 +459,12 @@
                                 </div>
                             </div>
                         </section>
-
+                        <!--
                         <section class="ne-aside__container">
                             <div class="ne-aside__border-b">
                                 <h3 class="ne-aside__title">Receitas com este Alimento</h3>
                             </div>
-                            <?php
+                            <?php /*
                                 $homePagePosts = new WP_Query(array(
                                     'posts_per_page' => 4,
                                     'post__not_in' => array( $post->ID )
@@ -455,8 +484,9 @@
                                         </div>
                                     </div>
                                 <?php } wp_reset_postdata();
-                            ?>
+                            */ ?>
                         </section>
+                        -->
 
                         <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
                     </aside>
