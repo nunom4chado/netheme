@@ -33,13 +33,57 @@
                     <div class="column-with-sidebar__main">
                         <!-- Post section -->
                         <article class="ne-blog-post__container">
-                            <p class="ne-blog-post__category"><?php echo get_the_category_list(', '); ?></p>
-                            <?php
-                                if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail();
-                                } 
-                            ?>
-                            <div class="ne-blog-post__content"><?php the_field('conteudo_principal'); ?></div>
+                            
+                            <!-- General Description -->
+                            <div class="grid-1-2">
+                                <?php
+                                    if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail();
+                                    } 
+                                ?>
+                                <div>
+                                    <h2 class="ne-h3-title">Descrição Geral</h2>
+                                    
+                                    <div class="ne-post-content">
+                                        <?php the_field('conteudo_principal'); ?>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Beneficios e Conservação -->
+                            <div class="grid-3-fit">
+                                <?php
+                                    if (the_field('nutriente_beneficios')) { ?>
+                                        <h2>Benefícios</h2>
+                                        <?php the_field('nutriente_beneficios'); ?>
+                                    <?php }
+
+                                ?>
+
+                                <?php
+                                    if (the_field('nutriente_hipovitaminose')) { ?>
+                                        <h2>Hipovitaminose</h2>
+                                        <?php the_field('nutriente_hipovitaminose'); ?>
+                                    <?php }
+
+                                ?>
+
+                                <?php
+                                    if (the_field('nutriente_hipervitaminose')) { ?>
+                                        <h2>Hipervitaminose</h2>
+                                        <?php the_field('nutriente_hipervitaminose'); ?>
+                                    <?php }
+
+                                ?>
+                            </div>
+
+
+
+                            
+                            
                             <?php
                                 
                                 $foodsWithNutrient = new WP_Query(array(
