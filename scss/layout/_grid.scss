@@ -70,6 +70,11 @@
 
 .grid-1-2 {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 2rem;
+
+  @include respond-above(xs) {
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2rem;
+  }
 }

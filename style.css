@@ -1749,8 +1749,12 @@ a:focus {
 
 .grid-1-2 {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 2rem; }
+  @media (min-width: 576px) {
+    .grid-1-2 {
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 2rem; } }
 
 .site-footer {
   width: 100vw; }
