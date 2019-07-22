@@ -2114,6 +2114,31 @@ a:focus {
   padding: 1rem;
   max-width: 125px; }
 
+.ne-more-nutrients {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center; }
+  .ne-more-nutrients img {
+    object-fit: cover;
+    max-width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    border-radius: 8px; }
+  .ne-more-nutrients__details {
+    margin-top: -10px; }
+  .ne-more-nutrients__title-link {
+    color: #616161; }
+    .ne-more-nutrients__title-link:hover {
+      color: #4ab877; }
+  .ne-more-nutrients__title {
+    margin: 0;
+    font-size: 0.81rem;
+    font-weight: 700; }
+  .ne-more-nutrients__date {
+    margin: 0;
+    font-size: 0.69rem;
+    color: #8d8d8d; }
+
 .login-action-login {
   background: url(img/foodPattern.png), linear-gradient(to right, #4ab877, #a9dd81); }
   .login-action-login input[type=checkbox]:focus, .login-action-login input[type=color]:focus, .login-action-login input[type=date]:focus, .login-action-login input[type=datetime-local]:focus, .login-action-login input[type=datetime]:focus, .login-action-login input[type=email]:focus, .login-action-login input[type=month]:focus, .login-action-login input[type=number]:focus, .login-action-login input[type=password]:focus, .login-action-login input[type=radio]:focus, .login-action-login input[type=search]:focus, .login-action-login input[type=tel]:focus, .login-action-login input[type=text]:focus, .login-action-login input[type=time]:focus, .login-action-login input[type=url]:focus, .login-action-login input[type=week]:focus, .login-action-login select:focus, .login-action-login textarea:focus {

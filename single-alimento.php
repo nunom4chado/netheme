@@ -348,6 +348,8 @@
                     </div> <!-- /.column-with-sidebar__main -->
                     <aside class="column-with-sidebar__sidebar">
 
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
+
                         <?php
                             $mainNutrients = get_field('nutrientes_principais');
 
@@ -488,7 +490,7 @@
                         </section>
                         -->
 
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
+                        
                     </aside>
                 </div>
             </div>

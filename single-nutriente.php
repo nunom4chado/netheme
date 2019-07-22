@@ -105,15 +105,15 @@
                         
                                     <?php while ( $related_items->have_posts() ) : $related_items->the_post(); ?>
                                     
-                                        <div class="ne-recent-post-item">
+                                        <div class="ne-more-nutrients">
                                             <a href="<?php the_permalink(); ?>">
                                                 <?php the_post_thumbnail(); ?>
                                             </a>
-                                            <div class="ne-recent-post-item__details">
-                                                <a class="ne-recent-post-item__title-link" href="<?php the_permalink(); ?>">
-                                                    <h4 class="ne-recent-post-item__title"><?php the_title(); ?></h4>
+                                            <div class="ne-more-nutrients__details">
+                                                <a class="ne-more-nutrients__title-link" href="<?php the_permalink(); ?>">
+                                                    <h4 class="ne-more-nutrients__title"><?php the_title(); ?></h4>
                                                 </a>
-                                                <p class="ne-recent-post-item__date">
+                                                <p class="ne-more-nutrients__date">
                                                     <?php the_terms( $post->ID, 'categoria_nutriente' ); ?>
                                                 </p>
                                             </div>
