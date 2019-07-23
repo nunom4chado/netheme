@@ -1740,6 +1740,8 @@ a:focus {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px; }
+  .grid-3-fit--300min {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
 .grid-4-fit {
   display: grid;
@@ -1750,7 +1752,8 @@ a:focus {
 .grid-1-2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 2rem; }
+  grid-column-gap: 2rem;
+  margin-bottom: 2rem; }
   @media (min-width: 576px) {
     .grid-1-2 {
       grid-template-columns: 1fr 2fr;
@@ -2179,11 +2182,11 @@ a:focus {
 .login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
   color: #616161; }
 
-.alimento-pros-cons {
-  margin-top: 2rem; }
-  .alimento-pros-cons h2 {
-    font-size: 1rem; }
-  .alimento-pros-cons ul {
-    font-family: "Open Sans";
-    font-size: 0.875rem;
-    line-height: 1.78; }
+.alimento-pros-cons h2 {
+  font-size: 1rem; }
+
+.alimento-pros-cons ul {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  line-height: 1.78;
+  padding-left: 1.2rem; }

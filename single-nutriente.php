@@ -54,27 +54,33 @@
 
 
                             <!-- Beneficios e Conservação -->
-                            <div class="grid-3-fit">
+                            <div class="grid-3-fit grid-3-fit--300min">
                                 <?php
-                                    if (the_field('nutriente_beneficios')) { ?>
-                                        <h2>Benefícios</h2>
-                                        <?php the_field('nutriente_beneficios'); ?>
+                                    if (get_field('nutriente_beneficios')) { ?>
+                                        <div class="alimento-pros-cons">
+                                            <h2>Benefícios</h2>
+                                            <?php the_field('nutriente_beneficios'); ?>
+                                        </div>
                                     <?php }
 
                                 ?>
 
                                 <?php
-                                    if (the_field('nutriente_hipovitaminose')) { ?>
-                                        <h2>Hipovitaminose</h2>
-                                        <?php the_field('nutriente_hipovitaminose'); ?>
+                                    if (get_field('nutriente_hipovitaminose')) { ?>
+                                        <div class="alimento-pros-cons">
+                                            <h2>Hipovitaminose</h2>
+                                            <?php the_field('nutriente_hipovitaminose'); ?>
+                                        </div>
                                     <?php }
 
                                 ?>
 
                                 <?php
-                                    if (the_field('nutriente_hipervitaminose')) { ?>
-                                        <h2>Hipervitaminose</h2>
-                                        <?php the_field('nutriente_hipervitaminose'); ?>
+                                    if (get_field('nutriente_hipervitaminose')) { ?>
+                                        <div class="alimento-pros-cons">
+                                            <h2>Hipervitaminose</h2>
+                                            <?php the_field('nutriente_hipervitaminose'); ?>
+                                        </div>
                                     <?php }
 
                                 ?>

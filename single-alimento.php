@@ -71,31 +71,35 @@
 
                             <!-- Beneficios e Conservação -->
                             <div class="grid-2-col-sm">
-                                <div class="alimento-pros-cons">
-                                    <h2>Benefícios</h2>
-                                    <?php
-                                        if( have_rows('benef_conserv') ):
+                                    
+                                <?php
+                                    if( have_rows('benef_conserv') ):
 
-                                            while( have_rows('benef_conserv') ) : the_row(); 
-                                                 the_sub_field('beneficios');
-                                            endwhile;
-                                            
-                                        endif;
-                                    ?>
-                                </div>
+                                        while( have_rows('benef_conserv') ) : the_row(); 
+                                            if (get_sub_field('alimento_beneficios')) { ?>
+                                                <div class="alimento-pros-cons">
+                                                    <h2>Benefícios</h2>
+                                                    <?php the_sub_field('alimento_beneficios'); ?>
+                                                </div>
+                                            <?php }
+                                        endwhile;
+                                    endif;
+                                ?>
 
-                                <div class="alimento-pros-cons">
-                                    <h2>Métodos de Conservação</h2>
-                                    <?php
-                                        if( have_rows('benef_conserv') ):
+                                <?php
+                                    if( have_rows('benef_conserv') ):
 
-                                            while( have_rows('benef_conserv') ) : the_row(); 
-                                                 the_sub_field('metodos_conservacao');
-                                            endwhile;
-                                            
-                                        endif;
-                                    ?>
-                                </div>
+                                        while( have_rows('benef_conserv') ) : the_row(); 
+                                            if (get_sub_field('alimento_conservacao')) { ?>
+                                                <div class="alimento-pros-cons">
+                                                    <h2>Métodos de Conservação</h2>
+                                                    <?php the_sub_field('alimento_conservacao'); ?>
+                                                </div>
+                                            <?php }
+                                        endwhile;
+                                        
+                                    endif;
+                                ?>
                             </div>
 
                             <!-- 

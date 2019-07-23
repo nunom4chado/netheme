@@ -59,7 +59,12 @@
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+
+  &--300min {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
+
 
 .grid-4-fit {
   display: grid;
@@ -72,6 +77,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2rem;
+  margin-bottom: 2rem;
 
   @include respond-above(xs) {
     grid-template-columns: 1fr 2fr;
