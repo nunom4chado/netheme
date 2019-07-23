@@ -105,10 +105,10 @@
 
                                 if ($foodsWithNutrient->have_posts()) {
                                     echo '<h2>Alimentos ricos em ' . get_the_title() . '</h2>';
-
+                                    echo '<div class="grid-3-fit grid-3-fit--200max">';
                                     while ($foodsWithNutrient->have_posts()) {
                                         $foodsWithNutrient->the_post(); ?>
-                                        <div class="grid-3-fit grid-3-fit--200max">
+                                        
                                             <a href="<?php the_permalink(); ?>" class="card-post-nutriente">
                                                 <?php the_post_thumbnail('thumbnail'); ?>
                                                 <div class="card-post-nutriente__details">
@@ -125,8 +125,9 @@
                                                     ?>
                                                 </div>
                                             </a>
-                                        </div>
+                                        
                                     <?php } wp_reset_postdata();
+                                    echo '</div>';
                                 }
 
                             ?>
