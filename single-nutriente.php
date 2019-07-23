@@ -86,10 +86,7 @@
                                 ?>
                             </div>
 
-
-
-                            
-                            
+                            <!-- Alimentos ricos em este Nutriente -->
                             <?php
                                 
                                 $foodsWithNutrient = new WP_Query(array(
@@ -111,13 +108,31 @@
 
                                     while ($foodsWithNutrient->have_posts()) {
                                         $foodsWithNutrient->the_post(); ?>
-                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                        <div class="grid-3-fit grid-3-fit--200max">
+                                            <a href="<?php the_permalink(); ?>" class="card-post-nutriente">
+                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                                <div class="card-post-nutriente__details">
+                                                    <h2 class="card-post-nutriente__details-title"><?php the_title(); ?></h2>
+                                                    <!-- Show custom taxonomy -->
+                                                    <?php 
+                                                        $terms = get_the_terms( $post->ID, 'categoria_alimento' );
+                                                        if ($terms) {
+                                                            foreach($terms as $term) {
+                                                                $termlinks = get_term_link($term);
+                                                                echo '<p class="card-post-nutriente__details-categories">' . $term->name . '</p>';
+                                                            }
+                                                        }
+                                                    ?>
+                                                </div>
+                                            </a>
+                                        </div>
                                     <?php } wp_reset_postdata();
                                 }
 
                             ?>
                         </article>
                     </div> <!-- /.column-with-sidebar__main -->
+
                     <aside class="column-with-sidebar__sidebar">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
                         <section class="ne-aside__container">

@@ -63,6 +63,10 @@
   &--300min {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
+  &--200max {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 200px));
+  }
 }
 
 
