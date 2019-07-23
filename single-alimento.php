@@ -125,7 +125,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="calories-table" type="checkbox" class="ne-hide-input" name="ne-nt-input" checked>
+                                    <input id="calories-table" type="radio" class="ne-hide-input" name="ne-nt-input" checked>
                                     <label for="calories-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
@@ -156,7 +156,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="hc-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <input id="hc-table" type="radio" class="ne-hide-input" name="ne-nt-input">
                                     <label for="hc-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
@@ -188,7 +188,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="lipidos-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <input id="lipidos-table" type="radio" class="ne-hide-input" name="ne-nt-input">
                                     <label for="lipidos-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
@@ -233,7 +233,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="proteina-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <input id="proteina-table" type="radio" class="ne-hide-input" name="ne-nt-input">
                                     <label for="proteina-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
@@ -266,7 +266,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="vitaminas-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <input id="vitaminas-table" type="radio" class="ne-hide-input" name="ne-nt-input">
                                     <label for="vitaminas-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
@@ -294,7 +294,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="minerais-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <input id="minerais-table" type="radio" class="ne-hide-input" name="ne-nt-input">
                                     <label for="minerais-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
@@ -322,7 +322,7 @@
                                 -->
                                 <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
-                                    <input id="outros-table" type="checkbox" class="ne-hide-input" name="ne-nt-input">
+                                    <input id="outros-table" type="radio" class="ne-hide-input" name="ne-nt-input">
                                     <label for="outros-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
