@@ -1455,6 +1455,13 @@ a:focus {
         */ }
   .ne-nutrition-table__element-ddr {
     font-size: .8rem; }
+  .ne-nutrition-table__subheader {
+    background: #a2ccb3 !important;
+    color: #fff;
+    font-weight: bold; }
+  .ne-nutrition-table--500w {
+    max-width: 500px;
+    margin: 0; }
 
 .ne_nutrition-table-tab__header {
   position: relative;

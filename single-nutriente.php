@@ -132,6 +132,67 @@
 
                             ?>
 
+                            <!-- Necessidades Diárias -->
+                            <div class="ne-nutrition-table" id="tabela-nutricional">
+                                <div class="ne-nutrition-table__main-header">
+                                    <div class="ne-nutrition-table__main-header-title">
+                                        <h2>Necessidades Diárias</h2>
+                                        <p>Valores por <span id="grams-based-val">100</span>g</p>
+                                    </div>
+                                </div>
+
+                                <div class="ne-nutrition-table-tab ne-nutrition-table--500w">
+                                    <!-- Hiden Inputs -->
+                                    <input id="calories-table" type="checkbox" class="ne-hide-input" name="ne-nt-input" checked>
+                                    <label for="calories-table" class="ne-nt-input-label"></label>
+                                    
+                                    <!-- Tab Header -->
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element">
+                                        <p class="ne_nutrition-table-tab__header-name">Faixa Etária</p>
+                                        <div class="ne_nutrition-table-tab__header-quantities">
+                                            <span class="ne-nutrition-table__element-quantity"><?php the_title(); ?></span>
+                                            <span>(<?php the_field('necessidades_unidade'); ?>)</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tab Content -->
+                                    <div class="ne_nutrition-table-tab__content">
+                                        <div class="ne_nutrition-table-tab__content-container">
+
+                                            <table class="ne-inner-table">
+
+                                                <tr class="ne-nutrition-table__element ne-nutrition-table__subheader">
+                                                    <td>Crianças</td>
+                                                </tr>
+                                                <?php ne_ddr_table_inner('necessidades_criancas'); ?>
+
+                                                <tr class="ne-nutrition-table__element ne-nutrition-table__subheader">
+                                                    <td>Gênero Masculino</td>
+                                                </tr>
+                                                <?php ne_ddr_table_inner('necessidades_homens'); ?>
+
+                                                <tr class="ne-nutrition-table__element ne-nutrition-table__subheader">
+                                                    <td>Gênero Feminino</td>
+                                                </tr>
+                                                <?php ne_ddr_table_inner('necessidades_mulheres'); ?>
+
+                                                <tr class="ne-nutrition-table__element ne-nutrition-table__subheader">
+                                                    <td>Grávidas</td>
+                                                </tr>
+                                                <?php ne_ddr_table_inner('necessidades_gravidas'); ?>
+
+                                                <tr class="ne-nutrition-table__element ne-nutrition-table__subheader">
+                                                    <td>Lactantes</td>
+                                                </tr>
+                                                <?php ne_ddr_table_inner('necessidades_lactantes'); ?>
+
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Bibliography Section -->
                             <?php if (get_field('bibliografia')) { ?>
                                 <div class="ne-bibliography">

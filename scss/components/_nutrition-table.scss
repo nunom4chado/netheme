@@ -57,6 +57,17 @@
     &__element-ddr {
         font-size: .8rem;
     }
+
+    &__subheader {
+        background: #a2ccb3 !important;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &--500w {
+        max-width: 500px;
+        margin: 0;
+    }
 }
 
 .ne_nutrition-table-tab__header {

@@ -24,6 +24,27 @@ function ne_nutrition_table_inner($group) {
     endif;
 }
 
+// Nutrition Daily Needs Inner Tables
+function ne_ddr_table_inner($group) {
+    if( have_rows($group) ):
+        while( have_rows($group) ): the_row();
+        if( $subfields = get_row() ) { ?>
+            
+            <?php
+            foreach ($subfields as $key => $value) {
+                if ( !empty($value) ) { 
+                    $field = get_sub_field_object( $key );?>
+                    <tr class="ne-nutrition-table__element">
+                        <td><?php echo esc_html($field['label']); ?></td>
+                        <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span></td>
+                    </tr>
+                <?php }
+            } 
+        }
+        endwhile;
+    endif;
+}
+
 // Post Categories Widget
 function ne_posts_categories() {
     $categories = get_categories();
