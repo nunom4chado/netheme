@@ -75,6 +75,16 @@
                             </div><!-- /.ne-blog-post__share -->
                         </div><!-- /.ne-blog-post -->
 
+                        <!-- Bibliography Section -->
+                        <?php if (get_field('bibliografia')) { ?>
+                            <div class="ne-bibliography">
+                                <h2>Bibliografia</h2>
+                                <div class="ne-bibliography__content">
+                                    <?php the_field('bibliografia'); ?>
+                                </div>
+                            </div>
+                        <?php } ?>
+
                         <!-- Show Related Posts -->
                         <?php 
                             $orig_post = $post;

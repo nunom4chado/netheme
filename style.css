@@ -1559,6 +1559,13 @@ a:focus {
     .ne-allergy li img {
       margin-right: .5rem; }
 
+.ne-bibliography {
+  margin-top: 4rem; }
+  .ne-bibliography h2 {
+    font-size: 1rem; }
+  .ne-bibliography__content {
+    font-size: .7rem; }
+
 .logged-in .navbar {
   top: 32px; }
 
