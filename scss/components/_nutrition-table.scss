@@ -62,7 +62,7 @@
     align-items: center;
     height: 60px;
     margin: 0;
-    padding: 0 70px 0 30px;
+    padding: 0 70px 0 10px;
     cursor: pointer;
     @include user-select();
 
@@ -73,7 +73,7 @@
         position: absolute;
         width: 24px;
         height: 100%;
-        right: 30px;
+        right: 20px;
         background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTI0IDI0SDBWMGgyNHoiIG9wYWNpdHk9Ii44NyIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNBOUFDQUYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE1Ljg4IDE1LjI5TDEyIDExLjQxbC0zLjg4IDMuODhhLjk5Ni45OTYgMCAxIDEtMS40MS0xLjQxbDQuNTktNC41OWEuOTk2Ljk5NiAwIDAgMSAxLjQxIDBsNC41OSA0LjU5Yy4zOS4zOS4zOSAxLjAyIDAgMS40MS0uMzkuMzgtMS4wMy4zOS0xLjQyIDB6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=');
         background-repeat: no-repeat;
         background-position: center;
@@ -85,6 +85,14 @@
         margin-left: 16px;
         font-weight: 500;
         color: #242a32;
+    }
+
+    &-quantities {
+        font-size: .85rem;
+    }
+
+    &-ddr {
+        font-size: .85rem;
     }
 }
 
@@ -130,8 +138,8 @@
     background-color: #f9f9f9;
 
     &-container {
-        padding: 20px 44px 20px;
-        font-size: .8rem;
+        //padding: 20px 44px 20px;
+        font-size: .7rem;
     }
 }
 
@@ -150,6 +158,7 @@
       th:nth-of-type(1),
       td:nth-of-type(1) {
         flex: 1;
+        padding-left: 2.6rem;
       }
       
       th,
@@ -167,11 +176,11 @@
     
     // add bottom border but not on last item
     tr:not(:last-child){
-      border-bottom: 1px solid #e9e9e9;
+      border-bottom: 1px dashed #e9e9e9;
     }
     // Hover Row Color
     tr:hover {
-      background-color: #e3efe8;
+      background-color: #f1f1f1;
     }
     
     // Table Header
@@ -185,4 +194,11 @@
     .nt-sub-2-cat {
         padding-left: 1rem;
     }
+  }
+
+  #close-ntable-btn {
+      text-align: right;
+      margin-top: 1rem;
+      font-size: .75rem;
+      display: block;
   }

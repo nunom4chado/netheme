@@ -406,3 +406,30 @@ class RecalcValues {
 }
 
 var recalcValues = new RecalcValues();
+
+//
+// Collapse all Nutrition Tabs
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+class CollapseNT {
+  constructor() {
+    this.closeAllBtn = $("#close-ntable-btn");
+    // run events as soon object is created
+    this.events();
+  }
+
+  // Events
+  events() {
+    this.closeAllBtn.on("click", this.closeAll.bind(this));
+  }
+
+  // Methods
+  closeAll() {
+    var cbarray = document.getElementsByName('ne-nt-input');
+    for(var i = 0; i < cbarray.length; i++){
+
+            cbarray[i].checked = false;
+    }
+  }
+}
+
+var collapseNT = new CollapseNT();
