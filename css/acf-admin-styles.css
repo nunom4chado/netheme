@@ -22,6 +22,9 @@
 .acf-group-min .acf-fields.-left>.acf-field>.acf-label {
     width: 60%;
 }
+.acf-group-min--thin .acf-fields.-left>.acf-field>.acf-label {
+    width: 100px;
+}
 .acf-group-min .acf-fields.-left>.acf-field>.acf-input {
     max-width: 40%;
     min-width: 100px;
