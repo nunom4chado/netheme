@@ -53,6 +53,10 @@
         }
         */
     }
+
+    &__element-ddr {
+        font-size: .8rem;
+    }
 }
 
 .ne_nutrition-table-tab__header {
@@ -62,7 +66,7 @@
     align-items: center;
     height: 60px;
     margin: 0;
-    padding: 0 70px 0 10px;
+    padding: 0 40px 0 10px;
     cursor: pointer;
     @include user-select();
 
@@ -81,7 +85,7 @@
     }
 
     &-name {
-        width: 60%;
+        flex: 3;
         margin-left: 16px;
         font-weight: 500;
         color: #242a32;
@@ -89,12 +93,16 @@
 
     &-quantities {
         font-size: .85rem;
+        flex: 1;
     }
 
     &-ddr {
-        font-size: .85rem;
+        font-size: .55rem;
+        flex: 1;
     }
 }
+
+
 
 .ne-hide-input {
     display: none;
@@ -157,14 +165,14 @@
       
       th:nth-of-type(1),
       td:nth-of-type(1) {
-        flex: 1;
+        flex: 3;
         padding-left: 2.6rem;
       }
       
       th,
       td {
-        flex-basis: 10%;
-        min-width: 95px;
+        flex: 1;
+        min-width: 75px;
       }
     }
     

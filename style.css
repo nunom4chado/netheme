@@ -1453,6 +1453,8 @@ a:focus {
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .11);
         }
         */ }
+  .ne-nutrition-table__element-ddr {
+    font-size: .8rem; }
 
 .ne_nutrition-table-tab__header {
   position: relative;
@@ -1461,7 +1463,7 @@ a:focus {
   align-items: center;
   height: 60px;
   margin: 0;
-  padding: 0 70px 0 10px;
+  padding: 0 40px 0 10px;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -1482,14 +1484,16 @@ a:focus {
     background-position: center;
     transform: rotate(180deg); }
   .ne_nutrition-table-tab__header-name {
-    width: 60%;
+    flex: 3;
     margin-left: 16px;
     font-weight: 500;
     color: #242a32; }
   .ne_nutrition-table-tab__header-quantities {
-    font-size: .85rem; }
+    font-size: .85rem;
+    flex: 1; }
   .ne_nutrition-table-tab__header-ddr {
-    font-size: .85rem; }
+    font-size: .55rem;
+    flex: 1; }
 
 .ne-hide-input {
   display: none; }
@@ -1533,12 +1537,12 @@ a:focus {
     flex: auto; }
     .ne-inner-table tr th:nth-of-type(1),
     .ne-inner-table tr td:nth-of-type(1) {
-      flex: 1;
+      flex: 3;
       padding-left: 2.6rem; }
     .ne-inner-table tr th,
     .ne-inner-table tr td {
-      flex-basis: 10%;
-      min-width: 95px; }
+      flex: 1;
+      min-width: 75px; }
   .ne-inner-table td,
   .ne-inner-table th {
     padding: .8rem; }
