@@ -2169,7 +2169,8 @@ a:focus {
     display: flex;
     align-items: center; }
   .ne-more-nutrients:hover img {
-    filter: brightness(110%); }
+    filter: brightness(110%);
+    transform: scale(1.1); }
   .ne-more-nutrients:hover h4 {
     text-decoration: underline; }
   .ne-more-nutrients img {
@@ -2177,7 +2178,8 @@ a:focus {
     max-width: 3.5rem;
     height: 3.5rem;
     margin-right: 1rem;
-    border-radius: 8px; }
+    border-radius: 8px;
+    transition: all .4s ease-out; }
   .ne-more-nutrients__title {
     margin: 0;
     font-size: 0.81rem;
