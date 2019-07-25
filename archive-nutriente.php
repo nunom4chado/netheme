@@ -55,7 +55,7 @@
                         echo '<div class="ne-aside__border-b">';
                             echo '<h3 class="ne-aside__title">Categorias</h3>';
                         echo '</div>';
-                        echo '<ul class="ne-categories-list">';
+                        echo '<ul class="ne-categories-list ne-nutricat">';
                     
                     foreach ( $terms as $term ) {
                         // The $term is an object, so we don't need to specify the $taxonomy.
@@ -65,7 +65,7 @@
                             continue;
                         }
                         // We successfully got a link. Print it out.
-                        echo '<li><a class="ne-categories-list__link" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+                        echo '<li><a class="ne-categories-list__link ne-nutricat_item ne-nutricat_item--' . $term->slug . '" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
                     }
                     
                         echo '</ul>';

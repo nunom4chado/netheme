@@ -83,3 +83,33 @@
   max-width: 200px;
   margin: auto;
 }
+
+.ne-nutricat {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: .3rem;
+  }
+
+  &_item {
+    height: 54px;
+    padding-left: 36px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &--minerais {
+      background: url('img/nutrientcat/minerais.png') no-repeat left top;
+    }
+    &--lipidos {
+      background: url('img/nutrientcat/lipidos.png') no-repeat left top;
+    }
+    &--vitaminas {
+      background: url('img/nutrientcat/vitaminas.png') no-repeat left top;
+    }
+    &--outros {
+      background: url('img/nutrientcat/outros.png') no-repeat left top;
+    }
+  }
+}
