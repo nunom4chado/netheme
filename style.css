@@ -2130,7 +2130,8 @@ a:focus {
   text-align: center;
   transition: box-shadow .25s ease, transform .25s ease;
   padding: 1rem;
-  background: #fff; }
+  background: #fff;
+  max-width: 250px; }
   .card-post-nutriente:hover {
     box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05);
     transform: translate3d(0, -5px, 0); }
