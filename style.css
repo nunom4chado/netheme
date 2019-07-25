@@ -1736,13 +1736,13 @@ a:focus {
     @media (min-width: 992px) {
       .column-with-sidebar__main {
         flex: 1;
-        max-width: 70%;
+        max-width: 75%;
         padding-right: 2rem; } }
   .column-with-sidebar__sidebar {
     flex-basis: 100%; }
     @media (min-width: 992px) {
       .column-with-sidebar__sidebar {
-        max-width: 30%;
+        max-width: 25%;
         padding-left: 3rem; } }
 
 .grid-2-col {
@@ -2163,25 +2163,26 @@ a:focus {
   max-width: 125px; }
 
 .ne-more-nutrients {
-  display: flex;
   margin-bottom: 1rem;
-  align-items: center; }
+  cursor: pointer; }
+  .ne-more-nutrients a {
+    display: flex;
+    align-items: center; }
+  .ne-more-nutrients:hover img {
+    filter: brightness(110%); }
+  .ne-more-nutrients:hover h4 {
+    text-decoration: underline; }
   .ne-more-nutrients img {
     object-fit: cover;
     max-width: 3.5rem;
     height: 3.5rem;
     margin-right: 1rem;
     border-radius: 8px; }
-  .ne-more-nutrients__details {
-    margin-top: -10px; }
-  .ne-more-nutrients__title-link {
-    color: #616161; }
-    .ne-more-nutrients__title-link:hover {
-      color: #4ab877; }
   .ne-more-nutrients__title {
     margin: 0;
     font-size: 0.81rem;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #616161; }
   .ne-more-nutrients__date {
     margin: 0;
     font-size: 0.69rem;

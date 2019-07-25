@@ -40,9 +40,21 @@
 }
 
 .ne-more-nutrients {
-  display: flex;
   margin-bottom: 1rem;
-  align-items: center;
+  cursor: pointer;
+
+  & a {
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover img {
+    filter: brightness(110%);
+  }
+
+  &:hover h4 {
+    text-decoration: underline;
+  }
 
   img {
     object-fit: cover;
@@ -52,22 +64,11 @@
     border-radius: 8px;
   }
 
-  &__details {
-    margin-top: -10px;
-  }
-
-  &__title-link {
-    color: $text-color;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
   &__title {
     margin: 0;
     font-size: 0.81rem;
     font-weight: 700;
+    color: $text-color;
   }
 
   &__date {

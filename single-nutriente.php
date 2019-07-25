@@ -245,15 +245,19 @@
                                         <div class="ne-more-nutrients">
                                             <a href="<?php the_permalink(); ?>">
                                                 <?php the_post_thumbnail(); ?>
-                                            </a>
-                                            <div class="ne-more-nutrients__details">
-                                                <a class="ne-more-nutrients__title-link" href="<?php the_permalink(); ?>">
+                                            
+                                                <div class="ne-more-nutrients__details">
                                                     <h4 class="ne-more-nutrients__title"><?php the_title(); ?></h4>
-                                                </a>
-                                                <p class="ne-more-nutrients__date">
-                                                    <?php the_terms( $post->ID, 'categoria_nutriente' ); ?>
-                                                </p>
-                                            </div>
+                                                    <p class="ne-more-nutrients__date">
+                                                        <?php 
+                                                            $terms = wp_get_post_terms( $post->ID, 'categoria_nutriente');
+                                                            foreach ($terms as $term) {
+                                                                echo $term->name;
+                                                            } 
+                                                        ?>
+                                                    </p>
+                                                </div>
+                                            </a>
                                         </div>
                         
                                     <?php endwhile; ?>
