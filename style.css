@@ -2187,6 +2187,10 @@ a:focus {
     font-size: 0.69rem;
     color: #8d8d8d; }
 
+.nutritent-img-small img {
+  max-width: 200px;
+  margin: auto; }
+
 .login-action-login {
   background: url(img/foodPattern.png), linear-gradient(to right, #4ab877, #a9dd81); }
   .login-action-login input[type=checkbox]:focus, .login-action-login input[type=color]:focus, .login-action-login input[type=date]:focus, .login-action-login input[type=datetime-local]:focus, .login-action-login input[type=datetime]:focus, .login-action-login input[type=email]:focus, .login-action-login input[type=month]:focus, .login-action-login input[type=number]:focus, .login-action-login input[type=password]:focus, .login-action-login input[type=radio]:focus, .login-action-login input[type=search]:focus, .login-action-login input[type=tel]:focus, .login-action-login input[type=text]:focus, .login-action-login input[type=time]:focus, .login-action-login input[type=url]:focus, .login-action-login input[type=week]:focus, .login-action-login select:focus, .login-action-login textarea:focus {

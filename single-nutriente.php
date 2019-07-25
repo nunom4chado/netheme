@@ -35,7 +35,7 @@
                         <article class="ne-blog-post__container">
                             
                             <!-- General Description -->
-                            <div class="grid-1-2">
+                            <div class="grid-1-2 nutritent-img-small">
                                 <?php
                                     if ( has_post_thumbnail() ) {
                                         the_post_thumbnail();
