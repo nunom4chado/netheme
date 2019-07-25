@@ -17,7 +17,7 @@
       <div class="section-normal">
         <div class="column-with-sidebar">
             <div class="column-with-sidebar__main">
-                <div class="grid-4-fit">
+                <div class="grid-3-fill">
                     <?php while(have_posts()) {
                         the_post(); ?>
 

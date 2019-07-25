@@ -105,7 +105,7 @@
 
                                 if ($foodsWithNutrient->have_posts()) {
                                     echo '<h2>Alimentos ricos em ' . get_the_title() . '</h2>';
-                                    echo '<div class="grid-3-fit grid-3-fit--200max">';
+                                    echo '<div class="grid-3-fill">';
                                     while ($foodsWithNutrient->have_posts()) {
                                         $foodsWithNutrient->the_post(); ?>
                                         

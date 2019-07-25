@@ -2,16 +2,16 @@
 
 
     <div class="page-layout">
-      <div class="ne-sub-header ne-sub-header__alimento">
+      <div class="ne-sub-header ne-sub-header__nutriente">
         <div class="section-normal">
             <h1 class="ne-sub-header__title"><?php the_archive_title(); ?></h1>
-            <p class="ne-sub-header__category">Alimentos</p>
+            <p class="ne-sub-header__category">Nutrientes</p>
         </div>
       </div>
       <div class="section-normal breadcrumb-container">
-        <div class="ne-breadcrumbs ne-breadcrumbs__alimento">
+        <div class="ne-breadcrumbs ne-breadcrumbs__nutriente">
             <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo esc_url(site_url()); ?>">Home</a>
-            <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo esc_url(site_url('alimentos')); ?>">Alimentos</a>
+            <a class="ne-breadcrumbs__link ne-breadcrumbs__link-alimento" href="<?php echo esc_url(site_url('nutrientes')); ?>">Nutrientes</a>
             <span class="ne-breadcrumbs__current"><?php the_archive_title(); ?></span>
         </div>
       </div>
@@ -28,7 +28,7 @@
                                 <h2 class="card-post-nutriente__details-title"><?php the_title(); ?></h2>
                                 <!-- Show custom taxonomy -->
                                 <?php 
-                                    $terms = get_the_terms( $post->ID, 'categoria_alimento' );
+                                    $terms = get_the_terms( $post->ID, 'categoria_nutriente' );
                                     if ($terms) {
                                         foreach($terms as $term) {
                                             $termlinks = get_term_link($term);
@@ -50,7 +50,7 @@
             <aside class="column-with-sidebar__sidebar">
 
                 <?php
-                    $terms = get_terms( 'categoria_alimento' );
+                    $terms = get_terms( 'categoria_nutriente' );
                     
                     echo '<section class="ne-aside__container">';
                         echo '<div class="ne-aside__border-b">';

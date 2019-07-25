@@ -1765,13 +1765,23 @@ a:focus {
 
 .grid-3-fit {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px; }
   .grid-3-fit--300min {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
   .grid-3-fit--200max {
-    grid-template-columns: repeat(auto-fit, minmax(170px, 200px)); }
+    grid-template-columns: repeat(auto-fill, minmax(170px, 200px)); }
+
+.grid-3-fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px; }
+  .grid-3-fill--300min {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .grid-3-fill--200max {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 200px)); }
 
 .grid-4-fit {
   display: grid;
@@ -2130,8 +2140,7 @@ a:focus {
   text-align: center;
   transition: box-shadow .25s ease, transform .25s ease;
   padding: 1rem;
-  background: #fff;
-  max-width: 250px; }
+  background: #fff; }
   .card-post-nutriente:hover {
     box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05);
     transform: translate3d(0, -5px, 0); }
@@ -2148,7 +2157,8 @@ a:focus {
     font-weight: 400;
     font-size: 0.75rem; }
 
-.post-type-archive-nutriente .card-post-nutriente img.size-thumbnail {
+.post-type-archive-nutriente .card-post-nutriente img.size-thumbnail,
+.tax-categoria_nutriente .card-post-nutriente img.size-thumbnail {
   padding: 1rem;
   max-width: 125px; }
 
