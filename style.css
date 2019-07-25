@@ -1743,7 +1743,7 @@ a:focus {
     @media (min-width: 992px) {
       .column-with-sidebar__sidebar {
         max-width: 30%;
-        padding-left: 1rem; } }
+        padding-left: 3rem; } }
 
 .grid-2-col {
   display: grid;

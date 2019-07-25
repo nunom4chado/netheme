@@ -47,9 +47,35 @@
             </div>
 
             <aside class="column-with-sidebar__sidebar">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
+
+                <?php
+                    $terms = get_terms( 'categoria_nutriente' );
+                    
+                    echo '<section class="ne-aside__container">';
+                        echo '<div class="ne-aside__border-b">';
+                            echo '<h3 class="ne-aside__title">Categorias</h3>';
+                        echo '</div>';
+                        echo '<ul class="ne-categories-list">';
+                    
+                    foreach ( $terms as $term ) {
+                        // The $term is an object, so we don't need to specify the $taxonomy.
+                        $term_link = get_term_link( $term );
+                        // If there was an error, continue to the next term.
+                        if ( is_wp_error( $term_link ) ) {
+                            continue;
+                        }
+                        // We successfully got a link. Print it out.
+                        echo '<li><a class="ne-categories-list__link" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+                    }
+                    
+                        echo '</ul>';
+                    echo '</section>';
+                ?>
+
                 <section class="ne-aside__container">
-                    <h3 class="ne-aside__title">Artigos Recentes</h3>
+                    <div class="ne-aside__border-b">
+                        <h3 class="ne-aside__title">Artigos Recentes</h3>
+                    </div>
                     <?php
                         $homePagePosts = new WP_Query(array(
                             'posts_per_page' => 4,
@@ -72,23 +98,8 @@
                         <?php } wp_reset_postdata();
                     ?>
                 </section>
-                
-                <?php
-                    $categories = get_categories();
 
-                    if ($categories) { ?>
-                        <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Categorias</h3>
-                            <ul class="ne-categories-list">
-                                <?php
-                                    foreach($categories as $category) {
-                                        echo '<li><a class="ne-categories-list__link" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
-                                    }
-                                ?>
-                            </ul>
-                        </section>
-                    <?php }
-                ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
             </aside>
 
           </div>

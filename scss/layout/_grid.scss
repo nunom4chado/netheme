@@ -27,7 +27,7 @@
     flex-basis: 100%;
     @include respond-above(md) {
       max-width: 30%;
-      padding-left: 1rem;
+      padding-left: 3rem;
     }
   }
 }

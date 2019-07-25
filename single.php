@@ -147,13 +147,17 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/img/nead.png" alt="custom ad">
                         
                         <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Artigos Recentes</h3>
-                            <?php ne_recent_posts(); ?>
-                        </section>
-                        
-                        <section class="ne-aside__container">
-                            <h3 class="ne-aside__title">Categorias</h3>
+                            <div class="ne-aside__border-b">
+                                <h3 class="ne-aside__title">Artigos Recentes</h3>
+                            </div>
                             <?php ne_posts_categories(); ?>
+                        </section>
+
+                        <section class="ne-aside__container">
+                            <div class="ne-aside__border-b">
+                                <h3 class="ne-aside__title">Artigos Recentes</h3>
+                            </div>
+                            <?php ne_recent_posts(); ?>
                         </section>
                     </aside>
                 </div>
