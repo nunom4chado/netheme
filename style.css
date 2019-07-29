@@ -2205,6 +2205,8 @@ a:focus {
     padding-left: 36px;
     padding-top: 5px;
     padding-bottom: 5px; }
+    .ne-nutricat_item--all {
+      background: url("img/nutrientcat/all.png") no-repeat left top; }
     .ne-nutricat_item--minerais {
       background: url("img/nutrientcat/minerais.png") no-repeat left top; }
     .ne-nutricat_item--lipidos {

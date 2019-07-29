@@ -56,6 +56,7 @@
                             echo '<h3 class="ne-aside__title">Categorias</h3>';
                         echo '</div>';
                         echo '<ul class="ne-categories-list ne-nutricat">';
+                            echo '<li><a class="ne-categories-list__link ne-nutricat_item ne-nutricat_item--all" href="' . esc_url(site_url('nutrientes')) . '">Todas</a></li>';
                     
                     foreach ( $terms as $term ) {
                         // The $term is an object, so we don't need to specify the $taxonomy.

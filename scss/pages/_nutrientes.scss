@@ -99,6 +99,9 @@
     padding-top: 5px;
     padding-bottom: 5px;
 
+    &--all {
+      background: url('img/nutrientcat/all.png') no-repeat left top;
+    }
     &--minerais {
       background: url('img/nutrientcat/minerais.png') no-repeat left top;
     }
