@@ -1,8 +1,22 @@
 <?php get_header(); ?>
 
-
     <div class="page-layout">
-      <div class="section-normal">
+
+        <section class="ne-home-top">
+            <div class="section-normal full-height">
+                <div class="ne-home-top__inner">
+                    <div class="ne-home-top__text">
+                        <h1>Saiba como cuidar do seu corpo</h1>
+                        <p>Duis sollicitudin nibh et libero rhoncus ultricies. Maecenas risus ipsum, imperdiet ac luctus sit amet, volutpat nec libero.</p>
+                        <a class="ne-home-top__btn" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <div class="section-normal">
 
         <?php
             $homePagePosts = new WP_Query(array(

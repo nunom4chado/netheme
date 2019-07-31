@@ -1,0 +1,57 @@
+.ne-home-top {
+    background: url('img/homeHeader.jpg') no-repeat top center;
+    background-size: cover;
+    height: 90vh;
+
+    @include respond-above(sm) {
+            background: url('img/homeheader2.jpg') no-repeat top center;
+            background-size: cover;
+            height: 80vh;
+        }
+
+
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__text {
+        width: 100%;
+
+        @include respond-above(sm) {
+            width: 50%;
+            padding-right: 2rem;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        border: 3px solid transparent;
+        background: #4ab877;
+        box-shadow: 0 2px 10px rgba(74,184,119,.5);
+        color: #fff;
+        border-radius: 50rem;
+        padding: .7rem 1rem;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:hover {
+            color: #fff;
+            box-shadow: 0 2px 15px rgba(74,184,119,.9);
+        }
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #8D8D8D;
+    }
+}
