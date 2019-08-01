@@ -2304,3 +2304,38 @@ a:focus {
     font-size: 1.4rem;
     line-height: 2rem;
     color: #8D8D8D; }
+
+.all-about-nutrition {
+  margin-top: 4rem; }
+  .all-about-nutrition h2 {
+    font-size: 38px;
+    font-weight: 600; }
+  .all-about-nutrition__inner {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      .all-about-nutrition__inner {
+        flex-direction: row;
+        justify-content: center; } }
+  .all-about-nutrition__card {
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); }
+    @media (min-width: 768px) {
+      .all-about-nutrition__card {
+        max-width: 285px;
+        margin: 1.5rem 2%; } }
+  .all-about-nutrition__img {
+    margin-top: 50px; }
+  .all-about-nutrition__card-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #505050; }
+  .all-about-nutrition__card-text {
+    font-family: "Open Sans";
+    font-size: 0.875rem;
+    line-height: 1.78;
+    color: #a2a2a2; }

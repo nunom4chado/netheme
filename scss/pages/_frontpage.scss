@@ -55,3 +55,59 @@
         color: #8D8D8D;
     }
 }
+
+.all-about-nutrition {
+    margin-top: 4rem;
+
+    h2 {
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        @include respond-above(sm) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        max-width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 40px rgba(0,0,0,.05);
+
+        @include respond-above(sm) {
+            max-width: 285px;
+            margin: 1.5rem 2%;
+        }
+        // @include normal-box-shadow;
+        // transition: box-shadow .25s ease, transform .25s ease;
+
+        // &:hover {
+        //     box-shadow: 0 2rem 5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .05);
+        //     transform: translate3d(0, -5px, 0);
+        // }
+    }
+
+    &__img {
+        margin-top: 50px;
+    }
+
+    &__card-title {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: #505050;
+    }
+
+    &__card-text {
+        font-family: "Open Sans";
+        font-size: 0.875rem;
+        line-height: 1.78;
+        color: #a2a2a2;
+    }
+}
