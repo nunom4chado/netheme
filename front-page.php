@@ -14,7 +14,7 @@
             </div>
         </section>
 
-        <section class="section-normal text-center all-about-nutrition">
+        <section class="section-thin text-center all-about-nutrition">
             <h2>Tudo sobre nutrição</h2>
             <div class="all-about-nutrition__inner">
                 <div class="all-about-nutrition__card">
@@ -33,6 +33,10 @@
                     <p class="all-about-nutrition__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet, nunc et accumsan cursus, neque eros sodales</p>
                 </div>
             </div>
+        </section>
+
+        <section class="section-thin home-recent-posts">
+            <h2>Artigos Recentes</h2>
         </section>
         
 

@@ -9,6 +9,12 @@
   @include container;
 }
 
+.section-thin {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include container-thin;
+}
+
 .column-with-sidebar {
   display: flex;
   flex-wrap: wrap;

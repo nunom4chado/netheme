@@ -57,32 +57,31 @@
 }
 
 .all-about-nutrition {
-    margin-top: 4rem;
+    margin-top: 3rem;
 
     h2 {
         font-size: 38px;
         font-weight: 600;
+        margin-bottom: 3rem;
     }
 
     &__inner {
         display: flex;
         flex-direction: column;
         @include respond-above(sm) {
-            flex-direction: row;
-            justify-content: center;
+             flex-direction: row;
         }
     }
 
     &__card {
-        max-width: 100%;
+        width: 100%;
         margin: 1rem 0;
         padding: 1rem;
         border-radius: 8px;
         box-shadow: 0 0 40px rgba(0,0,0,.05);
 
         @include respond-above(sm) {
-            max-width: 285px;
-            margin: 1.5rem 2%;
+            margin: 0 2%;
         }
         // @include normal-box-shadow;
         // transition: box-shadow .25s ease, transform .25s ease;
@@ -109,5 +108,16 @@
         font-size: 0.875rem;
         line-height: 1.78;
         color: #a2a2a2;
+    }
+}
+
+.home-recent-posts {
+    margin-top: 3rem;
+
+    h2 {
+        font-size: 38px;
+        font-weight: 600;
+        margin-bottom: 3rem;
+        text-align: center;
     }
 }

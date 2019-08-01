@@ -98,6 +98,19 @@
   }
 }
 
+@mixin container-thin {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  // @include respond-above(xs) {
+  //   padding-left: $container-padding-extra;
+  //   padding-right: $container-padding-extra;
+  // }
+}
+
 @mixin row-spaced-center {
   display: flex;
   justify-content: space-between;

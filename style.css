@@ -1730,6 +1730,15 @@ a:focus {
       padding-left: 2.25rem;
       padding-right: 2.25rem; } }
 
+.section-thin {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; }
+
 .column-with-sidebar {
   display: flex;
   flex-wrap: wrap; }
@@ -2306,27 +2315,26 @@ a:focus {
     color: #8D8D8D; }
 
 .all-about-nutrition {
-  margin-top: 4rem; }
+  margin-top: 3rem; }
   .all-about-nutrition h2 {
     font-size: 38px;
-    font-weight: 600; }
+    font-weight: 600;
+    margin-bottom: 3rem; }
   .all-about-nutrition__inner {
     display: flex;
     flex-direction: column; }
     @media (min-width: 768px) {
       .all-about-nutrition__inner {
-        flex-direction: row;
-        justify-content: center; } }
+        flex-direction: row; } }
   .all-about-nutrition__card {
-    max-width: 100%;
+    width: 100%;
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); }
     @media (min-width: 768px) {
       .all-about-nutrition__card {
-        max-width: 285px;
-        margin: 1.5rem 2%; } }
+        margin: 0 2%; } }
   .all-about-nutrition__img {
     margin-top: 50px; }
   .all-about-nutrition__card-title {
@@ -2339,3 +2347,11 @@ a:focus {
     font-size: 0.875rem;
     line-height: 1.78;
     color: #a2a2a2; }
+
+.home-recent-posts {
+  margin-top: 3rem; }
+  .home-recent-posts h2 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center; }
