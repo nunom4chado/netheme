@@ -2115,12 +2115,11 @@ a:focus {
         background: #53bb7d; }
     .card-post__details-title {
       font-size: 1.625rem;
-      font-weight: 600;
       line-height: 1.75rem;
       margin: 0; }
       .card-post__details-title a,
       .card-post__details-title a:visited {
-        color: #3b3b3b; }
+        color: #505050; }
         .card-post__details-title a:hover,
         .card-post__details-title a:visited:hover {
           color: #616161; }

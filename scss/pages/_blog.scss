@@ -166,13 +166,12 @@
 
     &-title {
       font-size: 1.625rem;
-      font-weight: 600;
       line-height: 1.75rem;
       margin: 0;
 
       a,
       a:visited {
-        color: $text-color-dark;
+        color: #505050;
 
         &:hover {
           color: $text-color;
