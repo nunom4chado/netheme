@@ -37,6 +37,7 @@
 
             if ($categories) { ?>
                 <ul>
+                    <li><a class="footer-link" href="<?php echo esc_url(site_url('blog')) ?>">Tudo</a></li>
                   <?php
                     foreach($categories as $category) {
                         echo '<li><a class="footer-link" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
