@@ -1801,6 +1801,14 @@ a:focus {
   grid-column-gap: 20px;
   grid-row-gap: 20px; }
 
+.grid-3-sm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px; }
+  @media (min-width: 576px) {
+    .grid-3-sm {
+      grid-template-columns: 1fr 1fr 1fr; } }
+
 .grid-1-2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -2327,7 +2335,7 @@ a:focus {
         flex-direction: row; } }
   .all-about-nutrition__card {
     width: 100%;
-    margin: 1rem 0;
+    margin: .5rem 0;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); }
@@ -2349,7 +2357,7 @@ a:focus {
 
 .home-recent-posts {
   margin-top: 3rem; }
-  .home-recent-posts h2 {
+  .home-recent-posts > h2 {
     font-size: 38px;
     font-weight: 600;
     margin-bottom: 3rem;

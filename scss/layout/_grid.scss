@@ -98,6 +98,16 @@
   grid-row-gap: 20px;
 }
 
+.grid-3-sm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  @include respond-above(xs) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .grid-1-2 {
   display: grid;
   grid-template-columns: 1fr;

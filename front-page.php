@@ -2,6 +2,7 @@
 
     <div class="page-layout">
 
+        <!-- HOME TOP SECTION -->
         <section class="ne-home-top">
             <div class="section-normal full-height">
                 <div class="ne-home-top__inner">
@@ -14,6 +15,7 @@
             </div>
         </section>
 
+        <!-- ALL ABOUT NUTRITION -->
         <section class="section-thin text-center all-about-nutrition">
             <h2>Tudo sobre nutrição</h2>
             <div class="all-about-nutrition__inner">
@@ -35,27 +37,37 @@
             </div>
         </section>
 
-        <section class="section-thin home-recent-posts">
+        <!-- RECENT ARTICLES -->
+        <section class="section-normal home-recent-posts">
             <h2>Artigos Recentes</h2>
-        </section>
-        
 
+            <div class="grid-3-sm">
+                <?php 
+                    $homePagePosts = new WP_Query(array(
+                        'posts_per_page' => 3
+                    ));
 
-        <section class="section-normal">
-
-            <?php
-                $homePagePosts = new WP_Query(array(
-                    'posts_per_page' => 2
-                ));
-
-                while ($homePagePosts->have_posts()) {
+                    while ($homePagePosts->have_posts()) {
                     $homePagePosts->the_post(); ?>
-                    <h2><?php the_title(); ?></h2>
-                    <!-- limit content to 5 words -->
-                    <p><?php echo wp_trim_words(get_the_content(), 5); ?></p>
-                <?php } wp_reset_postdata();
-            ?>
 
+                    <div class="card-post">
+                        <a class="card-post__img-link" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
+                        <p class="card-post__details-categories"><?php echo get_the_category_list(', '); ?></p>
+                        <div class="card-post__details">
+                            
+                            <h2 class="card-post__details-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <ul class="card-post__details-meta">
+                                <li><?php the_time('j \d\e F, Y'); ?></li>
+                                <li><i class="icon-clock"></i> <?php the_field('tempo_leitura'); ?>min para ler</li>
+                            </ul>
+                            <p class="card-post__details-excerpt"><?php echo wp_trim_words(get_the_content(), 17); ?></p>
+                        </div>
+                    </div>
+
+                <?php } wp_reset_postdata(); ?>
+            </div>
         </section>
     </div>
 
