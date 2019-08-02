@@ -1820,50 +1820,44 @@ a:focus {
       grid-column-gap: 2rem; } }
 
 .site-footer {
-  width: 100vw; }
+  margin-top: 5rem; }
   .site-footer__inner {
     max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    display: none;
-    justify-content: space-between; }
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr 1fr;
+    grid-gap: 2rem; }
     @media (min-width: 576px) {
       .site-footer__inner {
         padding-left: 2.25rem;
         padding-right: 2.25rem; } }
+    .site-footer__inner h3 {
+      margin: 0; }
+    .site-footer__inner ul {
+      list-style-type: none;
+      padding: 0;
+      margin: .5rem 0 2rem;
+      line-height: 2rem; }
   .site-footer__col1 {
-    width: 25%; }
+    padding-right: 2rem; }
     .site-footer__col1 p {
-      font-size: 0.9rem; }
-  .site-footer__col2 {
-    width: 35%; }
-  .site-footer__col3 {
-    width: 30%; }
+      font-family: "Open Sans";
+      font-size: 0.875rem;
+      margin: .5rem 0 1rem;
+      line-height: 1.78; }
   .site-footer__copy {
     padding: 1.2rem;
     margin-top: 1.7rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    font-size: 0.8rem; }
-    .site-footer__copy-inner {
-      max-width: 1260px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      @media (min-width: 576px) {
-        .site-footer__copy-inner {
-          padding-left: 2.25rem;
-          padding-right: 2.25rem; } }
+    font-size: 0.8rem;
+    border-top: 1px dashed #e9e9e9;
+    text-align: center; }
   .site-footer__social-link {
-    background: #eee;
     color: #949494;
     border-radius: 5px;
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     height: 35px;
     width: 35px;
     display: inline-flex;
@@ -1872,6 +1866,11 @@ a:focus {
     .site-footer__social-link:hover {
       background: #4ab877;
       color: #fff; }
+  .site-footer a.footer-link {
+    color: #878787;
+    font-size: .875rem; }
+    .site-footer a.footer-link:hover {
+      color: #000; }
 
 .ne-aside__container {
   margin-bottom: 2rem; }
@@ -2360,5 +2359,5 @@ a:focus {
   .home-recent-posts > h2 {
     font-size: 38px;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem;
     text-align: center; }
