@@ -4,8 +4,16 @@
   &__inner {
     @include container;
     display: grid;
-    grid-template-columns: 2.5fr 1.5fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
+
+    @include respond-above(xs) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-above(md) {
+      grid-template-columns: 2.5fr 1.5fr 1fr 1fr;
+    }
 
     h3 {
       margin: 0;
