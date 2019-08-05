@@ -72,9 +72,10 @@ function ne_recent_posts($args = NULL) {
         'post__not_in' => array( $post->ID )
     ));
 
+    echo '<ul class="list-min">';
     while ($homePagePosts->have_posts()) {
         $homePagePosts->the_post(); ?>
-        <div class="ne-recent-post-item">
+        <li class="ne-recent-post-item">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('thumbnail'); ?>
             </a>
@@ -84,8 +85,9 @@ function ne_recent_posts($args = NULL) {
                 </a>
                 <p class="ne-recent-post-item__date"><?php the_time('j \d\e F, Y'); ?></p>
             </div>
-        </div>
+        </li>
     <?php } wp_reset_postdata();
+    echo '</ul>';
 }
 
 // NE CUSTOM REST
