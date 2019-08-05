@@ -14,7 +14,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
 
         &-title {
             h2 {
@@ -26,14 +26,14 @@
             }
         }
 
-        form {
-            label {
-                display: block;
+        label {
+            font-size: .875rem;
+            font-weight: 600;
+        }
 
-                span {
-                    font-size: .75rem;
-                }
-            }
+        input {
+            max-width: 100px;
+            padding: .7rem 1rem;
         }
     }
 
@@ -55,7 +55,7 @@
     }
 
     &__element-ddr {
-        font-size: .8rem;
+        font-size: .875rem;
     }
 
     &__subheader {
@@ -78,6 +78,7 @@
     height: 60px;
     margin: 0;
     padding: 0 40px 0 10px;
+    font-weight: 500;
     cursor: pointer;
     @include user-select();
 
@@ -103,12 +104,12 @@
     }
 
     &-quantities {
-        font-size: .85rem;
+        font-size: .875rem;
         flex: 1;
     }
 
     &-ddr {
-        font-size: .55rem;
+        font-size: .65rem;
         flex: 1;
     }
 }

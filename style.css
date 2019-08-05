@@ -1114,7 +1114,7 @@ a:focus {
   .ne-recent-post-item__title {
     margin: 0;
     font-size: 0.81rem;
-    font-weight: 700; }
+    font-weight: 600; }
   .ne-recent-post-item__date {
     margin: 0;
     font-size: 0.69rem;
@@ -1433,16 +1433,18 @@ a:focus {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     .ne-nutrition-table__main-header-title h2 {
       margin: 0; }
     .ne-nutrition-table__main-header-title p {
       margin: 0;
       font-size: 1.3rem; }
-    .ne-nutrition-table__main-header form label {
-      display: block; }
-      .ne-nutrition-table__main-header form label span {
-        font-size: .75rem; }
+    .ne-nutrition-table__main-header label {
+      font-size: .875rem;
+      font-weight: 600; }
+    .ne-nutrition-table__main-header input {
+      max-width: 100px;
+      padding: .7rem 1rem; }
   .ne-nutrition-table-tab {
     position: relative;
     width: 100%;
@@ -1457,7 +1459,7 @@ a:focus {
         }
         */ }
   .ne-nutrition-table__element-ddr {
-    font-size: .8rem; }
+    font-size: .875rem; }
   .ne-nutrition-table__subheader {
     background: #a2ccb3 !important;
     color: #fff;
@@ -1474,6 +1476,7 @@ a:focus {
   height: 60px;
   margin: 0;
   padding: 0 40px 0 10px;
+  font-weight: 500;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -1499,10 +1502,10 @@ a:focus {
     font-weight: 500;
     color: #242a32; }
   .ne_nutrition-table-tab__header-quantities {
-    font-size: .85rem;
+    font-size: .875rem;
     flex: 1; }
   .ne_nutrition-table-tab__header-ddr {
-    font-size: .55rem;
+    font-size: .65rem;
     flex: 1; }
 
 .ne-hide-input {
