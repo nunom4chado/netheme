@@ -118,9 +118,9 @@ add_action( 'acf/input/admin_enqueue_scripts', 'acf_admin_styles' );
 function ne_files() {
 
     wp_enqueue_script('fancybox_js', get_theme_file_uri('js/jquery.fancybox.min.js'), array('jquery'), '1.0', true);
-    wp_enqueue_script('throttledresize_js', '//rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js', array('jquery'), '1.0', true);
     wp_enqueue_script('google-charts_js', '//www.gstatic.com/charts/loader.js', NULL, '1.0', true);
     wp_enqueue_script('jquery3_js', '//code.jquery.com/jquery-3.4.0.min.js', NULL, '1.0', true);
+    wp_enqueue_script('throttledresize_js', '//rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js', array('jquery3_js'), '1.0', true);
     wp_enqueue_script('main_js', get_theme_file_uri('js/main.js'), array('jquery3_js'), microtime(), true);
 
     wp_localize_script('main_js', 'neData', array(

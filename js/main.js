@@ -283,10 +283,9 @@ if (neFoodChart) {
   });
   google.setOnLoadCallback(initChart);
 
-  jQuery(function($) {
-    $(window).on("throttledresize", function(event) {
-      initChart();
-    });
+  $(window).on("throttledresize", function(event) {
+    console.log("resizing...");
+    initChart();
   });
 
   function initChart() {
