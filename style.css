@@ -1418,7 +1418,8 @@ a:focus {
   position: relative;
   padding-bottom: 80%;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 300px; }
 
 .ne-nutrition-distribution__chart {
   position: absolute;
