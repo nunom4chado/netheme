@@ -54,9 +54,8 @@
   &__section-title {
     margin: 30px 0 1px 0;
     font-weight: 600;
-    font-size: 2rem;
     padding: 15px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px dashed #ccc;
   }
 
   &__close {
@@ -80,10 +79,17 @@
 
   &__results-inner {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    @include respond-above(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     & > div {
-      width: 31%;
+      width: 100%;
+      @include respond-above(md) {
+        width: 31%;
+      }
     }
   }
 

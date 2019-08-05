@@ -1945,9 +1945,8 @@ a:focus {
   .search-overlay__section-title {
     margin: 30px 0 1px 0;
     font-weight: 600;
-    font-size: 2rem;
     padding: 15px 0;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px dashed #ccc; }
   .search-overlay__close {
     font-size: 1.5rem;
     cursor: pointer;
@@ -1963,9 +1962,16 @@ a:focus {
     width: 100%; }
   .search-overlay__results-inner {
     display: flex;
-    justify-content: space-between; }
+    flex-direction: column; }
+    @media (min-width: 992px) {
+      .search-overlay__results-inner {
+        flex-direction: row;
+        justify-content: space-between; } }
     .search-overlay__results-inner > div {
-      width: 31%; }
+      width: 100%; }
+      @media (min-width: 992px) {
+        .search-overlay__results-inner > div {
+          width: 31%; } }
   .search-overlay__no-results {
     font-size: 0.9rem; }
     .search-overlay__no-results a {
