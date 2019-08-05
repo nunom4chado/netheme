@@ -9,14 +9,25 @@
 
 .ne-nutrition-table {
     padding-top: 5rem;
+    max-width: 600px;
 
     &__main-header {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        flex-direction: column;
         margin-bottom: 2rem;
 
+        @include respond-above(sm) {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
         &-title {
+            margin-bottom: 1rem;
+            @include respond-above(sm) {
+                margin: 0;
+            }
+
             h2 {
                 margin: 0;
             }
@@ -34,6 +45,11 @@
         input {
             max-width: 100px;
             padding: .7rem 1rem;
+            display: block;
+
+            @include respond-above(sm) {
+                display: inline;
+            }
         }
     }
 

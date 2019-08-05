@@ -1428,23 +1428,37 @@ a:focus {
   height: 100%; }
 
 .ne-nutrition-table {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  max-width: 600px; }
   .ne-nutrition-table__main-header {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 2rem; }
-    .ne-nutrition-table__main-header-title h2 {
-      margin: 0; }
-    .ne-nutrition-table__main-header-title p {
-      margin: 0;
-      font-size: 1.3rem; }
+    @media (min-width: 768px) {
+      .ne-nutrition-table__main-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between; } }
+    .ne-nutrition-table__main-header-title {
+      margin-bottom: 1rem; }
+      @media (min-width: 768px) {
+        .ne-nutrition-table__main-header-title {
+          margin: 0; } }
+      .ne-nutrition-table__main-header-title h2 {
+        margin: 0; }
+      .ne-nutrition-table__main-header-title p {
+        margin: 0;
+        font-size: 1.3rem; }
     .ne-nutrition-table__main-header label {
       font-size: .875rem;
       font-weight: 600; }
     .ne-nutrition-table__main-header input {
       max-width: 100px;
-      padding: .7rem 1rem; }
+      padding: .7rem 1rem;
+      display: block; }
+      @media (min-width: 768px) {
+        .ne-nutrition-table__main-header input {
+          display: inline; } }
   .ne-nutrition-table-tab {
     position: relative;
     width: 100%;
