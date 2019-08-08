@@ -57,7 +57,7 @@
                                                 <ul class="list-inline">
                                                 
                                                 <?php foreach($allergies as $allergy) { 
-                                                    echo '<li><img src="' . get_template_directory_uri() . '/img/allergy/allergy-' . $allergy['value'] . '.png" alt="Alerta alergia ' . $allergy['label'] . '" > ' . $allergy['label'] . '</li>';
+                                                    echo '<li><img src="' . get_template_directory_uri() . '/img/allergy/allergy-' . $allergy['value'] . '.svg" alt="Alerta alergia ' . $allergy['label'] . '" > ' . $allergy['label'] . '</li>';
                                                 } ?>
 
                                                 </ul>

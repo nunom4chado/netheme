@@ -1603,12 +1603,21 @@ sup {
 .ne-allergy {
   margin-top: 2rem;
   font-size: .8rem; }
+  .ne-allergy ul {
+    margin-top: 1rem;
+    flex-wrap: wrap; }
   .ne-allergy li {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-right: 1.5rem; }
+    margin-right: 1.5rem;
+    width: 60px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: .65rem; }
     .ne-allergy li img {
-      margin-right: .5rem; }
+      margin-bottom: .2rem;
+      width: 40px; }
 
 .ne-bibliography {
   margin-top: 4rem; }
