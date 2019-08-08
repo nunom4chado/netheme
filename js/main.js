@@ -338,9 +338,42 @@ class RecalcValues {
     //Define Base DDR values
     this.ddr = {
       "calorias": 2000,
-      "hc": 5,
-      "lp": 3,
-      "pt": 4
+      // HIDRATOS
+      "hidratos_carbono": 260,
+      "fibra": 25,
+      "acucar": 90,
+      // LIPIDOS
+      "lipidos": 70,
+      // PROTEINAS
+      "proteina": 50,
+      // VITAMINAS
+      // "vitamina_a": falta converter unidade
+      // "vitamina_d": falta saber unidade
+      "vitamina_e": 12,
+      "vitamina_k": 75,
+      "tiamina": 1.1,
+      "vitamina_c": 80,
+      "riboflavina": 1.4,
+      "niacina": 16,
+      "vitamina_b6": 1.4,
+      "acido_folico": 200,
+      "vitamina_b12": 2.5,
+      "acido_pantotenico": 6,
+      "biotina": 50,
+      // MINERAIS
+      "potassio": 2000,
+      "calcio": 800,
+      "fosforo": 700,
+      "magnesio": 375,
+      "ferro": 14,
+      "zinco": 10,
+      "cobre": 1,
+      "manganes": 2,
+      "cromio": 40,
+      "fluoreto": 3.5,
+      "selenio": 55,
+      "iodo": 150
+
     }
     
     // Init Events

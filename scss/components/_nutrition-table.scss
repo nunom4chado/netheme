@@ -70,9 +70,9 @@
         */
     }
 
-    &__element-ddr {
-        font-size: .875rem;
-    }
+    // &__element-ddr {
+    //     font-size: .875rem;
+    // }
 
     &__subheader {
         background: #a2ccb3 !important;
@@ -84,6 +84,16 @@
         max-width: 500px;
         margin: 0;
     }
+
+    &__reference {
+        font-size: .7rem;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+}
+
+.ne_nutrition-table-tab__header .ne-nutrition-table__element-ddr {
+    font-size: .875rem;
 }
 
 .ne_nutrition-table-tab__header {

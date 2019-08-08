@@ -135,7 +135,7 @@
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('calorias'); ?></span>
                                             <span>kcal</span>
                                         </div>
-                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (VD)<sup>*</sup></p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -166,7 +166,7 @@
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('hidratos_carbono'); ?></span>
                                             <span>g</span>
                                         </div>
-                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (VD)<sup>*</sup></p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -198,7 +198,7 @@
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('lipidos'); ?></span>
                                             <span>g</span>
                                         </div>
-                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (VD)<sup>*</sup></p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -243,7 +243,7 @@
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('proteina'); ?></span>
                                             <span>g</span>
                                         </div>
-                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (DDR)</p>
+                                        <p class="ne_nutrition-table-tab__header-ddr"><span class="ne-nutrition-table__element-ddr"></span> (VD)<sup>*</sup></p>
                                     </div>
                                     
                                     <!-- Tab Content -->
@@ -346,6 +346,8 @@
                                 </div>
 
                                 <a href="#tabela-nutricional" id="close-ntable-btn">Fechar todos os separadores</a>
+
+                                <p class="ne-nutrition-table__reference"><sup>*</sup> VD - Valor Diário de referência para um adulto médio (8 400 kJ/2 000 kcal). Os seus valores podem variar dependendo das suas necessidades energéticas.</p>
                             </div><!-- /.ne-nutrition-table -->
 
                             <!-- Bibliography Section -->
