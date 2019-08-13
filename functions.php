@@ -1,5 +1,15 @@
 <?php
 
+// Maintenance Mode - Comment add action to go live
+function maintenance_mode() {
+    if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
+        wp_die('<h1>Brevemente</h1><p>Nutriente Essencial ' . date('Y') . '</p>');
+    }
+}
+add_action('get_header', 'maintenance_mode');
+
+
+
 require get_theme_file_path('inc/search-route.php');
 
 // Nutrition Inner Tables
