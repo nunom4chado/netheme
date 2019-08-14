@@ -2,12 +2,26 @@
 
 // Maintenance Mode - Comment add action to go live
 function maintenance_mode() {
-    if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
+    if ( !is_user_logged_in() ) {
         wp_die('<h1>Brevemente</h1><p>Nutriente Essencial ' . date('Y') . '</p>');
     }
 }
 add_action('get_header', 'maintenance_mode');
 
+
+// SMTP Authentication
+add_action( 'phpmailer_init', 'send_smtp_email' );
+function send_smtp_email( $phpmailer ) {
+	$phpmailer->isSMTP();
+	$phpmailer->Host       = SMTP_HOST;
+	$phpmailer->SMTPAuth   = SMTP_AUTH;
+	$phpmailer->Port       = SMTP_PORT;
+	$phpmailer->Username   = SMTP_USER;
+	$phpmailer->Password   = SMTP_PASS;
+	$phpmailer->SMTPSecure = SMTP_SECURE;
+	$phpmailer->From       = SMTP_FROM;
+	$phpmailer->FromName   = SMTP_NAME;
+}
 
 
 require get_theme_file_path('inc/search-route.php');
