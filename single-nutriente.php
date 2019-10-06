@@ -56,7 +56,7 @@
                             </div>
 
                             <!-- Beneficios e Conservação -->
-                            <div class="grid-3-fit grid-3-fit--300min">
+                            <div class="nutriente-lists">
                                 <?php
                                     if (get_field('nutriente_beneficios')) { ?>
                                         <div class="alimento-pros-cons">
@@ -135,7 +135,7 @@
                             ?>
 
                             <!-- Necessidades Diárias -->
-                            <div class="ne-nutrition-table" id="tabela-nutricional">
+                            <div class="ne-nutrition-table ne-nutrition-table--full">
                                 <div class="ne-nutrition-table__main-header">
                                     <div class="ne-nutrition-table__main-header-title">
                                         <h2>Necessidades Diárias</h2>
@@ -143,7 +143,7 @@
                                     </div>
                                 </div>
 
-                                <div class="ne-nutrition-table-tab ne-nutrition-table--500w">
+                                <div class="ne-nutrition-table-tab">
                                     <!-- Hiden Inputs -->
                                     <input id="calories-table" type="checkbox" class="ne-hide-input" name="ne-nt-input" checked>
                                     <label for="calories-table" class="ne-nt-input-label"></label>

@@ -1481,8 +1481,8 @@ sup {
     background: #a2ccb3 !important;
     color: #fff;
     font-weight: bold; }
-  .ne-nutrition-table--500w {
-    max-width: 500px;
+  .ne-nutrition-table--full {
+    max-width: 100%;
     margin: 0; }
   .ne-nutrition-table__reference {
     font-size: .7rem;
@@ -2318,14 +2318,18 @@ sup {
 .login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
   color: #616161; }
 
-.alimento-pros-cons h2 {
-  font-size: 1rem; }
+.nutriente-lists {
+  margin: 4rem 0; }
 
-.alimento-pros-cons ul {
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  line-height: 1.78;
-  padding-left: 1.2rem; }
+.alimento-pros-cons {
+  margin-bottom: 3rem; }
+  .alimento-pros-cons h2 {
+    font-size: 1.5rem; }
+  .alimento-pros-cons ul {
+    font-family: "Open Sans";
+    font-size: 0.875rem;
+    line-height: 1.78;
+    padding-left: 1.2rem; }
 
 .ne-home-top {
   background: url("img/homeHeader.jpg") no-repeat top center;
