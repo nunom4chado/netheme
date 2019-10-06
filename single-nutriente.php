@@ -42,7 +42,7 @@
                                     } 
                                 ?>
                                 <div>
-                                    <h2 class="ne-h3-title">Descrição Geral</h2>
+                                    <h2>Descrição Geral</h2>
                                     
                                     <div class="ne-post-content">
                                         <?php the_field('conteudo_descricao'); ?>
