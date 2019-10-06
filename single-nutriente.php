@@ -45,13 +45,15 @@
                                     <h2 class="ne-h3-title">Descrição Geral</h2>
                                     
                                     <div class="ne-post-content">
-                                        <?php the_field('conteudo_principal'); ?>
+                                        <?php the_field('conteudo_descricao'); ?>
                                     </div>
                                 </div>
 
                             </div>
 
-
+                            <div class="ne-post-content">
+                                <?php the_field('conteudo_principal'); ?>
+                            </div>
 
                             <!-- Beneficios e Conservação -->
                             <div class="grid-3-fit grid-3-fit--300min">
