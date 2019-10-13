@@ -36,7 +36,7 @@ function ne_nutrition_table_inner($group) {
             foreach ($subfields as $key => $value) {
                 if ( !empty($value) ) { 
                     $field = get_sub_field_object( $key );?>
-                    <tr class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
+                    <tr id="chart_<?php echo esc_html($field['_name']); ?>" class="<?php echo esc_attr($field['wrapper']['class']); ?> ne-nutrition-table__element" data-name="<?php echo esc_html($field['_name']); ?>" data-value="<?php echo esc_html($value); ?>">
                         <td><?php echo esc_html($field['label']); ?></td>
                         <td><span class="ne-nutrition-table__element-quantity"><?php echo esc_html($value); ?></span> <?php echo esc_html($field['append']); ?></td>
                         <td class="ne-nutrition-table__element-ddr"></td>

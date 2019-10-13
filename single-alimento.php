@@ -165,7 +165,7 @@
                                     <label for="hc-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div id="ne-nt-hc" class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="hidratos_carbono" data-value="<?php the_field('hidratos_carbono'); ?>">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="hidratos_carbono" data-value="<?php the_field('hidratos_carbono'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Hidratos de Carbono</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('hidratos_carbono'); ?></span>
@@ -197,7 +197,7 @@
                                     <label for="lipidos-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div id="ne-nt-lip" class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="lipidos" data-value="<?php the_field('lipidos'); ?>">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="lipidos" data-value="<?php the_field('lipidos'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Lípidos</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('lipidos'); ?></span>
@@ -242,7 +242,7 @@
                                     <label for="proteina-table" class="ne-nt-input-label"></label>
                                     
                                     <!-- Tab Header -->
-                                    <div id="ne-nt-prot" class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="proteina" data-value="<?php the_field('proteina'); ?>">
+                                    <div class="ne_nutrition-table-tab__header ne-nutrition-table__element" data-name="proteina" data-value="<?php the_field('proteina'); ?>">
                                         <p class="ne_nutrition-table-tab__header-name">Proteína</p>
                                         <div class="ne_nutrition-table-tab__header-quantities">
                                             <span class="ne-nutrition-table__element-quantity"><?php the_field('proteina'); ?></span>

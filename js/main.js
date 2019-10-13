@@ -273,9 +273,9 @@ var neSearch = new Search();
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 var neFoodChart = document.getElementById("ne-food-chart");
 // get values from nutrition table
-let ntHc = $("#ne-nt-hc").data('value');
-let ntLip = $("#ne-nt-lip").data('value');
-let ntProt = $("#ne-nt-prot").data('value');
+let ntHc = $("#chart_calorias_hc").data('value');
+let ntLip = $("#chart_calorias_gordura").data('value');
+let ntProt = $("#chart_calorias_proteina").data('value');
 
 if (neFoodChart) {
   google.load("visualization", "1", {
@@ -284,7 +284,6 @@ if (neFoodChart) {
   google.setOnLoadCallback(initChart);
 
   $(window).on("throttledresize", function(event) {
-    console.log("resizing...");
     initChart();
   });
 
