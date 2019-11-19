@@ -170,7 +170,7 @@ class Search {
                                   item.title
                                 }</h4>
                             </a>
-                            <p class="ne-recent-post-item__date">${"category"}</p>
+                            <p class="ne-recent-post-item__date">${item.category}</p>
                         </div>
                     </li>
                     `
@@ -204,7 +204,7 @@ class Search {
                                   item.title
                                 }</h4>
                             </a>
-                            <p class="ne-recent-post-item__date">${"category"}</p>
+                            <p class="ne-recent-post-item__date">${item.category}</p>
                         </div>
                     </li>
                     `

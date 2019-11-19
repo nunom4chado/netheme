@@ -43,7 +43,8 @@ function neSearchResults($data) {
                         'id' => get_the_id($nutriente),
                         'title' => get_the_title($nutriente),
                         'permalink' => get_the_permalink($nutriente),
-                        'image' => get_the_post_thumbnail_url($nutriente, 'thumbnail')
+                        'image' => get_the_post_thumbnail_url($nutriente, 'thumbnail'),
+                        'category' => get_the_terms( $nutriente , 'categoria_nutriente' )[0]->name
                     ));
                 }
             }
@@ -51,7 +52,8 @@ function neSearchResults($data) {
             array_push($results['alimentos'], array(
                 'title' => get_the_title(),
                 'permalink' => get_the_permalink(),
-                'image' => get_the_post_thumbnail_url(0, 'thumbnail')
+                'image' => get_the_post_thumbnail_url(0, 'thumbnail'),
+                'category' => get_the_terms( get_the_ID() , 'categoria_alimento' )[0]->name
             ));
         }
 
@@ -60,7 +62,8 @@ function neSearchResults($data) {
                 'id' => get_the_id(),
                 'title' => get_the_title(),
                 'permalink' => get_the_permalink(),
-                'image' => get_the_post_thumbnail_url(0, 'thumbnail')
+                'image' => get_the_post_thumbnail_url(0, 'thumbnail'),
+                'category' => get_the_terms( get_the_ID() , 'categoria_nutriente' )[0]->name
             ));
         }
     }
@@ -89,7 +92,8 @@ function neSearchResults($data) {
                 array_push($results['alimentos'], array(
                     'title' => get_the_title(),
                     'permalink' => get_the_permalink(),
-                    'image' => get_the_post_thumbnail_url(0, 'thumbnail')
+                    'image' => get_the_post_thumbnail_url(0, 'thumbnail'),
+                    'category' => get_the_terms( get_the_ID() , 'categoria_alimento' )[0]->name
                 ));
             }
         }
