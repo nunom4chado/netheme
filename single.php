@@ -50,25 +50,25 @@
                                 ?>
 
                                 <div class="ne-blog-post__share-container">
-                                    <a href="<?php $twitterURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($twitterURL) ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-twitter"></i>
                                     </a>
-                                    <a href="<?php $facebookURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($facebookURL) ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
-                                    <a href="<?php $googleURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($googleURL) ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-google-plus-g"></i>
                                     </a>
-                                    <a href="<?php $bufferURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($bufferURL) ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-buffer"></i>
                                     </a>
-                                    <a href="<?php $linkedInURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($linkedInURL) ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
-                                    <a href="<?php $whatsappURL ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($whatsappURL) ?>" class="ne-blog-post__share-icons" target="_blank" rel="nofollow">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
-                                    <a href="<?php $pinterestURL ?>" class="ne-blog-post__share-icons" data-pin-custom="true" target="_blank" rel="nofollow">
+                                    <a href="<?php echo htmlspecialchars($pinterestURL) ?>" class="ne-blog-post__share-icons" data-pin-custom="true" target="_blank" rel="nofollow">
                                         <i class="fab fa-pinterest-p"></i>
                                     </a>
                                 </div>
