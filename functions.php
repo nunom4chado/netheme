@@ -219,3 +219,13 @@ function neLoginTitle() {
     return get_bloginfo("name");
 }
 
+// Order alimentos and nutrientes by name asc
+add_action( 'pre_get_posts', 'alimentos_nutrientes_archive_sort_order'); 
+function alimentos_nutrientes_archive_sort_order($query){
+    if(is_post_type_archive('alimento') || is_post_type_archive('nutriente')):
+        //Set the order ASC or DESC
+        $query->set( 'order', 'ASC' );
+        //Set the orderby
+        $query->set( 'orderby', 'title' );
+    endif;    
+};
