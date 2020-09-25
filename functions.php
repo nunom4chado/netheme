@@ -8,24 +8,6 @@ function maintenance_mode() {
 }
 add_action('get_header', 'maintenance_mode');
 
-
-// SMTP Authentication
-add_action( 'phpmailer_init', 'send_smtp_email' );
-function send_smtp_email( $phpmailer ) {
-	$phpmailer->isSMTP();
-	$phpmailer->Host       = SMTP_HOST;
-	$phpmailer->SMTPAuth   = SMTP_AUTH;
-	$phpmailer->Port       = SMTP_PORT;
-	$phpmailer->Username   = SMTP_USER;
-	$phpmailer->Password   = SMTP_PASS;
-	$phpmailer->SMTPSecure = SMTP_SECURE;
-	$phpmailer->From       = SMTP_FROM;
-	$phpmailer->FromName   = SMTP_NAME;
-}
-
-
-require get_theme_file_path('inc/search-route.php');
-
 // Nutrition Inner Tables
 function ne_nutrition_table_inner($group) {
     if( have_rows($group) ):
@@ -203,6 +185,12 @@ add_filter('login_headerurl', 'neHeaderUrl');
 function neHeaderUrl() {
     return esc_url(site_url('/'));
 }
+
+// Enable Cors from every adress
+function add_cors_http_header(){
+    header("Access-Control-Allow-Origin: *");
+}
+add_action('init','add_cors_http_header');
 
 // Load our css file to be able to change elements on login page
 add_action('login_enqueue_scripts', 'neLoginCSS');
