@@ -1,8 +1,10 @@
 .login-action-login {
-    background: url(img/foodPattern.png), linear-gradient(to right, #4ab877, #a9dd81);;
+    input {
+        border-color: #CFD8E3;
+    }
 
     // focus color on inputs
-    input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime-local]:focus, input[type=datetime]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, input[type=password]:focus, input[type=radio]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, select:focus, textarea:focus {
+    input:focus {
         border-color: $primary-color-dark;
         box-shadow: 0 0 2px rgba(74,184,119,.8);
         outline: 2px solid transparent;
@@ -19,9 +21,17 @@
 
 // login image
 .login h1 a {
-    background-image: url('img/imgtemp.png');
+    background-image: url('img/logoHorizontal.svg');
     background-size: 100%;
     width: 100%;
+}
+
+.login #loginform {
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 // log in button
@@ -37,13 +47,4 @@
     background: #45ad6f;
     border-color: $primary-color-dark;
     color: #fff;
-}
-
-// bottom links
-.login #backtoblog a, .login #nav a {
-    text-decoration: none;
-    color: #fff;
-}
-.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
-    color: $text-color;
 }

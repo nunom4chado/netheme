@@ -2282,21 +2282,31 @@ sup {
     .ne-nutricat_item--outros {
       background: url("img/nutrientcat/outros.png") no-repeat left top; }
 
-.login-action-login {
-  background: url(img/foodPattern.png), linear-gradient(to right, #4ab877, #a9dd81); }
-  .login-action-login input[type=checkbox]:focus, .login-action-login input[type=color]:focus, .login-action-login input[type=date]:focus, .login-action-login input[type=datetime-local]:focus, .login-action-login input[type=datetime]:focus, .login-action-login input[type=email]:focus, .login-action-login input[type=month]:focus, .login-action-login input[type=number]:focus, .login-action-login input[type=password]:focus, .login-action-login input[type=radio]:focus, .login-action-login input[type=search]:focus, .login-action-login input[type=tel]:focus, .login-action-login input[type=text]:focus, .login-action-login input[type=time]:focus, .login-action-login input[type=url]:focus, .login-action-login input[type=week]:focus, .login-action-login select:focus, .login-action-login textarea:focus {
-    border-color: #3a955f;
-    box-shadow: 0 0 2px rgba(74, 184, 119, 0.8);
-    outline: 2px solid transparent; }
-  .login-action-login .button-primary.focus, .login-action-login .button-primary:focus {
-    box-shadow: 0 0 2px rgba(74, 184, 119, 0.8); }
-  .login-action-login a:focus {
-    box-shadow: 0 0 2px #616161; }
+.login-action-login input {
+  border-color: #CFD8E3; }
+
+.login-action-login input:focus {
+  border-color: #3a955f;
+  box-shadow: 0 0 2px rgba(74, 184, 119, 0.8);
+  outline: 2px solid transparent; }
+
+.login-action-login .button-primary.focus, .login-action-login .button-primary:focus {
+  box-shadow: 0 0 2px rgba(74, 184, 119, 0.8); }
+
+.login-action-login a:focus {
+  box-shadow: 0 0 2px #616161; }
 
 .login h1 a {
-  background-image: url("img/imgtemp.png");
+  background-image: url("img/logoHorizontal.svg");
   background-size: 100%;
   width: 100%; }
+
+.login #loginform {
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
 
 .wp-core-ui .button-primary {
   background: #4ab877;
@@ -2310,13 +2320,6 @@ sup {
   background: #45ad6f;
   border-color: #3a955f;
   color: #fff; }
-
-.login #backtoblog a, .login #nav a {
-  text-decoration: none;
-  color: #fff; }
-
-.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
-  color: #616161; }
 
 .nutriente-lists {
   margin: 4rem 0; }
